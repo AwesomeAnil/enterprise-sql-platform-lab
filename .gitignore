@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build Output
+bin/
+obj/
+
+# SSDT Build Output
+*.dacpac
+*.publish.xml
+
+# SQL Server
+*.jfm
