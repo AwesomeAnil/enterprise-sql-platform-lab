@@ -83,6 +83,9 @@
     <Build Include="Tables\staging\Calendar.sql" />
     <Build Include="Stored Procedures\warehouse\sp_Load_DimDate.sql" />
     <Build Include="Tables\warehouse\DimDate.sql" />
+    <Build Include="Tables\staging\Product.sql" />
+    <Build Include="Tables\warehouse\DimProduct.sql" />
+    <Build Include="Stored Procedures\warehouse\sp_Load_DimProduct.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
@@ -90,5 +93,6 @@
   <ItemGroup>
     <None Include="Scripts\Load-Customer.sql" />
     <None Include="Scripts\Load-Calendar.sql" />
+    <None Include="Scripts\Load-Product.sql" />
   </ItemGroup>
 </Project>

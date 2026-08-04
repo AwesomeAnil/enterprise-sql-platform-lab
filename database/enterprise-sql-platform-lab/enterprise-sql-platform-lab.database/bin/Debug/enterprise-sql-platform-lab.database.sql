@@ -40,45 +40,37 @@ USE [$(DatabaseName)];
 
 
 GO
-IF EXISTS (SELECT 1
-           FROM   [master].[dbo].[sysdatabases]
-           WHERE  [name] = N'$(DatabaseName)')
-    BEGIN
-        ALTER DATABASE [$(DatabaseName)]
-            SET ARITHABORT ON,
-                CONCAT_NULL_YIELDS_NULL ON,
-                CURSOR_DEFAULT LOCAL 
-            WITH ROLLBACK IMMEDIATE;
-    END
+PRINT N'Creating Table [warehouse].[DimProduct]...';
 
 
 GO
-IF EXISTS (SELECT 1
-           FROM   [master].[dbo].[sysdatabases]
-           WHERE  [name] = N'$(DatabaseName)')
-    BEGIN
-        ALTER DATABASE [$(DatabaseName)]
-            SET PAGE_VERIFY NONE,
-                DISABLE_BROKER 
-            WITH ROLLBACK IMMEDIATE;
-    END
+CREATE TABLE [warehouse].[DimProduct] (
+    [ProductKey]   INT             IDENTITY (1, 1) NOT NULL,
+    [ProductID]    INT             NOT NULL,
+    [ProductCode]  VARCHAR (20)    NOT NULL,
+    [ProductName]  VARCHAR (200)   NOT NULL,
+    [Category]     VARCHAR (50)    NOT NULL,
+    [SubCategory]  VARCHAR (50)    NOT NULL,
+    [Brand]        VARCHAR (50)    NOT NULL,
+    [UnitPrice]    DECIMAL (18, 2) NOT NULL,
+    [StandardCost] DECIMAL (18, 2) NOT NULL,
+    [Status]       VARCHAR (20)    NOT NULL,
+    [SourceSystem] VARCHAR (20)    NOT NULL,
+    [CreatedDate]  DATE            NOT NULL,
+    [ModifiedDate] DATE            NOT NULL,
+    [LoadDate]     DATETIME2 (7)   NOT NULL,
+    CONSTRAINT [PK_DimProduct] PRIMARY KEY CLUSTERED ([ProductKey] ASC),
+    CONSTRAINT [UQ_DimProduct_ProductID] UNIQUE NONCLUSTERED ([ProductID] ASC)
+);
 
 
 GO
-ALTER DATABASE [$(DatabaseName)]
-    SET TARGET_RECOVERY_TIME = 0 SECONDS 
-    WITH ROLLBACK IMMEDIATE;
+PRINT N'Creating Default Constraint [warehouse].[DF_DimProduct_LoadDate]...';
 
 
 GO
-IF EXISTS (SELECT 1
-           FROM   [master].[dbo].[sysdatabases]
-           WHERE  [name] = N'$(DatabaseName)')
-    BEGIN
-        ALTER DATABASE [$(DatabaseName)]
-            SET QUERY_STORE (QUERY_CAPTURE_MODE = ALL, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 367), MAX_STORAGE_SIZE_MB = 100) 
-            WITH ROLLBACK IMMEDIATE;
-    END
+ALTER TABLE [warehouse].[DimProduct]
+    ADD CONSTRAINT [DF_DimProduct_LoadDate] DEFAULT (SYSUTCDATETIME()) FOR [LoadDate];
 
 
 GO
