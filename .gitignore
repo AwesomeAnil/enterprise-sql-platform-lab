@@ -8,6 +8,8 @@ bin/
 obj/
 
 # SSDT Build Output
+*.dbmdl
+*.jfm
 *.dacpac
 *.publish.xml
 
