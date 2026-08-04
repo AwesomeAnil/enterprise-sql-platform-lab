@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="enterprise-sql-platform-lab.database/enterprise-sql-platform-lab.database.sqlproj" Id="29d2b0fe-fa22-44cb-a659-92d05389bb47">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>

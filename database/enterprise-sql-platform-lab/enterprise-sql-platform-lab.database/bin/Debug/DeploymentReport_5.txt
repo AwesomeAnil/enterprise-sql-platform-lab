@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [metadata].[PipelineConfiguration] (Table)
+       [metadata].[Watermark] (Table)
+       [metadata].[DF_PipelineConfiguration_IsActive] (Default Constraint)
+       [metadata].[DF_PipelineConfiguration_CreatedDate] (Default Constraint)
+       [metadata].[DF_Watermark_ModifiedDate] (Default Constraint)
+
+** Supporting actions

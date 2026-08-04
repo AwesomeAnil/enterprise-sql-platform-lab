@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sp_Load_DimDate.sql ",
+              "DocumentMoniker": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql",
+              "RelativeDocumentMoniker": "enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql",
+              "ToolTip": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_DimDate.sql\r\n(localdb)\\ProjectModels.enterprise-sql-platform-lab.database\r\n(LAPTOP-P62T6CNI\\Anil Jacob)*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-04T13:43:06.106Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
