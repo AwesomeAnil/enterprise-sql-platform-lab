@@ -1,0 +1,501 @@
+SalespersonID,EmployeeCode,FirstName,LastName,FullName,Email,TerritoryID,JobTitle,HireDate,Status,SourceSystem,CreatedDate,ModifiedDate
+10001,EMP10001,Arun,Menon,Arun Menon,arun.menon26@adventureworks.com,116,Senior Account Manager,2020-02-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10002,EMP10002,Vikram,Clark,Vikram Clark,vikram.clark90@adventureworks.com,103,Account Executive,2021-09-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10003,EMP10003,Sneha,Martin,Sneha Martin,sneha.martin617@enterprise.com,113,Business Development Manager,2023-04-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10004,EMP10004,Daniel,Lewis,Daniel Lewis,daniel.lewis285@enterprise.com,145,Territory Manager,2018-10-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10005,EMP10005,Anil,Kapoor,Anil Kapoor,anil.kapoor981@contoso.com,106,Territory Manager,2018-02-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10006,EMP10006,Jason,Johnson,Jason Johnson,jason.johnson619@contoso.com,147,Regional Sales Manager,2017-06-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10007,EMP10007,Andrew,Brown,Andrew Brown,andrew.brown81@adventureworks.com,141,Enterprise Account Manager,2020-04-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10008,EMP10008,David,Lewis,David Lewis,david.lewis197@adventureworks.com,103,Senior Account Manager,2017-10-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10009,EMP10009,Rahul,Thomas,Rahul Thomas,rahul.thomas888@enterprise.com,118,Regional Sales Manager,2021-04-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10010,EMP10010,David,Gupta,David Gupta,david.gupta380@contoso.com,143,Sales Executive,2019-05-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10011,EMP10011,Sanjay,Nair,Sanjay Nair,sanjay.nair624@adventureworks.com,135,Senior Account Manager,2018-12-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10012,EMP10012,Michael,Joseph,Michael Joseph,michael.joseph948@adventureworks.com,136,Senior Account Manager,2024-09-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10013,EMP10013,Brian,Patel,Brian Patel,brian.patel235@enterprise.com,126,Sales Executive,2020-07-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10014,EMP10014,Andrew,Lewis,Andrew Lewis,andrew.lewis898@adventureworks.com,114,Regional Sales Manager,2020-07-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10015,EMP10015,Andrew,Wilson,Andrew Wilson,andrew.wilson147@contoso.com,116,Business Development Manager,2018-07-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10016,EMP10016,Rohit,Lewis,Rohit Lewis,rohit.lewis439@adventureworks.com,124,Senior Account Manager,2021-06-24,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10017,EMP10017,Anil,Martin,Anil Martin,anil.martin506@enterprise.com,108,Account Manager,2017-07-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10018,EMP10018,Kevin,Taylor,Kevin Taylor,kevin.taylor611@enterprise.com,125,Enterprise Account Manager,2021-04-26,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10019,EMP10019,Emma,Joseph,Emma Joseph,emma.joseph995@adventureworks.com,144,Senior Account Executive,2017-02-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10020,EMP10020,Sophia,Joseph,Sophia Joseph,sophia.joseph788@adventureworks.com,108,Sales Executive,2020-10-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10021,EMP10021,Daniel,Sharma,Daniel Sharma,daniel.sharma977@adventureworks.com,117,Business Development Manager,2025-01-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10022,EMP10022,Emma,Menon,Emma Menon,emma.menon892@adventureworks.com,141,Business Development Manager,2020-05-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10023,EMP10023,Anil,Johnson,Anil Johnson,anil.johnson781@enterprise.com,150,Business Development Manager,2023-01-19,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10024,EMP10024,Emily,Smith,Emily Smith,emily.smith501@enterprise.com,124,Sales Executive,2018-04-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10025,EMP10025,Sneha,Lewis,Sneha Lewis,sneha.lewis970@enterprise.com,147,Regional Sales Manager,2017-12-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10026,EMP10026,Ajay,Clark,Ajay Clark,ajay.clark785@enterprise.com,143,Regional Sales Manager,2018-06-10,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10027,EMP10027,Priya,Joseph,Priya Joseph,priya.joseph541@adventureworks.com,114,Business Development Manager,2021-09-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10028,EMP10028,Karan,Kapoor,Karan Kapoor,karan.kapoor731@contoso.com,143,Sales Consultant,2021-06-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10029,EMP10029,Emma,Wilson,Emma Wilson,emma.wilson124@enterprise.com,105,Sales Consultant,2019-07-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10030,EMP10030,Sophia,Thomas,Sophia Thomas,sophia.thomas603@enterprise.com,105,Account Executive,2017-01-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10031,EMP10031,William,Patel,William Patel,william.patel881@contoso.com,133,Senior Account Manager,2017-10-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10032,EMP10032,Sarah,Kapoor,Sarah Kapoor,sarah.kapoor553@enterprise.com,137,Enterprise Account Manager,2025-02-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10033,EMP10033,Kevin,Anderson,Kevin Anderson,kevin.anderson827@contoso.com,107,Senior Account Executive,2019-02-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10034,EMP10034,David,Taylor,David Taylor,david.taylor421@contoso.com,104,Senior Account Executive,2025-03-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10035,EMP10035,Rohit,Smith,Rohit Smith,rohit.smith820@enterprise.com,113,Senior Account Manager,2019-10-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10036,EMP10036,Anil,Taylor,Anil Taylor,anil.taylor188@contoso.com,116,Senior Account Executive,2022-03-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10037,EMP10037,Jason,Clark,Jason Clark,jason.clark101@enterprise.com,135,Account Executive,2024-04-25,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10038,EMP10038,Andrew,Thomas,Andrew Thomas,andrew.thomas171@contoso.com,131,Senior Account Manager,2022-06-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10039,EMP10039,William,Patel,William Patel,william.patel169@contoso.com,125,Sales Executive,2017-01-09,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10040,EMP10040,Kevin,Wilson,Kevin Wilson,kevin.wilson293@contoso.com,147,Business Development Manager,2024-10-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10041,EMP10041,Sarah,Reddy,Sarah Reddy,sarah.reddy195@contoso.com,104,Enterprise Account Manager,2019-06-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10042,EMP10042,Amit,Smith,Amit Smith,amit.smith59@enterprise.com,131,Business Development Manager,2023-07-21,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10043,EMP10043,Emma,Gupta,Emma Gupta,emma.gupta59@adventureworks.com,112,Senior Account Executive,2017-11-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10044,EMP10044,Sanjay,Thomas,Sanjay Thomas,sanjay.thomas414@enterprise.com,116,Enterprise Account Manager,2023-05-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10045,EMP10045,Emily,Nair,Emily Nair,emily.nair430@adventureworks.com,137,Business Development Manager,2023-07-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10046,EMP10046,Pooja,Kapoor,Pooja Kapoor,pooja.kapoor686@adventureworks.com,116,Sales Executive,2020-07-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10047,EMP10047,Sanjay,Verma,Sanjay Verma,sanjay.verma469@contoso.com,101,Regional Sales Manager,2017-10-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10048,EMP10048,Olivia,Menon,Olivia Menon,olivia.menon76@adventureworks.com,133,Sales Executive,2019-05-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10049,EMP10049,David,Nair,David Nair,david.nair901@enterprise.com,119,Account Manager,2021-02-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10050,EMP10050,Sophia,Verma,Sophia Verma,sophia.verma627@adventureworks.com,101,Business Development Manager,2022-12-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10051,EMP10051,Sanjay,Menon,Sanjay Menon,sanjay.menon962@enterprise.com,108,Senior Account Executive,2019-12-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10052,EMP10052,Anil,Joseph,Anil Joseph,anil.joseph289@adventureworks.com,146,Sales Consultant,2019-05-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10053,EMP10053,Arun,Joseph,Arun Joseph,arun.joseph518@contoso.com,104,Senior Account Executive,2019-10-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10054,EMP10054,Brian,Joseph,Brian Joseph,brian.joseph46@enterprise.com,150,Account Manager,2020-09-28,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10055,EMP10055,Pooja,Gupta,Pooja Gupta,pooja.gupta760@contoso.com,146,Territory Manager,2023-03-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10056,EMP10056,Vikram,Nair,Vikram Nair,vikram.nair968@adventureworks.com,135,Account Executive,2018-09-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10057,EMP10057,Olivia,Clark,Olivia Clark,olivia.clark152@contoso.com,103,Sales Executive,2018-06-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10058,EMP10058,Andrew,Patel,Andrew Patel,andrew.patel921@contoso.com,144,Senior Account Manager,2019-05-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10059,EMP10059,David,Clark,David Clark,david.clark906@contoso.com,148,Account Manager,2023-12-18,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10060,EMP10060,Sneha,Gupta,Sneha Gupta,sneha.gupta820@enterprise.com,102,Account Manager,2021-08-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10061,EMP10061,John,Taylor,John Taylor,john.taylor822@adventureworks.com,118,Account Manager,2019-10-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10062,EMP10062,Vikram,Brown,Vikram Brown,vikram.brown894@enterprise.com,115,Senior Account Manager,2022-04-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10063,EMP10063,Daniel,Johnson,Daniel Johnson,daniel.johnson313@enterprise.com,102,Senior Account Manager,2019-07-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10064,EMP10064,Pooja,Nair,Pooja Nair,pooja.nair991@contoso.com,142,Business Development Manager,2020-12-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10065,EMP10065,Brian,Clark,Brian Clark,brian.clark340@enterprise.com,117,Account Manager,2018-04-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10066,EMP10066,Pooja,Patel,Pooja Patel,pooja.patel112@adventureworks.com,123,Sales Consultant,2021-11-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10067,EMP10067,Emma,Menon,Emma Menon,emma.menon395@adventureworks.com,117,Account Executive,2019-02-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10068,EMP10068,Rajesh,Martin,Rajesh Martin,rajesh.martin948@adventureworks.com,147,Senior Account Manager,2024-09-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10069,EMP10069,Rahul,Smith,Rahul Smith,rahul.smith639@contoso.com,108,Sales Executive,2024-06-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10070,EMP10070,Sanjay,Taylor,Sanjay Taylor,sanjay.taylor335@contoso.com,119,Business Development Manager,2024-10-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10071,EMP10071,James,Brown,James Brown,james.brown694@adventureworks.com,140,Enterprise Account Manager,2018-12-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10072,EMP10072,Sophia,Sharma,Sophia Sharma,sophia.sharma312@contoso.com,128,Enterprise Account Manager,2019-05-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10073,EMP10073,John,Wilson,John Wilson,john.wilson453@contoso.com,114,Business Development Manager,2024-07-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10074,EMP10074,William,Gupta,William Gupta,william.gupta675@enterprise.com,133,Enterprise Account Manager,2020-03-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10075,EMP10075,Brian,Thomas,Brian Thomas,brian.thomas689@contoso.com,113,Account Manager,2019-07-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10076,EMP10076,Sneha,Anderson,Sneha Anderson,sneha.anderson626@enterprise.com,127,Enterprise Account Manager,2022-02-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10077,EMP10077,Karan,Brown,Karan Brown,karan.brown507@contoso.com,110,Account Executive,2019-09-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10078,EMP10078,Jason,Menon,Jason Menon,jason.menon798@contoso.com,112,Business Development Manager,2019-06-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10079,EMP10079,Sophia,Thomas,Sophia Thomas,sophia.thomas940@enterprise.com,109,Regional Sales Manager,2022-02-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10080,EMP10080,Sophia,Walker,Sophia Walker,sophia.walker325@contoso.com,147,Business Development Manager,2023-11-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10081,EMP10081,Andrew,Clark,Andrew Clark,andrew.clark457@enterprise.com,129,Sales Executive,2022-04-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10082,EMP10082,Brian,Joseph,Brian Joseph,brian.joseph785@adventureworks.com,141,Senior Account Manager,2022-06-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10083,EMP10083,Rahul,Verma,Rahul Verma,rahul.verma241@contoso.com,121,Business Development Manager,2020-10-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10084,EMP10084,Anil,Thomas,Anil Thomas,anil.thomas393@adventureworks.com,146,Senior Account Manager,2018-09-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10085,EMP10085,James,Smith,James Smith,james.smith556@contoso.com,104,Senior Account Manager,2021-08-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10086,EMP10086,Michael,Lewis,Michael Lewis,michael.lewis969@adventureworks.com,149,Enterprise Account Manager,2017-03-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10087,EMP10087,Rajesh,Johnson,Rajesh Johnson,rajesh.johnson306@contoso.com,135,Business Development Manager,2021-09-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10088,EMP10088,William,Thomas,William Thomas,william.thomas500@enterprise.com,128,Regional Sales Manager,2020-01-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10089,EMP10089,John,Brown,John Brown,john.brown742@enterprise.com,109,Enterprise Account Manager,2022-03-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10090,EMP10090,Andrew,Brown,Andrew Brown,andrew.brown607@adventureworks.com,102,Senior Account Executive,2024-06-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10091,EMP10091,Anil,Wilson,Anil Wilson,anil.wilson187@enterprise.com,125,Sales Consultant,2019-12-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10092,EMP10092,John,Smith,John Smith,john.smith780@contoso.com,149,Territory Manager,2020-02-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10093,EMP10093,Rahul,Anderson,Rahul Anderson,rahul.anderson20@adventureworks.com,104,Sales Consultant,2023-01-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10094,EMP10094,Rahul,Patel,Rahul Patel,rahul.patel773@enterprise.com,113,Account Executive,2019-10-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10095,EMP10095,Sneha,Reddy,Sneha Reddy,sneha.reddy485@adventureworks.com,137,Senior Account Manager,2018-04-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10096,EMP10096,Pooja,Johnson,Pooja Johnson,pooja.johnson172@adventureworks.com,148,Senior Account Executive,2023-10-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10097,EMP10097,Priya,Verma,Priya Verma,priya.verma111@adventureworks.com,120,Enterprise Account Manager,2017-04-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10098,EMP10098,Michael,Brown,Michael Brown,michael.brown965@adventureworks.com,105,Enterprise Account Manager,2019-03-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10099,EMP10099,Arun,Thomas,Arun Thomas,arun.thomas105@adventureworks.com,144,Enterprise Account Manager,2020-05-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10100,EMP10100,Kevin,Lewis,Kevin Lewis,kevin.lewis802@enterprise.com,135,Territory Manager,2020-11-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10101,EMP10101,Rahul,Martin,Rahul Martin,rahul.martin664@contoso.com,127,Regional Sales Manager,2017-02-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10102,EMP10102,David,Wilson,David Wilson,david.wilson725@enterprise.com,112,Business Development Manager,2021-11-19,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10103,EMP10103,Pooja,Walker,Pooja Walker,pooja.walker828@adventureworks.com,130,Territory Manager,2022-06-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10104,EMP10104,Olivia,Joseph,Olivia Joseph,olivia.joseph331@enterprise.com,118,Regional Sales Manager,2017-12-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10105,EMP10105,Daniel,Lewis,Daniel Lewis,daniel.lewis625@adventureworks.com,122,Account Executive,2021-04-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10106,EMP10106,John,Gupta,John Gupta,john.gupta500@enterprise.com,117,Sales Consultant,2020-12-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10107,EMP10107,Emily,Joseph,Emily Joseph,emily.joseph570@enterprise.com,113,Senior Account Executive,2022-10-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10108,EMP10108,James,Anderson,James Anderson,james.anderson569@enterprise.com,131,Regional Sales Manager,2024-09-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10109,EMP10109,Rajesh,Nair,Rajesh Nair,rajesh.nair302@enterprise.com,145,Senior Account Manager,2021-07-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10110,EMP10110,Olivia,Johnson,Olivia Johnson,olivia.johnson485@adventureworks.com,123,Territory Manager,2022-12-15,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10111,EMP10111,Sophia,Smith,Sophia Smith,sophia.smith361@adventureworks.com,118,Sales Executive,2022-02-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10112,EMP10112,Vikram,Kapoor,Vikram Kapoor,vikram.kapoor324@enterprise.com,149,Account Manager,2023-01-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10113,EMP10113,Rohit,Anderson,Rohit Anderson,rohit.anderson284@adventureworks.com,149,Business Development Manager,2023-08-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10114,EMP10114,Vikram,Kapoor,Vikram Kapoor,vikram.kapoor304@enterprise.com,112,Sales Executive,2021-01-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10115,EMP10115,Sophia,Reddy,Sophia Reddy,sophia.reddy281@enterprise.com,136,Sales Executive,2017-08-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10116,EMP10116,Anil,Anderson,Anil Anderson,anil.anderson106@enterprise.com,119,Regional Sales Manager,2023-06-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10117,EMP10117,John,Gupta,John Gupta,john.gupta989@enterprise.com,131,Senior Account Executive,2019-11-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10118,EMP10118,Michael,Anderson,Michael Anderson,michael.anderson76@adventureworks.com,144,Account Executive,2024-01-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10119,EMP10119,Kevin,Lewis,Kevin Lewis,kevin.lewis972@contoso.com,116,Senior Account Executive,2017-12-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10120,EMP10120,James,Walker,James Walker,james.walker611@adventureworks.com,150,Business Development Manager,2019-07-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10121,EMP10121,Andrew,Wilson,Andrew Wilson,andrew.wilson305@adventureworks.com,120,Enterprise Account Manager,2021-10-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10122,EMP10122,Emily,Menon,Emily Menon,emily.menon971@enterprise.com,114,Sales Executive,2024-01-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10123,EMP10123,Priya,Thomas,Priya Thomas,priya.thomas178@adventureworks.com,111,Account Executive,2017-11-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10124,EMP10124,Karan,Walker,Karan Walker,karan.walker482@contoso.com,115,Sales Executive,2017-05-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10125,EMP10125,Karan,Wilson,Karan Wilson,karan.wilson73@adventureworks.com,117,Enterprise Account Manager,2019-08-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10126,EMP10126,Andrew,Kapoor,Andrew Kapoor,andrew.kapoor436@enterprise.com,115,Account Manager,2023-02-09,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10127,EMP10127,Brian,Reddy,Brian Reddy,brian.reddy74@enterprise.com,120,Enterprise Account Manager,2018-11-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10128,EMP10128,Olivia,Verma,Olivia Verma,olivia.verma450@enterprise.com,145,Sales Executive,2022-04-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10129,EMP10129,Pooja,Martin,Pooja Martin,pooja.martin553@contoso.com,106,Enterprise Account Manager,2021-11-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10130,EMP10130,James,Smith,James Smith,james.smith619@contoso.com,106,Senior Account Manager,2017-04-16,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10131,EMP10131,Brian,Lewis,Brian Lewis,brian.lewis602@enterprise.com,118,Enterprise Account Manager,2024-07-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10132,EMP10132,Ajay,Gupta,Ajay Gupta,ajay.gupta482@adventureworks.com,129,Sales Executive,2024-04-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10133,EMP10133,Olivia,Taylor,Olivia Taylor,olivia.taylor651@contoso.com,131,Sales Consultant,2018-01-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10134,EMP10134,John,Menon,John Menon,john.menon879@enterprise.com,127,Regional Sales Manager,2020-09-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10135,EMP10135,Michael,Clark,Michael Clark,michael.clark38@contoso.com,121,Sales Executive,2017-12-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10136,EMP10136,Ajay,Brown,Ajay Brown,ajay.brown886@adventureworks.com,143,Business Development Manager,2017-01-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10137,EMP10137,Amit,Kapoor,Amit Kapoor,amit.kapoor531@contoso.com,149,Regional Sales Manager,2023-12-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10138,EMP10138,Ajay,Patel,Ajay Patel,ajay.patel209@contoso.com,109,Sales Executive,2023-02-28,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10139,EMP10139,Karan,Anderson,Karan Anderson,karan.anderson125@enterprise.com,139,Senior Account Manager,2024-01-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10140,EMP10140,Asha,Clark,Asha Clark,asha.clark15@adventureworks.com,106,Senior Account Manager,2021-07-30,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10141,EMP10141,Andrew,Menon,Andrew Menon,andrew.menon473@enterprise.com,110,Regional Sales Manager,2024-04-07,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10142,EMP10142,Asha,Martin,Asha Martin,asha.martin723@contoso.com,131,Regional Sales Manager,2021-08-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10143,EMP10143,Sophia,Reddy,Sophia Reddy,sophia.reddy393@enterprise.com,133,Account Manager,2023-09-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10144,EMP10144,Pooja,Taylor,Pooja Taylor,pooja.taylor349@adventureworks.com,101,Sales Executive,2019-12-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10145,EMP10145,Brian,Lewis,Brian Lewis,brian.lewis594@adventureworks.com,110,Regional Sales Manager,2022-06-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10146,EMP10146,David,Smith,David Smith,david.smith566@adventureworks.com,130,Sales Consultant,2021-03-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10147,EMP10147,Karan,Thomas,Karan Thomas,karan.thomas586@contoso.com,150,Territory Manager,2019-08-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10148,EMP10148,Rohit,Anderson,Rohit Anderson,rohit.anderson723@contoso.com,143,Account Manager,2021-05-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10149,EMP10149,Amit,Reddy,Amit Reddy,amit.reddy515@adventureworks.com,107,Regional Sales Manager,2020-09-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10150,EMP10150,Andrew,Wilson,Andrew Wilson,andrew.wilson16@adventureworks.com,127,Account Manager,2018-08-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10151,EMP10151,Kevin,Joseph,Kevin Joseph,kevin.joseph347@adventureworks.com,126,Senior Account Executive,2024-10-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10152,EMP10152,Jason,Clark,Jason Clark,jason.clark390@contoso.com,146,Regional Sales Manager,2024-01-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10153,EMP10153,Amit,Walker,Amit Walker,amit.walker71@enterprise.com,144,Sales Executive,2024-01-30,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10154,EMP10154,Rohit,Nair,Rohit Nair,rohit.nair445@enterprise.com,146,Senior Account Executive,2024-02-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10155,EMP10155,Karan,Verma,Karan Verma,karan.verma926@enterprise.com,121,Account Executive,2017-07-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10156,EMP10156,David,Taylor,David Taylor,david.taylor150@enterprise.com,127,Enterprise Account Manager,2022-12-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10157,EMP10157,Priya,Gupta,Priya Gupta,priya.gupta180@enterprise.com,125,Enterprise Account Manager,2023-11-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10158,EMP10158,Sarah,Lewis,Sarah Lewis,sarah.lewis147@enterprise.com,141,Sales Executive,2022-03-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10159,EMP10159,Sanjay,Sharma,Sanjay Sharma,sanjay.sharma921@contoso.com,144,Business Development Manager,2020-03-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10160,EMP10160,Daniel,Johnson,Daniel Johnson,daniel.johnson602@contoso.com,128,Sales Executive,2024-03-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10161,EMP10161,Asha,Kapoor,Asha Kapoor,asha.kapoor394@contoso.com,116,Territory Manager,2018-03-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10162,EMP10162,Olivia,Verma,Olivia Verma,olivia.verma717@contoso.com,143,Territory Manager,2017-03-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10163,EMP10163,Olivia,Patel,Olivia Patel,olivia.patel933@adventureworks.com,119,Senior Account Manager,2022-07-28,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10164,EMP10164,David,Thomas,David Thomas,david.thomas652@enterprise.com,117,Account Manager,2023-12-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10165,EMP10165,William,Patel,William Patel,william.patel317@contoso.com,138,Sales Consultant,2017-05-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10166,EMP10166,Rahul,Verma,Rahul Verma,rahul.verma335@adventureworks.com,112,Senior Account Manager,2021-08-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10167,EMP10167,Sophia,Johnson,Sophia Johnson,sophia.johnson544@adventureworks.com,111,Sales Executive,2020-01-22,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10168,EMP10168,Sarah,Verma,Sarah Verma,sarah.verma765@contoso.com,130,Senior Account Executive,2018-04-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10169,EMP10169,Sneha,Brown,Sneha Brown,sneha.brown991@adventureworks.com,106,Territory Manager,2021-02-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10170,EMP10170,Sophia,Menon,Sophia Menon,sophia.menon466@contoso.com,148,Sales Executive,2024-07-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10171,EMP10171,Brian,Johnson,Brian Johnson,brian.johnson111@adventureworks.com,131,Account Executive,2019-08-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10172,EMP10172,Sophia,Smith,Sophia Smith,sophia.smith938@adventureworks.com,142,Senior Account Executive,2019-06-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10173,EMP10173,Daniel,Verma,Daniel Verma,daniel.verma665@contoso.com,109,Account Executive,2018-04-23,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10174,EMP10174,Asha,Anderson,Asha Anderson,asha.anderson119@enterprise.com,135,Account Manager,2019-08-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10175,EMP10175,David,Clark,David Clark,david.clark430@adventureworks.com,110,Territory Manager,2025-02-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10176,EMP10176,Brian,Anderson,Brian Anderson,brian.anderson631@contoso.com,103,Sales Consultant,2020-02-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10177,EMP10177,Daniel,Thomas,Daniel Thomas,daniel.thomas876@contoso.com,144,Sales Consultant,2018-02-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10178,EMP10178,Arun,Johnson,Arun Johnson,arun.johnson63@contoso.com,113,Senior Account Executive,2020-02-05,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10179,EMP10179,Brian,Wilson,Brian Wilson,brian.wilson94@adventureworks.com,142,Enterprise Account Manager,2019-05-19,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10180,EMP10180,Amit,Smith,Amit Smith,amit.smith250@enterprise.com,114,Senior Account Executive,2023-05-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10181,EMP10181,Sophia,Kapoor,Sophia Kapoor,sophia.kapoor601@enterprise.com,122,Account Manager,2019-08-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10182,EMP10182,Emily,Sharma,Emily Sharma,emily.sharma284@enterprise.com,135,Sales Executive,2018-06-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10183,EMP10183,Vikram,Sharma,Vikram Sharma,vikram.sharma135@enterprise.com,116,Enterprise Account Manager,2021-01-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10184,EMP10184,Priya,Joseph,Priya Joseph,priya.joseph54@enterprise.com,134,Senior Account Executive,2021-09-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10185,EMP10185,Sarah,Wilson,Sarah Wilson,sarah.wilson797@contoso.com,138,Senior Account Executive,2022-10-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10186,EMP10186,Sneha,Walker,Sneha Walker,sneha.walker45@adventureworks.com,134,Sales Executive,2024-05-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10187,EMP10187,Rajesh,Patel,Rajesh Patel,rajesh.patel491@contoso.com,144,Senior Account Executive,2021-10-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10188,EMP10188,Andrew,Wilson,Andrew Wilson,andrew.wilson76@enterprise.com,139,Account Manager,2020-08-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10189,EMP10189,Pooja,Walker,Pooja Walker,pooja.walker649@adventureworks.com,146,Sales Consultant,2023-02-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10190,EMP10190,Emily,Martin,Emily Martin,emily.martin302@contoso.com,139,Territory Manager,2022-09-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10191,EMP10191,Karan,Menon,Karan Menon,karan.menon874@adventureworks.com,150,Business Development Manager,2024-04-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10192,EMP10192,Neha,Taylor,Neha Taylor,neha.taylor463@enterprise.com,122,Regional Sales Manager,2021-08-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10193,EMP10193,Rohit,Menon,Rohit Menon,rohit.menon321@contoso.com,143,Sales Executive,2020-07-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10194,EMP10194,Anil,Anderson,Anil Anderson,anil.anderson69@enterprise.com,106,Territory Manager,2017-12-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10195,EMP10195,Rohit,Johnson,Rohit Johnson,rohit.johnson832@enterprise.com,104,Enterprise Account Manager,2023-03-29,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10196,EMP10196,Sophia,Smith,Sophia Smith,sophia.smith687@enterprise.com,123,Territory Manager,2021-08-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10197,EMP10197,Rohit,Patel,Rohit Patel,rohit.patel992@contoso.com,120,Sales Consultant,2023-09-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10198,EMP10198,Emma,Kapoor,Emma Kapoor,emma.kapoor159@adventureworks.com,115,Senior Account Executive,2022-05-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10199,EMP10199,Sophia,Johnson,Sophia Johnson,sophia.johnson118@contoso.com,115,Territory Manager,2023-06-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10200,EMP10200,Ajay,Walker,Ajay Walker,ajay.walker629@adventureworks.com,136,Account Executive,2024-03-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10201,EMP10201,Sanjay,Joseph,Sanjay Joseph,sanjay.joseph30@enterprise.com,145,Sales Executive,2020-01-25,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10202,EMP10202,David,Sharma,David Sharma,david.sharma186@enterprise.com,143,Territory Manager,2023-05-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10203,EMP10203,Rohit,Sharma,Rohit Sharma,rohit.sharma94@adventureworks.com,114,Territory Manager,2022-12-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10204,EMP10204,John,Gupta,John Gupta,john.gupta379@contoso.com,121,Enterprise Account Manager,2025-02-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10205,EMP10205,William,Patel,William Patel,william.patel160@enterprise.com,104,Senior Account Executive,2023-12-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10206,EMP10206,Sanjay,Taylor,Sanjay Taylor,sanjay.taylor498@adventureworks.com,127,Sales Executive,2021-12-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10207,EMP10207,Emma,Menon,Emma Menon,emma.menon354@contoso.com,119,Enterprise Account Manager,2018-03-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10208,EMP10208,Sanjay,Verma,Sanjay Verma,sanjay.verma47@enterprise.com,139,Account Executive,2021-06-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10209,EMP10209,Asha,Kapoor,Asha Kapoor,asha.kapoor786@enterprise.com,119,Sales Consultant,2019-11-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10210,EMP10210,Sarah,Taylor,Sarah Taylor,sarah.taylor180@enterprise.com,135,Senior Account Manager,2021-04-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10211,EMP10211,Brian,Johnson,Brian Johnson,brian.johnson74@contoso.com,128,Account Executive,2017-06-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10212,EMP10212,Rahul,Smith,Rahul Smith,rahul.smith590@contoso.com,126,Territory Manager,2023-06-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10213,EMP10213,Michael,Sharma,Michael Sharma,michael.sharma990@contoso.com,140,Regional Sales Manager,2018-12-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10214,EMP10214,Andrew,Johnson,Andrew Johnson,andrew.johnson91@contoso.com,116,Territory Manager,2018-03-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10215,EMP10215,Emma,Nair,Emma Nair,emma.nair406@contoso.com,115,Sales Consultant,2020-10-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10216,EMP10216,Rahul,Martin,Rahul Martin,rahul.martin649@enterprise.com,133,Senior Account Manager,2022-12-14,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10217,EMP10217,David,Johnson,David Johnson,david.johnson745@adventureworks.com,116,Senior Account Executive,2018-08-28,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10218,EMP10218,Neha,Gupta,Neha Gupta,neha.gupta617@enterprise.com,105,Account Manager,2024-05-08,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10219,EMP10219,Arun,Anderson,Arun Anderson,arun.anderson476@adventureworks.com,129,Enterprise Account Manager,2023-07-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10220,EMP10220,Emily,Smith,Emily Smith,emily.smith885@adventureworks.com,110,Regional Sales Manager,2020-07-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10221,EMP10221,Daniel,Verma,Daniel Verma,daniel.verma816@contoso.com,104,Sales Consultant,2023-08-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10222,EMP10222,Asha,Wilson,Asha Wilson,asha.wilson463@enterprise.com,124,Sales Executive,2017-08-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10223,EMP10223,Jason,Nair,Jason Nair,jason.nair630@adventureworks.com,125,Regional Sales Manager,2022-09-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10224,EMP10224,Kevin,Patel,Kevin Patel,kevin.patel461@adventureworks.com,113,Sales Consultant,2024-04-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10225,EMP10225,Emma,Reddy,Emma Reddy,emma.reddy981@enterprise.com,107,Sales Consultant,2022-01-20,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10226,EMP10226,Rahul,Martin,Rahul Martin,rahul.martin662@enterprise.com,116,Regional Sales Manager,2017-06-10,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10227,EMP10227,Emma,Martin,Emma Martin,emma.martin625@enterprise.com,124,Sales Executive,2021-01-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10228,EMP10228,Ajay,Smith,Ajay Smith,ajay.smith696@adventureworks.com,141,Sales Consultant,2017-08-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10229,EMP10229,Vikram,Clark,Vikram Clark,vikram.clark695@contoso.com,117,Enterprise Account Manager,2020-03-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10230,EMP10230,John,Nair,John Nair,john.nair597@adventureworks.com,123,Sales Executive,2018-08-03,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10231,EMP10231,Karan,Brown,Karan Brown,karan.brown133@adventureworks.com,106,Sales Executive,2024-12-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10232,EMP10232,Arun,Smith,Arun Smith,arun.smith833@enterprise.com,145,Business Development Manager,2024-07-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10233,EMP10233,Sanjay,Taylor,Sanjay Taylor,sanjay.taylor521@contoso.com,124,Sales Executive,2017-03-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10234,EMP10234,Neha,Smith,Neha Smith,neha.smith971@contoso.com,115,Account Manager,2019-02-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10235,EMP10235,Asha,Menon,Asha Menon,asha.menon520@adventureworks.com,103,Sales Consultant,2022-11-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10236,EMP10236,Emily,Reddy,Emily Reddy,emily.reddy612@contoso.com,111,Account Manager,2018-09-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10237,EMP10237,Ajay,Walker,Ajay Walker,ajay.walker829@enterprise.com,129,Account Executive,2025-02-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10238,EMP10238,Sanjay,Thomas,Sanjay Thomas,sanjay.thomas993@contoso.com,119,Regional Sales Manager,2023-11-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10239,EMP10239,Sneha,Verma,Sneha Verma,sneha.verma989@contoso.com,124,Enterprise Account Manager,2019-03-06,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10240,EMP10240,Daniel,Verma,Daniel Verma,daniel.verma797@contoso.com,134,Territory Manager,2022-08-22,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10241,EMP10241,Brian,Kapoor,Brian Kapoor,brian.kapoor821@adventureworks.com,117,Account Executive,2018-07-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10242,EMP10242,Jason,Johnson,Jason Johnson,jason.johnson568@enterprise.com,134,Senior Account Executive,2024-12-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10243,EMP10243,Ajay,Gupta,Ajay Gupta,ajay.gupta280@contoso.com,110,Territory Manager,2022-10-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10244,EMP10244,Andrew,Thomas,Andrew Thomas,andrew.thomas837@contoso.com,102,Territory Manager,2020-12-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10245,EMP10245,Emma,Johnson,Emma Johnson,emma.johnson242@contoso.com,124,Senior Account Manager,2017-12-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10246,EMP10246,Andrew,Menon,Andrew Menon,andrew.menon860@adventureworks.com,122,Account Manager,2024-04-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10247,EMP10247,Asha,Anderson,Asha Anderson,asha.anderson713@enterprise.com,131,Regional Sales Manager,2024-11-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10248,EMP10248,William,Nair,William Nair,william.nair20@contoso.com,110,Business Development Manager,2019-06-03,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10249,EMP10249,Emily,Martin,Emily Martin,emily.martin434@enterprise.com,116,Sales Executive,2020-03-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10250,EMP10250,Sneha,Taylor,Sneha Taylor,sneha.taylor655@adventureworks.com,105,Senior Account Executive,2022-02-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10251,EMP10251,Sarah,Walker,Sarah Walker,sarah.walker549@enterprise.com,133,Enterprise Account Manager,2024-02-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10252,EMP10252,Anil,Verma,Anil Verma,anil.verma440@enterprise.com,123,Senior Account Manager,2023-11-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10253,EMP10253,Priya,Nair,Priya Nair,priya.nair537@contoso.com,134,Business Development Manager,2017-10-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10254,EMP10254,Emma,Clark,Emma Clark,emma.clark21@contoso.com,103,Territory Manager,2022-04-10,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10255,EMP10255,Pooja,Sharma,Pooja Sharma,pooja.sharma366@enterprise.com,116,Senior Account Executive,2020-11-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10256,EMP10256,Rohit,Smith,Rohit Smith,rohit.smith137@enterprise.com,135,Sales Consultant,2020-12-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10257,EMP10257,Priya,Wilson,Priya Wilson,priya.wilson713@contoso.com,112,Account Manager,2024-02-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10258,EMP10258,Ajay,Wilson,Ajay Wilson,ajay.wilson38@contoso.com,103,Senior Account Manager,2019-04-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10259,EMP10259,John,Verma,John Verma,john.verma528@contoso.com,131,Sales Executive,2023-02-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10260,EMP10260,Arun,Kapoor,Arun Kapoor,arun.kapoor293@contoso.com,142,Sales Consultant,2017-07-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10261,EMP10261,Kevin,Johnson,Kevin Johnson,kevin.johnson448@contoso.com,125,Sales Consultant,2021-12-07,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10262,EMP10262,Sarah,Anderson,Sarah Anderson,sarah.anderson377@adventureworks.com,106,Territory Manager,2019-12-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10263,EMP10263,Emily,Gupta,Emily Gupta,emily.gupta559@contoso.com,107,Senior Account Executive,2020-08-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10264,EMP10264,Asha,Verma,Asha Verma,asha.verma457@adventureworks.com,128,Account Manager,2025-01-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10265,EMP10265,David,Wilson,David Wilson,david.wilson44@adventureworks.com,140,Territory Manager,2020-12-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10266,EMP10266,Kevin,Patel,Kevin Patel,kevin.patel77@adventureworks.com,126,Sales Consultant,2024-02-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10267,EMP10267,Rohit,Gupta,Rohit Gupta,rohit.gupta976@enterprise.com,139,Regional Sales Manager,2018-08-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10268,EMP10268,Rahul,Thomas,Rahul Thomas,rahul.thomas798@adventureworks.com,124,Territory Manager,2021-02-09,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10269,EMP10269,Amit,Walker,Amit Walker,amit.walker158@adventureworks.com,124,Sales Consultant,2022-01-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10270,EMP10270,Rahul,Lewis,Rahul Lewis,rahul.lewis141@adventureworks.com,126,Sales Consultant,2021-02-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10271,EMP10271,Sneha,Menon,Sneha Menon,sneha.menon27@adventureworks.com,132,Business Development Manager,2019-02-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10272,EMP10272,Sophia,Menon,Sophia Menon,sophia.menon269@contoso.com,129,Senior Account Manager,2024-11-23,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10273,EMP10273,Asha,Anderson,Asha Anderson,asha.anderson205@enterprise.com,105,Regional Sales Manager,2018-07-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10274,EMP10274,Karan,Wilson,Karan Wilson,karan.wilson90@adventureworks.com,143,Sales Consultant,2020-08-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10275,EMP10275,Sophia,Clark,Sophia Clark,sophia.clark298@contoso.com,146,Account Manager,2018-10-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10276,EMP10276,Emma,Thomas,Emma Thomas,emma.thomas125@enterprise.com,116,Regional Sales Manager,2018-07-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10277,EMP10277,Sophia,Lewis,Sophia Lewis,sophia.lewis378@contoso.com,109,Enterprise Account Manager,2023-03-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10278,EMP10278,Rahul,Verma,Rahul Verma,rahul.verma408@adventureworks.com,131,Business Development Manager,2025-01-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10279,EMP10279,James,Lewis,James Lewis,james.lewis76@enterprise.com,142,Senior Account Executive,2020-07-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10280,EMP10280,Sanjay,Martin,Sanjay Martin,sanjay.martin353@enterprise.com,141,Enterprise Account Manager,2023-03-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10281,EMP10281,Anil,Taylor,Anil Taylor,anil.taylor515@enterprise.com,134,Account Manager,2018-05-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10282,EMP10282,Priya,Smith,Priya Smith,priya.smith958@adventureworks.com,123,Business Development Manager,2019-07-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10283,EMP10283,Jason,Nair,Jason Nair,jason.nair257@enterprise.com,136,Sales Executive,2024-02-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10284,EMP10284,Asha,Walker,Asha Walker,asha.walker547@enterprise.com,142,Account Manager,2022-08-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10285,EMP10285,Olivia,Reddy,Olivia Reddy,olivia.reddy176@adventureworks.com,147,Enterprise Account Manager,2024-01-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10286,EMP10286,Andrew,Lewis,Andrew Lewis,andrew.lewis43@enterprise.com,103,Enterprise Account Manager,2017-11-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10287,EMP10287,Neha,Lewis,Neha Lewis,neha.lewis427@adventureworks.com,102,Regional Sales Manager,2024-03-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10288,EMP10288,Sophia,Verma,Sophia Verma,sophia.verma658@contoso.com,116,Territory Manager,2022-06-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10289,EMP10289,Rahul,Patel,Rahul Patel,rahul.patel162@contoso.com,131,Regional Sales Manager,2021-08-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10290,EMP10290,Emily,Reddy,Emily Reddy,emily.reddy321@adventureworks.com,147,Sales Consultant,2020-07-31,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10291,EMP10291,Anil,Johnson,Anil Johnson,anil.johnson528@adventureworks.com,121,Senior Account Manager,2018-03-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10292,EMP10292,Pooja,Wilson,Pooja Wilson,pooja.wilson254@enterprise.com,104,Sales Executive,2018-02-01,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10293,EMP10293,Jason,Walker,Jason Walker,jason.walker429@enterprise.com,121,Enterprise Account Manager,2018-10-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10294,EMP10294,Neha,Gupta,Neha Gupta,neha.gupta511@adventureworks.com,132,Sales Executive,2022-03-28,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10295,EMP10295,Rahul,Brown,Rahul Brown,rahul.brown518@contoso.com,114,Enterprise Account Manager,2019-09-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10296,EMP10296,Amit,Verma,Amit Verma,amit.verma507@adventureworks.com,144,Regional Sales Manager,2024-05-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10297,EMP10297,Rajesh,Menon,Rajesh Menon,rajesh.menon442@enterprise.com,147,Sales Consultant,2019-12-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10298,EMP10298,David,Patel,David Patel,david.patel411@enterprise.com,136,Senior Account Manager,2023-05-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10299,EMP10299,Asha,Nair,Asha Nair,asha.nair396@adventureworks.com,149,Business Development Manager,2022-01-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10300,EMP10300,Emily,Walker,Emily Walker,emily.walker122@enterprise.com,126,Sales Consultant,2018-02-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10301,EMP10301,John,Clark,John Clark,john.clark962@contoso.com,113,Enterprise Account Manager,2018-08-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10302,EMP10302,Emma,Patel,Emma Patel,emma.patel47@enterprise.com,146,Sales Consultant,2018-07-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10303,EMP10303,Emma,Wilson,Emma Wilson,emma.wilson153@adventureworks.com,109,Sales Consultant,2022-10-13,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10304,EMP10304,John,Gupta,John Gupta,john.gupta403@adventureworks.com,138,Sales Consultant,2020-05-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10305,EMP10305,Emma,Clark,Emma Clark,emma.clark502@adventureworks.com,120,Regional Sales Manager,2023-04-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10306,EMP10306,David,Smith,David Smith,david.smith690@enterprise.com,138,Sales Executive,2021-09-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10307,EMP10307,Rohit,Sharma,Rohit Sharma,rohit.sharma612@contoso.com,142,Enterprise Account Manager,2019-12-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10308,EMP10308,Rohit,Patel,Rohit Patel,rohit.patel598@contoso.com,134,Enterprise Account Manager,2018-11-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10309,EMP10309,Michael,Reddy,Michael Reddy,michael.reddy842@adventureworks.com,103,Enterprise Account Manager,2019-09-20,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10310,EMP10310,Vikram,Kapoor,Vikram Kapoor,vikram.kapoor20@contoso.com,127,Account Manager,2020-07-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10311,EMP10311,Neha,Taylor,Neha Taylor,neha.taylor514@adventureworks.com,148,Account Executive,2022-04-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10312,EMP10312,Emma,Kapoor,Emma Kapoor,emma.kapoor575@contoso.com,131,Business Development Manager,2024-06-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10313,EMP10313,Priya,Wilson,Priya Wilson,priya.wilson935@adventureworks.com,135,Sales Consultant,2020-11-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10314,EMP10314,Jason,Joseph,Jason Joseph,jason.joseph625@contoso.com,116,Sales Executive,2019-02-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10315,EMP10315,Sneha,Verma,Sneha Verma,sneha.verma790@contoso.com,114,Regional Sales Manager,2024-11-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10316,EMP10316,David,Clark,David Clark,david.clark957@adventureworks.com,119,Senior Account Executive,2020-01-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10317,EMP10317,Sophia,Brown,Sophia Brown,sophia.brown918@contoso.com,150,Account Manager,2020-11-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10318,EMP10318,Asha,Nair,Asha Nair,asha.nair355@contoso.com,117,Regional Sales Manager,2024-05-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10319,EMP10319,Brian,Clark,Brian Clark,brian.clark278@adventureworks.com,118,Account Manager,2024-10-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10320,EMP10320,Rohit,Lewis,Rohit Lewis,rohit.lewis246@enterprise.com,143,Business Development Manager,2017-07-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10321,EMP10321,Sneha,Patel,Sneha Patel,sneha.patel103@contoso.com,146,Regional Sales Manager,2020-09-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10322,EMP10322,Ajay,Reddy,Ajay Reddy,ajay.reddy6@adventureworks.com,127,Regional Sales Manager,2018-10-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10323,EMP10323,Neha,Verma,Neha Verma,neha.verma329@contoso.com,104,Senior Account Executive,2024-03-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10324,EMP10324,Sneha,Clark,Sneha Clark,sneha.clark757@adventureworks.com,112,Territory Manager,2017-06-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10325,EMP10325,Priya,Patel,Priya Patel,priya.patel857@contoso.com,112,Sales Executive,2022-07-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10326,EMP10326,Rajesh,Verma,Rajesh Verma,rajesh.verma582@adventureworks.com,122,Sales Executive,2018-03-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10327,EMP10327,Arun,Clark,Arun Clark,arun.clark537@contoso.com,133,Regional Sales Manager,2018-07-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10328,EMP10328,Kevin,Menon,Kevin Menon,kevin.menon339@enterprise.com,130,Sales Executive,2025-03-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10329,EMP10329,Rajesh,Smith,Rajesh Smith,rajesh.smith810@contoso.com,144,Senior Account Manager,2023-05-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10330,EMP10330,Jason,Brown,Jason Brown,jason.brown847@contoso.com,121,Senior Account Executive,2022-10-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10331,EMP10331,Vikram,Gupta,Vikram Gupta,vikram.gupta144@contoso.com,116,Account Executive,2020-08-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10332,EMP10332,Sneha,Wilson,Sneha Wilson,sneha.wilson772@contoso.com,120,Enterprise Account Manager,2020-09-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10333,EMP10333,Rajesh,Joseph,Rajesh Joseph,rajesh.joseph670@contoso.com,116,Account Executive,2024-10-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10334,EMP10334,Daniel,Verma,Daniel Verma,daniel.verma164@contoso.com,133,Sales Executive,2024-09-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10335,EMP10335,Arun,Verma,Arun Verma,arun.verma377@adventureworks.com,115,Account Manager,2019-06-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10336,EMP10336,Daniel,Walker,Daniel Walker,daniel.walker383@contoso.com,136,Regional Sales Manager,2024-11-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10337,EMP10337,Kevin,Kapoor,Kevin Kapoor,kevin.kapoor781@enterprise.com,149,Enterprise Account Manager,2024-08-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10338,EMP10338,Rahul,Martin,Rahul Martin,rahul.martin458@adventureworks.com,124,Senior Account Executive,2024-11-22,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10339,EMP10339,Vikram,Patel,Vikram Patel,vikram.patel849@adventureworks.com,113,Enterprise Account Manager,2022-09-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10340,EMP10340,Priya,Smith,Priya Smith,priya.smith875@adventureworks.com,108,Senior Account Manager,2021-12-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10341,EMP10341,Sarah,Nair,Sarah Nair,sarah.nair921@adventureworks.com,104,Regional Sales Manager,2021-12-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10342,EMP10342,James,Wilson,James Wilson,james.wilson578@enterprise.com,130,Sales Executive,2023-04-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10343,EMP10343,Michael,Joseph,Michael Joseph,michael.joseph837@enterprise.com,138,Senior Account Executive,2019-06-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10344,EMP10344,David,Nair,David Nair,david.nair555@enterprise.com,131,Account Executive,2017-10-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10345,EMP10345,Priya,Reddy,Priya Reddy,priya.reddy785@adventureworks.com,142,Territory Manager,2025-03-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10346,EMP10346,William,Brown,William Brown,william.brown460@contoso.com,106,Business Development Manager,2021-03-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10347,EMP10347,Jason,Johnson,Jason Johnson,jason.johnson122@enterprise.com,126,Business Development Manager,2023-01-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10348,EMP10348,Sneha,Sharma,Sneha Sharma,sneha.sharma775@enterprise.com,130,Business Development Manager,2020-05-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10349,EMP10349,Michael,Thomas,Michael Thomas,michael.thomas254@contoso.com,110,Sales Executive,2020-11-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10350,EMP10350,William,Menon,William Menon,william.menon33@adventureworks.com,140,Account Executive,2021-09-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10351,EMP10351,Rahul,Menon,Rahul Menon,rahul.menon609@enterprise.com,139,Account Executive,2022-01-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10352,EMP10352,Amit,Brown,Amit Brown,amit.brown450@enterprise.com,114,Account Executive,2023-01-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10353,EMP10353,Asha,Thomas,Asha Thomas,asha.thomas836@adventureworks.com,121,Enterprise Account Manager,2023-06-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10354,EMP10354,Sanjay,Smith,Sanjay Smith,sanjay.smith243@contoso.com,143,Business Development Manager,2018-08-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10355,EMP10355,Asha,Joseph,Asha Joseph,asha.joseph63@adventureworks.com,148,Account Manager,2023-08-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10356,EMP10356,James,Clark,James Clark,james.clark508@enterprise.com,142,Territory Manager,2020-11-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10357,EMP10357,John,Taylor,John Taylor,john.taylor419@enterprise.com,125,Account Manager,2020-05-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10358,EMP10358,Sarah,Thomas,Sarah Thomas,sarah.thomas870@enterprise.com,146,Account Manager,2020-05-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10359,EMP10359,Andrew,Patel,Andrew Patel,andrew.patel576@contoso.com,136,Business Development Manager,2021-09-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10360,EMP10360,Sneha,Joseph,Sneha Joseph,sneha.joseph209@contoso.com,106,Regional Sales Manager,2024-04-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10361,EMP10361,Rahul,Clark,Rahul Clark,rahul.clark742@enterprise.com,118,Territory Manager,2017-07-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10362,EMP10362,Emily,Patel,Emily Patel,emily.patel895@enterprise.com,149,Enterprise Account Manager,2019-02-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10363,EMP10363,Sophia,Kapoor,Sophia Kapoor,sophia.kapoor491@enterprise.com,120,Account Executive,2020-09-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10364,EMP10364,Neha,Menon,Neha Menon,neha.menon765@contoso.com,145,Enterprise Account Manager,2019-09-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10365,EMP10365,Michael,Thomas,Michael Thomas,michael.thomas566@contoso.com,125,Regional Sales Manager,2020-03-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10366,EMP10366,David,Verma,David Verma,david.verma268@contoso.com,132,Regional Sales Manager,2022-10-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10367,EMP10367,Rohit,Anderson,Rohit Anderson,rohit.anderson780@contoso.com,124,Sales Consultant,2019-04-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10368,EMP10368,Olivia,Thomas,Olivia Thomas,olivia.thomas760@enterprise.com,117,Business Development Manager,2017-03-08,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10369,EMP10369,Olivia,Taylor,Olivia Taylor,olivia.taylor303@enterprise.com,122,Senior Account Manager,2019-03-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10370,EMP10370,Brian,Thomas,Brian Thomas,brian.thomas512@adventureworks.com,144,Sales Consultant,2024-05-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10371,EMP10371,Brian,Anderson,Brian Anderson,brian.anderson990@adventureworks.com,148,Regional Sales Manager,2024-03-13,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10372,EMP10372,Rohit,Johnson,Rohit Johnson,rohit.johnson174@enterprise.com,135,Regional Sales Manager,2025-01-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10373,EMP10373,William,Clark,William Clark,william.clark658@enterprise.com,103,Senior Account Executive,2022-11-17,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10374,EMP10374,Sanjay,Patel,Sanjay Patel,sanjay.patel783@enterprise.com,109,Senior Account Manager,2021-08-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10375,EMP10375,Anil,Sharma,Anil Sharma,anil.sharma224@adventureworks.com,124,Account Executive,2022-02-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10376,EMP10376,Sanjay,Walker,Sanjay Walker,sanjay.walker935@contoso.com,132,Account Executive,2024-05-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10377,EMP10377,Sophia,Taylor,Sophia Taylor,sophia.taylor13@enterprise.com,147,Sales Executive,2022-12-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10378,EMP10378,Asha,Sharma,Asha Sharma,asha.sharma515@adventureworks.com,128,Account Manager,2024-07-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10379,EMP10379,Vikram,Martin,Vikram Martin,vikram.martin153@enterprise.com,140,Business Development Manager,2019-02-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10380,EMP10380,David,Joseph,David Joseph,david.joseph815@contoso.com,124,Territory Manager,2017-11-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10381,EMP10381,Sneha,Thomas,Sneha Thomas,sneha.thomas308@adventureworks.com,142,Account Executive,2017-11-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10382,EMP10382,Michael,Brown,Michael Brown,michael.brown566@contoso.com,141,Account Executive,2017-08-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10383,EMP10383,Rahul,Anderson,Rahul Anderson,rahul.anderson866@contoso.com,122,Enterprise Account Manager,2024-03-26,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10384,EMP10384,Vikram,Martin,Vikram Martin,vikram.martin942@enterprise.com,114,Enterprise Account Manager,2019-07-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10385,EMP10385,Amit,Nair,Amit Nair,amit.nair701@contoso.com,137,Account Executive,2023-02-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10386,EMP10386,Jason,Smith,Jason Smith,jason.smith17@enterprise.com,110,Territory Manager,2023-08-02,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10387,EMP10387,Asha,Gupta,Asha Gupta,asha.gupta578@enterprise.com,125,Business Development Manager,2023-05-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10388,EMP10388,Ajay,Reddy,Ajay Reddy,ajay.reddy810@adventureworks.com,106,Business Development Manager,2025-02-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10389,EMP10389,David,Patel,David Patel,david.patel101@contoso.com,105,Sales Consultant,2019-08-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10390,EMP10390,Emily,Walker,Emily Walker,emily.walker407@contoso.com,141,Sales Executive,2017-05-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10391,EMP10391,Daniel,Anderson,Daniel Anderson,daniel.anderson234@contoso.com,125,Territory Manager,2023-03-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10392,EMP10392,Olivia,Brown,Olivia Brown,olivia.brown88@adventureworks.com,116,Senior Account Executive,2020-04-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10393,EMP10393,Anil,Brown,Anil Brown,anil.brown729@adventureworks.com,148,Territory Manager,2018-09-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10394,EMP10394,Vikram,Nair,Vikram Nair,vikram.nair6@contoso.com,124,Sales Executive,2021-12-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10395,EMP10395,Rahul,Gupta,Rahul Gupta,rahul.gupta442@contoso.com,136,Business Development Manager,2023-04-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10396,EMP10396,Rajesh,Nair,Rajesh Nair,rajesh.nair363@adventureworks.com,139,Enterprise Account Manager,2018-01-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10397,EMP10397,Jason,Brown,Jason Brown,jason.brown13@contoso.com,125,Senior Account Executive,2021-08-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10398,EMP10398,Sophia,Thomas,Sophia Thomas,sophia.thomas586@adventureworks.com,144,Territory Manager,2018-11-26,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10399,EMP10399,Pooja,Verma,Pooja Verma,pooja.verma275@contoso.com,105,Account Manager,2018-08-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10400,EMP10400,James,Verma,James Verma,james.verma496@enterprise.com,117,Senior Account Manager,2021-01-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10401,EMP10401,Sarah,Walker,Sarah Walker,sarah.walker632@enterprise.com,107,Account Manager,2022-02-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10402,EMP10402,Michael,Smith,Michael Smith,michael.smith862@adventureworks.com,122,Regional Sales Manager,2021-04-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10403,EMP10403,Brian,Walker,Brian Walker,brian.walker140@contoso.com,139,Senior Account Manager,2020-08-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10404,EMP10404,Priya,Brown,Priya Brown,priya.brown992@contoso.com,148,Regional Sales Manager,2020-04-08,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10405,EMP10405,Kevin,Thomas,Kevin Thomas,kevin.thomas334@contoso.com,126,Sales Consultant,2020-02-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10406,EMP10406,Olivia,Kapoor,Olivia Kapoor,olivia.kapoor607@adventureworks.com,144,Business Development Manager,2019-01-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10407,EMP10407,Rohit,Wilson,Rohit Wilson,rohit.wilson966@adventureworks.com,129,Sales Executive,2019-05-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10408,EMP10408,Rahul,Taylor,Rahul Taylor,rahul.taylor690@contoso.com,141,Sales Executive,2018-07-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10409,EMP10409,Sanjay,Reddy,Sanjay Reddy,sanjay.reddy733@contoso.com,105,Regional Sales Manager,2021-03-25,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10410,EMP10410,Sarah,Lewis,Sarah Lewis,sarah.lewis411@adventureworks.com,145,Territory Manager,2022-09-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10411,EMP10411,Kevin,Johnson,Kevin Johnson,kevin.johnson719@adventureworks.com,141,Senior Account Executive,2023-08-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10412,EMP10412,Sneha,Johnson,Sneha Johnson,sneha.johnson171@adventureworks.com,103,Enterprise Account Manager,2023-11-15,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10413,EMP10413,Sanjay,Brown,Sanjay Brown,sanjay.brown991@contoso.com,107,Account Executive,2021-10-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10414,EMP10414,Sneha,Martin,Sneha Martin,sneha.martin765@adventureworks.com,138,Enterprise Account Manager,2023-04-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10415,EMP10415,David,Brown,David Brown,david.brown475@adventureworks.com,145,Business Development Manager,2023-08-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10416,EMP10416,Rajesh,Anderson,Rajesh Anderson,rajesh.anderson108@contoso.com,106,Senior Account Executive,2021-08-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10417,EMP10417,Rohit,Reddy,Rohit Reddy,rohit.reddy357@contoso.com,130,Senior Account Manager,2020-11-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10418,EMP10418,David,Anderson,David Anderson,david.anderson100@contoso.com,145,Regional Sales Manager,2025-02-05,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10419,EMP10419,Asha,Patel,Asha Patel,asha.patel830@adventureworks.com,102,Sales Consultant,2018-04-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10420,EMP10420,Sanjay,Gupta,Sanjay Gupta,sanjay.gupta953@adventureworks.com,134,Account Manager,2019-09-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10421,EMP10421,John,Clark,John Clark,john.clark437@contoso.com,126,Account Manager,2019-08-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10422,EMP10422,Sanjay,Taylor,Sanjay Taylor,sanjay.taylor406@enterprise.com,113,Regional Sales Manager,2023-11-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10423,EMP10423,Michael,Sharma,Michael Sharma,michael.sharma722@enterprise.com,118,Senior Account Executive,2019-04-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10424,EMP10424,Kevin,Clark,Kevin Clark,kevin.clark192@contoso.com,113,Regional Sales Manager,2020-08-28,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10425,EMP10425,Sanjay,Anderson,Sanjay Anderson,sanjay.anderson541@adventureworks.com,139,Territory Manager,2020-07-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10426,EMP10426,Olivia,Menon,Olivia Menon,olivia.menon357@contoso.com,140,Account Manager,2022-02-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10427,EMP10427,Karan,Verma,Karan Verma,karan.verma941@adventureworks.com,106,Account Manager,2023-08-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10428,EMP10428,Sneha,Verma,Sneha Verma,sneha.verma120@enterprise.com,145,Account Manager,2021-03-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10429,EMP10429,James,Walker,James Walker,james.walker142@adventureworks.com,128,Account Manager,2021-04-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10430,EMP10430,Sophia,Gupta,Sophia Gupta,sophia.gupta569@enterprise.com,119,Account Manager,2022-06-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10431,EMP10431,Brian,Wilson,Brian Wilson,brian.wilson635@enterprise.com,101,Regional Sales Manager,2021-01-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10432,EMP10432,Brian,Brown,Brian Brown,brian.brown987@adventureworks.com,142,Regional Sales Manager,2022-09-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10433,EMP10433,Sarah,Taylor,Sarah Taylor,sarah.taylor728@contoso.com,111,Senior Account Executive,2022-06-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10434,EMP10434,Kevin,Thomas,Kevin Thomas,kevin.thomas300@enterprise.com,115,Business Development Manager,2020-01-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10435,EMP10435,Ajay,Wilson,Ajay Wilson,ajay.wilson580@adventureworks.com,136,Business Development Manager,2022-07-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10436,EMP10436,Vikram,Joseph,Vikram Joseph,vikram.joseph794@adventureworks.com,135,Account Executive,2021-02-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10437,EMP10437,Daniel,Clark,Daniel Clark,daniel.clark224@contoso.com,148,Senior Account Manager,2018-02-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10438,EMP10438,Amit,Wilson,Amit Wilson,amit.wilson270@contoso.com,129,Senior Account Executive,2017-12-23,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10439,EMP10439,Sneha,Kapoor,Sneha Kapoor,sneha.kapoor831@adventureworks.com,145,Sales Consultant,2023-08-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10440,EMP10440,Emily,Taylor,Emily Taylor,emily.taylor170@adventureworks.com,114,Senior Account Manager,2018-07-25,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10441,EMP10441,Olivia,Johnson,Olivia Johnson,olivia.johnson546@contoso.com,135,Account Manager,2023-09-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10442,EMP10442,Karan,Verma,Karan Verma,karan.verma297@adventureworks.com,133,Senior Account Executive,2020-01-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10443,EMP10443,Ajay,Taylor,Ajay Taylor,ajay.taylor941@enterprise.com,142,Account Manager,2020-02-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10444,EMP10444,Anil,Thomas,Anil Thomas,anil.thomas150@adventureworks.com,116,Territory Manager,2020-08-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10445,EMP10445,Olivia,Joseph,Olivia Joseph,olivia.joseph643@contoso.com,129,Senior Account Executive,2021-03-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10446,EMP10446,William,Nair,William Nair,william.nair413@adventureworks.com,145,Sales Consultant,2020-02-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10447,EMP10447,Sarah,Smith,Sarah Smith,sarah.smith596@enterprise.com,147,Regional Sales Manager,2018-01-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10448,EMP10448,Karan,Johnson,Karan Johnson,karan.johnson871@enterprise.com,126,Senior Account Manager,2022-12-30,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10449,EMP10449,Brian,Kapoor,Brian Kapoor,brian.kapoor507@contoso.com,119,Sales Consultant,2020-08-15,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10450,EMP10450,Anil,Lewis,Anil Lewis,anil.lewis873@contoso.com,144,Account Executive,2020-11-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10451,EMP10451,Arun,Wilson,Arun Wilson,arun.wilson17@enterprise.com,129,Regional Sales Manager,2018-10-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10452,EMP10452,James,Kapoor,James Kapoor,james.kapoor706@enterprise.com,120,Account Manager,2024-04-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10453,EMP10453,William,Joseph,William Joseph,william.joseph96@adventureworks.com,117,Senior Account Executive,2021-01-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10454,EMP10454,William,Gupta,William Gupta,william.gupta54@contoso.com,120,Senior Account Manager,2024-01-07,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10455,EMP10455,Rahul,Menon,Rahul Menon,rahul.menon2@enterprise.com,105,Account Manager,2022-05-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10456,EMP10456,Emma,Wilson,Emma Wilson,emma.wilson10@enterprise.com,122,Senior Account Executive,2024-10-20,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10457,EMP10457,James,Reddy,James Reddy,james.reddy490@enterprise.com,125,Senior Account Executive,2019-07-27,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10458,EMP10458,Vikram,Menon,Vikram Menon,vikram.menon321@contoso.com,109,Territory Manager,2020-05-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10459,EMP10459,Ajay,Reddy,Ajay Reddy,ajay.reddy657@adventureworks.com,105,Business Development Manager,2018-08-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10460,EMP10460,Emily,Gupta,Emily Gupta,emily.gupta451@contoso.com,114,Account Manager,2025-02-07,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10461,EMP10461,Emily,Wilson,Emily Wilson,emily.wilson881@enterprise.com,107,Account Manager,2017-12-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10462,EMP10462,Olivia,Brown,Olivia Brown,olivia.brown360@contoso.com,109,Senior Account Manager,2020-07-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10463,EMP10463,Rahul,Thomas,Rahul Thomas,rahul.thomas567@adventureworks.com,147,Enterprise Account Manager,2023-09-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10464,EMP10464,Karan,Sharma,Karan Sharma,karan.sharma869@adventureworks.com,114,Business Development Manager,2020-05-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10465,EMP10465,Neha,Brown,Neha Brown,neha.brown303@adventureworks.com,116,Regional Sales Manager,2017-08-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10466,EMP10466,Sneha,Anderson,Sneha Anderson,sneha.anderson654@adventureworks.com,134,Account Executive,2017-10-18,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10467,EMP10467,Andrew,Smith,Andrew Smith,andrew.smith136@contoso.com,127,Sales Consultant,2023-05-18,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10468,EMP10468,Priya,Anderson,Priya Anderson,priya.anderson978@enterprise.com,138,Senior Account Executive,2017-03-10,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10469,EMP10469,Neha,Patel,Neha Patel,neha.patel945@enterprise.com,133,Sales Executive,2021-06-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10470,EMP10470,Emma,Taylor,Emma Taylor,emma.taylor434@adventureworks.com,106,Business Development Manager,2021-07-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10471,EMP10471,Anil,Joseph,Anil Joseph,anil.joseph86@contoso.com,133,Senior Account Manager,2017-11-20,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10472,EMP10472,Anil,Clark,Anil Clark,anil.clark335@contoso.com,141,Senior Account Executive,2023-07-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10473,EMP10473,James,Thomas,James Thomas,james.thomas60@enterprise.com,128,Senior Account Executive,2017-12-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10474,EMP10474,Emily,Patel,Emily Patel,emily.patel317@adventureworks.com,148,Account Manager,2024-05-19,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10475,EMP10475,Karan,Reddy,Karan Reddy,karan.reddy719@enterprise.com,132,Sales Consultant,2018-11-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10476,EMP10476,Kevin,Joseph,Kevin Joseph,kevin.joseph171@contoso.com,148,Sales Executive,2018-06-04,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10477,EMP10477,Vikram,Sharma,Vikram Sharma,vikram.sharma344@contoso.com,134,Senior Account Executive,2020-01-20,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10478,EMP10478,Olivia,Nair,Olivia Nair,olivia.nair509@contoso.com,124,Account Executive,2022-09-24,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10479,EMP10479,Olivia,Gupta,Olivia Gupta,olivia.gupta377@enterprise.com,150,Senior Account Executive,2019-11-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10480,EMP10480,Sanjay,Menon,Sanjay Menon,sanjay.menon234@adventureworks.com,101,Account Executive,2022-09-16,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10481,EMP10481,Rajesh,Thomas,Rajesh Thomas,rajesh.thomas48@contoso.com,125,Account Manager,2021-01-30,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10482,EMP10482,Jason,Patel,Jason Patel,jason.patel567@adventureworks.com,127,Senior Account Manager,2024-05-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10483,EMP10483,James,Smith,James Smith,james.smith278@enterprise.com,124,Senior Account Executive,2023-05-31,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10484,EMP10484,William,Patel,William Patel,william.patel184@enterprise.com,103,Territory Manager,2022-10-14,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10485,EMP10485,Daniel,Verma,Daniel Verma,daniel.verma793@contoso.com,106,Business Development Manager,2020-09-02,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10486,EMP10486,David,Kapoor,David Kapoor,david.kapoor299@adventureworks.com,148,Enterprise Account Manager,2020-05-29,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10487,EMP10487,David,Lewis,David Lewis,david.lewis996@contoso.com,147,Business Development Manager,2019-03-12,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10488,EMP10488,Sneha,Reddy,Sneha Reddy,sneha.reddy7@contoso.com,115,Business Development Manager,2017-04-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10489,EMP10489,Brian,Sharma,Brian Sharma,brian.sharma974@contoso.com,149,Territory Manager,2017-01-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10490,EMP10490,Rohit,Verma,Rohit Verma,rohit.verma107@enterprise.com,116,Territory Manager,2022-12-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10491,EMP10491,Amit,Reddy,Amit Reddy,amit.reddy729@contoso.com,103,Senior Account Manager,2018-01-17,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10492,EMP10492,Emma,Taylor,Emma Taylor,emma.taylor718@contoso.com,148,Senior Account Executive,2022-02-21,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10493,EMP10493,Emma,Reddy,Emma Reddy,emma.reddy653@contoso.com,138,Enterprise Account Manager,2017-11-03,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10494,EMP10494,Sanjay,Reddy,Sanjay Reddy,sanjay.reddy243@contoso.com,121,Territory Manager,2019-12-06,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10495,EMP10495,Rohit,Smith,Rohit Smith,rohit.smith326@contoso.com,115,Senior Account Executive,2020-01-19,Inactive,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10496,EMP10496,Anil,Lewis,Anil Lewis,anil.lewis112@enterprise.com,111,Regional Sales Manager,2018-03-09,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10497,EMP10497,James,Menon,James Menon,james.menon549@contoso.com,129,Sales Executive,2019-05-01,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10498,EMP10498,Jason,Menon,Jason Menon,jason.menon93@enterprise.com,120,Enterprise Account Manager,2024-09-11,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10499,EMP10499,Brian,Smith,Brian Smith,brian.smith152@enterprise.com,116,Sales Consultant,2024-12-22,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40
+10500,EMP10500,Amit,Verma,Amit Verma,amit.verma267@enterprise.com,126,Regional Sales Manager,2017-05-08,Active,Google Colab,2026-08-05 12:02:40,2026-08-05 12:02:40

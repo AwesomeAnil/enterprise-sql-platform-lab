@@ -1,0 +1,51 @@
+TerritoryID,TerritoryCode,TerritoryName,Region,Country,TerritoryManager,Status,SourceSystem,CreatedDate,ModifiedDate
+101,ST-101,India West,West,India,Rajesh Verma,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+102,ST-102,USA Central,Central,USA,Anil Verma,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+103,ST-103,Japan,APAC,Japan,Vikram Wilson,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+104,ST-104,India North,North,India,Vikram Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+105,ST-105,India North,North,India,Sophia Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+106,ST-106,Japan,APAC,Japan,Sanjay Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+107,ST-107,Canada East,East,Canada,Rajesh Kapoor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+108,ST-108,Netherlands,EMEA,Netherlands,Priya Reddy,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+109,ST-109,UK,EMEA,United Kingdom,Rahul Patel,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+110,ST-110,Germany,EMEA,Germany,Neha Wilson,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+111,ST-111,India South,South,India,Arun Taylor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+112,ST-112,France,EMEA,France,Vikram Taylor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+113,ST-113,Germany,EMEA,Germany,Olivia Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+114,ST-114,India South,South,India,Michael Kapoor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+115,ST-115,India East,East,India,Michael Thomas,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+116,ST-116,Canada East,East,Canada,Arun Gupta,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+117,ST-117,USA East,East,USA,Neha Smith,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+118,ST-118,Canada East,East,Canada,Vikram Wilson,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+119,ST-119,Japan,APAC,Japan,Michael Nair,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+120,ST-120,Canada East,East,Canada,Sophia Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+121,ST-121,India South,South,India,Michael Thomas,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+122,ST-122,UK,EMEA,United Kingdom,Karan Reddy,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+123,ST-123,Australia,ANZ,Australia,Priya Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+124,ST-124,France,EMEA,France,Arun Nair,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+125,ST-125,USA Central,Central,USA,Sophia Taylor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+126,ST-126,Australia,ANZ,Australia,Sanjay Joseph,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+127,ST-127,Germany,EMEA,Germany,Michael Nair,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+128,ST-128,India East,East,India,Amit Thomas,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+129,ST-129,USA East,East,USA,Sanjay Wilson,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+130,ST-130,France,EMEA,France,Daniel Brown,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+131,ST-131,Japan,APAC,Japan,Rajesh Gupta,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+132,ST-132,Japan,APAC,Japan,Emma Kapoor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+133,ST-133,India West,West,India,David Johnson,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+134,ST-134,India North,North,India,Emma Taylor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+135,ST-135,Singapore,APAC,Singapore,Rahul Thomas,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+136,ST-136,Singapore,APAC,Singapore,Daniel Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+137,ST-137,USA East,East,USA,Sophia Kapoor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+138,ST-138,India North,North,India,Daniel Smith,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+139,ST-139,India West,West,India,Neha Joseph,Inactive,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+140,ST-140,Canada West,West,Canada,Michael Sharma,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+141,ST-141,Australia,ANZ,Australia,Vikram Patel,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+142,ST-142,India East,East,India,Sophia Kapoor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+143,ST-143,Middle East South,Middle East,Saudi Arabia,Sophia Nair,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+144,ST-144,Netherlands,EMEA,Netherlands,John Joseph,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+145,ST-145,USA West,West,USA,David Johnson,Inactive,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+146,ST-146,Germany,EMEA,Germany,Arun Joseph,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+147,ST-147,India West,West,India,Michael Menon,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+148,ST-148,India North,North,India,Olivia Taylor,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+149,ST-149,USA Central,Central,USA,Rajesh Patel,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
+150,ST-150,India South,South,India,Michael Patel,Active,Google Colab,2026-08-05 12:01:22,2026-08-05 12:01:22
