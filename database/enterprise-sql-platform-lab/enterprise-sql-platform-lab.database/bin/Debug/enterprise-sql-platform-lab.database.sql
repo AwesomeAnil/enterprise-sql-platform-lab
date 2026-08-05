@@ -40,37 +40,115 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating Table [warehouse].[DimProduct]...';
+PRINT N'Creating Schema [pipeline]...';
 
 
 GO
-CREATE TABLE [warehouse].[DimProduct] (
-    [ProductKey]   INT             IDENTITY (1, 1) NOT NULL,
-    [ProductID]    INT             NOT NULL,
-    [ProductCode]  VARCHAR (20)    NOT NULL,
-    [ProductName]  VARCHAR (200)   NOT NULL,
-    [Category]     VARCHAR (50)    NOT NULL,
-    [SubCategory]  VARCHAR (50)    NOT NULL,
-    [Brand]        VARCHAR (50)    NOT NULL,
-    [UnitPrice]    DECIMAL (18, 2) NOT NULL,
-    [StandardCost] DECIMAL (18, 2) NOT NULL,
-    [Status]       VARCHAR (20)    NOT NULL,
-    [SourceSystem] VARCHAR (20)    NOT NULL,
-    [CreatedDate]  DATE            NOT NULL,
-    [ModifiedDate] DATE            NOT NULL,
-    [LoadDate]     DATETIME2 (7)   NOT NULL,
-    CONSTRAINT [PK_DimProduct] PRIMARY KEY CLUSTERED ([ProductKey] ASC),
-    CONSTRAINT [UQ_DimProduct_ProductID] UNIQUE NONCLUSTERED ([ProductID] ASC)
+CREATE SCHEMA [pipeline]
+    AUTHORIZATION [dbo];
+
+
+GO
+PRINT N'Starting rebuilding table [warehouse].[DimCustomer]...';
+
+
+GO
+BEGIN TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SET XACT_ABORT ON;
+
+CREATE TABLE [warehouse].[tmp_ms_xx_DimCustomer] (
+    [CustomerKey]    INT           IDENTITY (1, 1) NOT NULL,
+    [CustomerID]     INT           NOT NULL,
+    [CustomerCode]   VARCHAR (50)  NOT NULL,
+    [CustomerName]   VARCHAR (200) NOT NULL,
+    [CustomerType]   VARCHAR (50)  NOT NULL,
+    [Industry]       VARCHAR (50)  NOT NULL,
+    [SalesTerritory] VARCHAR (50)  NOT NULL,
+    [Country]        VARCHAR (20)  NOT NULL,
+    [StateProvince]  VARCHAR (100) NULL,
+    [City]           VARCHAR (100) NOT NULL,
+    [Status]         VARCHAR (20)  NOT NULL,
+    [SourceSystem]   VARCHAR (20)  NOT NULL,
+    [CreatedDate]    DATETIME2 (7) NOT NULL,
+    [ModifiedDate]   DATETIME2 (7) NOT NULL,
+    [LoadDate]       DATETIME2 (7) CONSTRAINT [DF_DimCustomer_LoadDate] DEFAULT (SYSUTCDATETIME()) NOT NULL,
+    CONSTRAINT [tmp_ms_xx_constraint_PK_DimCustomer1] PRIMARY KEY CLUSTERED ([CustomerKey] ASC),
+    CONSTRAINT [tmp_ms_xx_constraint_UQ_DimCustomer_CustomerID1] UNIQUE NONCLUSTERED ([CustomerID] ASC)
 );
 
+IF EXISTS (SELECT TOP 1 1 
+           FROM   [warehouse].[DimCustomer])
+    BEGIN
+        SET IDENTITY_INSERT [warehouse].[tmp_ms_xx_DimCustomer] ON;
+        INSERT INTO [warehouse].[tmp_ms_xx_DimCustomer] ([CustomerKey], [CustomerID], [CustomerCode], [CustomerName], [CustomerType], [Industry], [SalesTerritory], [Country], [StateProvince], [City], [Status], [SourceSystem], [CreatedDate], [ModifiedDate], [LoadDate])
+        SELECT   [CustomerKey],
+                 [CustomerID],
+                 [CustomerCode],
+                 [CustomerName],
+                 [CustomerType],
+                 [Industry],
+                 [SalesTerritory],
+                 [Country],
+                 [StateProvince],
+                 [City],
+                 [Status],
+                 [SourceSystem],
+                 [CreatedDate],
+                 [ModifiedDate],
+                 [LoadDate]
+        FROM     [warehouse].[DimCustomer]
+        ORDER BY [CustomerKey] ASC;
+        SET IDENTITY_INSERT [warehouse].[tmp_ms_xx_DimCustomer] OFF;
+    END
+
+DROP TABLE [warehouse].[DimCustomer];
+
+EXECUTE sp_rename N'[warehouse].[tmp_ms_xx_DimCustomer]', N'DimCustomer';
+
+EXECUTE sp_rename N'[warehouse].[tmp_ms_xx_constraint_PK_DimCustomer1]', N'PK_DimCustomer', N'OBJECT';
+
+EXECUTE sp_rename N'[warehouse].[tmp_ms_xx_constraint_UQ_DimCustomer_CustomerID1]', N'UQ_DimCustomer_CustomerID', N'OBJECT';
+
+COMMIT TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
 
 GO
-PRINT N'Creating Default Constraint [warehouse].[DF_DimProduct_LoadDate]...';
+PRINT N'Creating Procedure [pipeline].[sp_Developer_Load]...';
 
 
 GO
-ALTER TABLE [warehouse].[DimProduct]
-    ADD CONSTRAINT [DF_DimProduct_LoadDate] DEFAULT (SYSUTCDATETIME()) FOR [LoadDate];
+CREATE PROCEDURE [pipeline].[sp_Developer_Load]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    PRINT '===========================================';
+    PRINT 'Enterprise SQL Platform - Developer Pipeline';
+    SELECT COUNT(*) FROM [warehouse].[DimCustomer]
+    PRINT '===========================================';
+
+    PRINT 'Loading Customer Dimension...';
+    EXEC warehouse.sp_Load_DimCustomer;
+
+    PRINT 'Loading Date Dimension...';
+    EXEC warehouse.sp_Load_DimDate;
+
+    PRINT 'Loading Product Dimension...';
+    EXEC warehouse.sp_Load_DimProduct;
+
+    PRINT 'Developer Pipeline Completed Successfully.';
+END;
+GO
+PRINT N'Refreshing Procedure [warehouse].[sp_Load_DimCustomer]...';
+
+
+GO
+EXECUTE sp_refreshsqlmodule N'[warehouse].[sp_Load_DimCustomer]';
 
 
 GO

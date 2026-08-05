@@ -69,6 +69,10 @@
     <Folder Include="Tables\staging" />
     <Folder Include="Tables\warehouse" />
     <Folder Include="Stored Procedures\warehouse" />
+    <Folder Include="Scripts\Dev" />
+    <Folder Include="Scripts\Int" />
+    <Folder Include="Stored Procedures\pipeline" />
+    <Folder Include="Stored Procedures\staging" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schemas\metadata.sql" />
@@ -86,13 +90,24 @@
     <Build Include="Tables\staging\Product.sql" />
     <Build Include="Tables\warehouse\DimProduct.sql" />
     <Build Include="Stored Procedures\warehouse\sp_Load_DimProduct.sql" />
+    <None Include="Scripts\Int\Load-Calendar.sql" />
+    <None Include="Scripts\Int\Load-Customer.sql" />
+    <None Include="Scripts\Int\Load-Product.sql" />
+    <Build Include="Schemas\pipeline.sql" />
+    <Build Include="Stored Procedures\pipeline\sp_Load_Warehouse.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Calendar.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Product.sql" />
+    <Build Include="Stored Procedures\pipeline\sp_Load_Staging.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\Load-Customer.sql" />
-    <None Include="Scripts\Load-Calendar.sql" />
-    <None Include="Scripts\Load-Product.sql" />
+    <None Include="localDB.publish.publish.xml" />
+    <None Include="Scripts\Dev\Load-Customer-LocalDB.sql" />
+    <None Include="Scripts\Dev\Load-Calendar-LocalDB.sql" />
+    <None Include="Scripts\Dev\Load-Product-LocalDB.sql" />
+    <None Include="Scripts\Dev\Execute-Dim-Loads.sql" />
   </ItemGroup>
 </Project>
