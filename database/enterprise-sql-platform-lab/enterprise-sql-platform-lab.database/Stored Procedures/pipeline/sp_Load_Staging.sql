@@ -6,11 +6,13 @@ BEGIN
     DECLARE @CustomerRows INT;
     DECLARE @CalendarRows INT;
     DECLARE @ProductRows INT;
-    DECLARE @TablesLoaded INT = 6;
+    DECLARE @TablesLoaded INT = 7;
     DECLARE @TotalRows INT;
     DECLARE @GeographyRows INT;
     DECLARE @SalesTerritoryRows INT
     DECLARE @SalespersonRows INT;
+    DECLARE @SalesRows INT;
+
 
 
 
@@ -39,6 +41,9 @@ BEGIN
     PRINT '[INFO] Loading Salesperson Staging...';
     EXEC staging.sp_Load_Staging_Salesperson;
 
+    PRINT '[INFO] Loading Sales Staging...';
+    EXEC staging.sp_Load_Staging_Sales;
+
     
     SELECT @CustomerRows = COUNT(*)
     FROM staging.Customer;
@@ -58,6 +63,9 @@ BEGIN
     SELECT @SalespersonRows = COUNT(*)
     FROM staging.Salesperson;
 
+    SELECT @SalesRows = COUNT(*)
+    FROM staging.Sales;
+
 
     SET @TotalRows =
       @CustomerRows
@@ -65,7 +73,8 @@ BEGIN
     + @ProductRows
     + @GeographyRows
     + @SalesTerritoryRows
-    + @SalespersonRows;
+    + @SalespersonRows
+    + @SalesRows;
 
     PRINT '';
     PRINT '============================================================';
@@ -78,6 +87,7 @@ BEGIN
     PRINT '[PASS] Geography Rows Loaded : ' + CAST(@GeographyRows AS VARCHAR(20));
     PRINT '[PASS] Sales Territory Rows Loaded : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
     PRINT '[PASS] Salesperson Rows Loaded : ' + CAST(@SalespersonRows AS VARCHAR(20));
+    PRINT '[PASS] Sales Rows Loaded : ' + CAST(@SalesRows AS VARCHAR(20));
 
     PRINT '';
     PRINT '------------------------------------------------------------';

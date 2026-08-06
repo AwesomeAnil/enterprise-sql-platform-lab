@@ -111,6 +111,10 @@
     <Build Include="Tables\warehouse\DimSalesperson.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Salesperson.sql" />
     <Build Include="Stored Procedures\warehouse\sp_Load_DimSalesperson.sql" />
+    <Build Include="Tables\staging\Sales.sql" />
+    <Build Include="Tables\warehouse\FactSales.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Sales.sql" />
+    <Build Include="Stored Procedures\warehouse\sp_Load_FactSales.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />

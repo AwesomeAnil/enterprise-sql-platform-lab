@@ -6,11 +6,13 @@ BEGIN
     DECLARE @CustomerRows INT;
     DECLARE @DateRows INT;
     DECLARE @ProductRows INT;
-    DECLARE @TablesLoaded INT = 6;
+    DECLARE @TablesLoaded INT = 7;
     DECLARE @TotalRows INT;
     DECLARE @GeographyRows INT;
     DECLARE @SalesTerritoryRows INT;
     DECLARE @SalespersonRows INT;
+    DECLARE @FactSalesRows INT;
+
 
 
 
@@ -36,6 +38,10 @@ BEGIN
     PRINT '[INFO] Loading Salesperson Dimension...';
     EXEC warehouse.sp_Load_DimSalesperson;
 
+    PRINT '[INFO] Loading FactSales...';
+    EXEC warehouse.sp_Load_FactSales;
+
+
     SELECT @CustomerRows = COUNT(*)
     FROM warehouse.DimCustomer;
 
@@ -54,6 +60,9 @@ BEGIN
     SELECT @SalespersonRows = COUNT(*)
     FROM warehouse.DimSalesperson;
 
+    SELECT @FactSalesRows = COUNT(*)
+    FROM warehouse.FactSales;
+
 
     SET @TotalRows =
       @CustomerRows
@@ -61,7 +70,8 @@ BEGIN
     + @ProductRows
     + @GeographyRows
     + @SalesTerritoryRows
-    + @SalespersonRows;
+    + @SalespersonRows
+    + @FactSalesRows;
 
     PRINT '';
     PRINT '============================================================';
@@ -74,6 +84,7 @@ BEGIN
     PRINT '[PASS] Geography Dimension Rows : ' + CAST(@GeographyRows AS VARCHAR(20));
     PRINT '[PASS] Sales Territory Dimension Rows : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
     PRINT '[PASS] Salesperson Dimension Rows : ' + CAST(@SalespersonRows AS VARCHAR(20));
+    PRINT '[PASS] FactSales Rows : ' + CAST(@FactSalesRows AS VARCHAR(20));
 
     PRINT '';
     PRINT '------------------------------------------------------------';

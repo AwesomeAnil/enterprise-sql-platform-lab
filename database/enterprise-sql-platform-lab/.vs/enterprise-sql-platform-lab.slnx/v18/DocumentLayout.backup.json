@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{29D2B0FE-FA22-44CB-A659-92D05389BB47}|enterprise-sql-platform-lab.database\\enterprise-sql-platform-lab.database.sqlproj|solutionrelative:enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +51,50 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "sp_Load_Warehouse.sql ",
+              "DocumentMoniker": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql",
+              "RelativeDocumentMoniker": "enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql",
+              "ToolTip": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Warehouse.sql\r\n(localdb)\\ProjectModels.enterprise-sql-platform-lab.database\r\n(LAPTOP-P62T6CNI\\Anil Jacob)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-06T09:20:18.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sp_Load_Staging.sql ",
+              "DocumentMoniker": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql",
+              "RelativeDocumentMoniker": "enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql",
+              "ToolTip": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\pipeline\\sp_Load_Staging.sql\r\n(localdb)\\ProjectModels.enterprise-sql-platform-lab.database\r\n(LAPTOP-P62T6CNI\\Anil Jacob)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-06T09:18:56.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "sp_Load_FactSales.sql ",
+              "DocumentMoniker": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql",
+              "RelativeDocumentMoniker": "enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql",
+              "ToolTip": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\warehouse\\sp_Load_FactSales.sql\r\n(localdb)\\ProjectModels.enterprise-sql-platform-lab.database\r\n(LAPTOP-P62T6CNI\\Anil Jacob)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-06T09:18:42.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "sp_Load_Staging_Sales.sql ",
+              "DocumentMoniker": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql",
+              "RelativeDocumentMoniker": "enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql",
+              "ToolTip": "C:\\D Drive\\Anil\\GitHub\\enterprise-sql-platform-lab\\database\\enterprise-sql-platform-lab\\enterprise-sql-platform-lab.database\\Stored Procedures\\staging\\sp_Load_Staging_Sales.sql\r\n(localdb)\\ProjectModels.enterprise-sql-platform-lab.database\r\n(LAPTOP-P62T6CNI\\Anil Jacob)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-06T09:17:55.211Z",
+              "EditorCaption": ""
             }
           ]
         }
