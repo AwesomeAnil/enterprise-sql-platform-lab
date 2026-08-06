@@ -1,0 +1,21 @@
+CustomerID,CustomerCode,CustomerName,CustomerType,Industry,SalesTerritory,Country,StateProvince,City,PostalCode,EmailAddress,PhoneNumber,Status,CreatedDate,ModifiedDate,SourceSystem
+100001,CUST-100001,Northwind Holdings LLC,Enterprise,Healthcare,EMEA,United Arab Emirates,Louisiana,Dubai,32599,info@northwindholdingsllc.com,321.581.9600,Active,22/02/2024,15/03/2024,CRM
+100002,CUST-100002,Fusion Retail Ltd.,SMB,Manufacturing,AMER,Canada,Oklahoma,Calgary,26563,info@fusionretailltd.com,001-486-537-9402x654,Active,07/07/2022,18/12/2024,CRM
+100003,CUST-100003,Velocity Technologies GmbH,Enterprise,Healthcare,EMEA,Germany,Colorado,Munich,50298,info@velocitytechnologiesgmbh.com,855-394-0781,Active,31/05/2025,22/10/2025,CRM
+100004,CUST-100004,Pacific Energy Pty Ltd,SMB,Manufacturing,APAC,Australia,South Carolina,Melbourne,47901,info@pacificenergyptyltd.com,001-831-603-4131,Active,17/10/2023,09/02/2026,CRM
+100005,CUST-100005,Atlas Healthcare Ltd,Enterprise,Healthcare,EMEA,United Kingdom,Hawaii,Birmingham,49021,info@atlashealthcareltd.com,(534)719-2832x764,Inactive,26/05/2023,21/01/2026,CRM
+100006,CUST-100006,Vertex Financial B.V.,Enterprise,Energy,EMEA,Netherlands,Iowa,Amsterdam,04708,info@vertexfinancialbv.com,564-613-9537x67242,Active,15/12/2024,22/03/2026,CRM
+100007,CUST-100007,Fusion Retail Inc.,Education,Telecommunications,AMER,United States,Pennsylvania,New York,52851,info@fusionretailinc.com,(332)887-1012x269,Active,28/07/2024,08/06/2025,CRM
+100008,CUST-100008,Evergreen Holdings SAS,Enterprise,Healthcare,EMEA,France,North Dakota,Lyon,33454,info@evergreenholdingssas.com,-6530,Active,10/02/2023,29/07/2026,CRM
+100009,CUST-100009,Summit Financial Ltd.,Enterprise,Energy,AMER,Canada,Washington,Toronto,35023,info@summitfinancialltd.com,728.914.8932x52880,Active,06/08/2021,14/03/2025,CRM
+100010,CUST-100010,Apex Holdings B.V.,Education,Retail,EMEA,Netherlands,Maryland,Amsterdam,31886,info@apexholdingsbv.com,4399117182,Active,30/08/2021,28/03/2026,CRM
+100011,CUST-100011,Pacific Logistics Ltd,SMB,Technology,EMEA,United Kingdom,North Dakota,Birmingham,80008,info@pacificlogisticsltd.com,(738)234-6578x71331,Inactive,16/05/2025,28/07/2025,CRM
+100012,CUST-100012,Prime Consulting LLC,SMB,Manufacturing,EMEA,United Arab Emirates,Iowa,Dubai,01443,info@primeconsultingllc.com,603-910-5183,Active,09/12/2023,18/07/2024,CRM
+100013,CUST-100013,Pioneer Engineering Inc.,Enterprise,Logistics,AMER,United States,Oregon,Chicago,76026,info@pioneerengineeringinc.com,337.263.1165x6670,Active,10/06/2022,27/12/2022,CRM
+100014,CUST-100014,Crystal Financial B.V.,Government,Public Sector,EMEA,Netherlands,Connecticut,Amsterdam,33092,info@crystalfinancialbv.com,538.372.6247,Active,13/03/2023,06/05/2024,CRM
+100015,CUST-100015,Fusion Solutions Ltd,Enterprise,Logistics,EMEA,United Kingdom,Oklahoma,London,13334,info@fusionsolutionsltd.com,5808132677,Active,11/05/2023,20/02/2026,CRM
+100016,CUST-100016,Quantum Industrial KK,Education,Financial Services,APAC,Japan,Alabama,Osaka,51674,info@quantumindustrialkk.com,274-768-7234x309,Active,12/03/2025,03/06/2025,CRM
+100017,CUST-100017,Summit Logistics Ltd.,SMB,Telecommunications,AMER,Canada,North Carolina,Toronto,70116,info@summitlogisticsltd.com,(808)312-1913,Active,24/10/2021,07/08/2024,CRM
+100018,CUST-100018,Nimbus Solutions Pvt Ltd,Enterprise,Education,APAC,India,Pennsylvania,Pune,78425,info@nimbussolutionspvtltd.com,5917699854,Active,08/05/2025,20/01/2026,CRM
+100019,CUST-100019,Fusion Distribution Inc.,Enterprise,Energy,AMER,United States,Texas,Seattle,85108,info@fusiondistributioninc.com,675-410-7991x1838,Active,16/07/2022,21/02/2024,CRM
+100020,CUST-100020,Nimbus Manufacturing Pvt Ltd,Education,Technology,APAC,India,Kansas,Mumbai,48935,info@nimbusmanufacturingpvtltd.com,327-384-9808x4124,Inactive,26/04/2025,08/06/2026,CRM
