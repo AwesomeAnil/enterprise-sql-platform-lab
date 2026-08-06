@@ -6,8 +6,13 @@ BEGIN
     DECLARE @CustomerRows INT;
     DECLARE @DateRows INT;
     DECLARE @ProductRows INT;
-    DECLARE @TablesLoaded INT = 3;
+    DECLARE @TablesLoaded INT = 6;
     DECLARE @TotalRows INT;
+    DECLARE @GeographyRows INT;
+    DECLARE @SalesTerritoryRows INT;
+    DECLARE @SalespersonRows INT;
+
+
 
     PRINT '';
     PRINT '============================================================';
@@ -25,6 +30,12 @@ BEGIN
     PRINT '[INFO] Loading Product Dimension...';
     EXEC warehouse.sp_Load_DimProduct;
 
+    PRINT '[INFO] Loading Geography Dimension...';
+    EXEC warehouse.sp_Load_DimGeography;
+
+    PRINT '[INFO] Loading Salesperson Dimension...';
+    EXEC warehouse.sp_Load_DimSalesperson;
+
     SELECT @CustomerRows = COUNT(*)
     FROM warehouse.DimCustomer;
 
@@ -34,10 +45,23 @@ BEGIN
     SELECT @ProductRows = COUNT(*)
     FROM warehouse.DimProduct;
 
+    SELECT @GeographyRows = COUNT(*)
+    FROM warehouse.DimGeography;
+
+    SELECT @SalesTerritoryRows = COUNT(*)
+    FROM warehouse.DimSalesTerritory;
+
+    SELECT @SalespersonRows = COUNT(*)
+    FROM warehouse.DimSalesperson;
+
+
     SET @TotalRows =
-          @CustomerRows
-        + @DateRows
-        + @ProductRows;
+      @CustomerRows
+    + @DateRows
+    + @ProductRows
+    + @GeographyRows
+    + @SalesTerritoryRows
+    + @SalespersonRows;
 
     PRINT '';
     PRINT '============================================================';
@@ -47,6 +71,9 @@ BEGIN
     PRINT '[PASS] Customer Dimension Rows : ' + CAST(@CustomerRows AS VARCHAR(20));
     PRINT '[PASS] Date Dimension Rows     : ' + CAST(@DateRows AS VARCHAR(20));
     PRINT '[PASS] Product Dimension Rows  : ' + CAST(@ProductRows AS VARCHAR(20));
+    PRINT '[PASS] Geography Dimension Rows : ' + CAST(@GeographyRows AS VARCHAR(20));
+    PRINT '[PASS] Sales Territory Dimension Rows : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
+    PRINT '[PASS] Salesperson Dimension Rows : ' + CAST(@SalespersonRows AS VARCHAR(20));
 
     PRINT '';
     PRINT '------------------------------------------------------------';

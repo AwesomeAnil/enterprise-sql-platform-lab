@@ -99,6 +99,18 @@
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Calendar.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Product.sql" />
     <Build Include="Stored Procedures\pipeline\sp_Load_Staging.sql" />
+    <Build Include="Tables\staging\Geography.sql" />
+    <Build Include="Tables\warehouse\DimGeography.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Geography.sql" />
+    <Build Include="Stored Procedures\warehouse\sp_Load_DimGeography.sql" />
+    <Build Include="Tables\staging\SalesTerritory.sql" />
+    <Build Include="Tables\warehouse\DimSalesTerritory.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_SalesTerritory.sql" />
+    <Build Include="Stored Procedures\warehouse\sp_Load_DimSalesTerritory.sql" />
+    <Build Include="Tables\staging\Salesperson.sql" />
+    <Build Include="Tables\warehouse\DimSalesperson.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Salesperson.sql" />
+    <Build Include="Stored Procedures\warehouse\sp_Load_DimSalesperson.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />

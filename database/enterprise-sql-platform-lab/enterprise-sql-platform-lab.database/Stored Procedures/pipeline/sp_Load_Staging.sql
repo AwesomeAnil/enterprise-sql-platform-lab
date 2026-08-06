@@ -6,8 +6,13 @@ BEGIN
     DECLARE @CustomerRows INT;
     DECLARE @CalendarRows INT;
     DECLARE @ProductRows INT;
-    DECLARE @TablesLoaded INT = 3;
+    DECLARE @TablesLoaded INT = 6;
     DECLARE @TotalRows INT;
+    DECLARE @GeographyRows INT;
+    DECLARE @SalesTerritoryRows INT
+    DECLARE @SalespersonRows INT;
+
+
 
     PRINT '';
     PRINT '============================================================';
@@ -25,6 +30,16 @@ BEGIN
     PRINT '[INFO] Loading Product Staging...';
     EXEC staging.sp_Load_Staging_Product;
 
+    PRINT '[INFO] Loading Geography Staging...';
+    EXEC staging.sp_Load_Staging_Geography;
+
+    PRINT '[INFO] Loading Sales Territory Staging...';
+    EXEC staging.sp_Load_Staging_SalesTerritory;
+
+    PRINT '[INFO] Loading Salesperson Staging...';
+    EXEC staging.sp_Load_Staging_Salesperson;
+
+    
     SELECT @CustomerRows = COUNT(*)
     FROM staging.Customer;
 
@@ -34,10 +49,23 @@ BEGIN
     SELECT @ProductRows = COUNT(*)
     FROM staging.Product;
 
+    SELECT @GeographyRows = COUNT(*)
+    FROM staging.Geography;
+
+    SELECT @SalesTerritoryRows = COUNT(*)
+    FROM staging.SalesTerritory;
+
+    SELECT @SalespersonRows = COUNT(*)
+    FROM staging.Salesperson;
+
+
     SET @TotalRows =
-          @CustomerRows
-        + @CalendarRows
-        + @ProductRows;
+      @CustomerRows
+    + @CalendarRows
+    + @ProductRows
+    + @GeographyRows
+    + @SalesTerritoryRows
+    + @SalespersonRows;
 
     PRINT '';
     PRINT '============================================================';
@@ -47,6 +75,9 @@ BEGIN
     PRINT '[PASS] Customer Rows Loaded : ' + CAST(@CustomerRows AS VARCHAR(20));
     PRINT '[PASS] Calendar Rows Loaded : ' + CAST(@CalendarRows AS VARCHAR(20));
     PRINT '[PASS] Product Rows Loaded  : ' + CAST(@ProductRows AS VARCHAR(20));
+    PRINT '[PASS] Geography Rows Loaded : ' + CAST(@GeographyRows AS VARCHAR(20));
+    PRINT '[PASS] Sales Territory Rows Loaded : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
+    PRINT '[PASS] Salesperson Rows Loaded : ' + CAST(@SalespersonRows AS VARCHAR(20));
 
     PRINT '';
     PRINT '------------------------------------------------------------';

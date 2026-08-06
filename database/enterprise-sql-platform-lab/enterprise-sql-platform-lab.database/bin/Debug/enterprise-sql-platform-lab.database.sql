@@ -40,117 +40,435 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating Schema [pipeline]...';
+PRINT N'Creating Table [staging].[Salesperson]...';
 
 
 GO
-CREATE SCHEMA [pipeline]
-    AUTHORIZATION [dbo];
-
-
-GO
-PRINT N'Starting rebuilding table [warehouse].[DimCustomer]...';
-
-
-GO
-BEGIN TRANSACTION;
-
-SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
-
-SET XACT_ABORT ON;
-
-CREATE TABLE [warehouse].[tmp_ms_xx_DimCustomer] (
-    [CustomerKey]    INT           IDENTITY (1, 1) NOT NULL,
-    [CustomerID]     INT           NOT NULL,
-    [CustomerCode]   VARCHAR (50)  NOT NULL,
-    [CustomerName]   VARCHAR (200) NOT NULL,
-    [CustomerType]   VARCHAR (50)  NOT NULL,
-    [Industry]       VARCHAR (50)  NOT NULL,
-    [SalesTerritory] VARCHAR (50)  NOT NULL,
-    [Country]        VARCHAR (20)  NOT NULL,
-    [StateProvince]  VARCHAR (100) NULL,
-    [City]           VARCHAR (100) NOT NULL,
-    [Status]         VARCHAR (20)  NOT NULL,
-    [SourceSystem]   VARCHAR (20)  NOT NULL,
-    [CreatedDate]    DATETIME2 (7) NOT NULL,
-    [ModifiedDate]   DATETIME2 (7) NOT NULL,
-    [LoadDate]       DATETIME2 (7) CONSTRAINT [DF_DimCustomer_LoadDate] DEFAULT (SYSUTCDATETIME()) NOT NULL,
-    CONSTRAINT [tmp_ms_xx_constraint_PK_DimCustomer1] PRIMARY KEY CLUSTERED ([CustomerKey] ASC),
-    CONSTRAINT [tmp_ms_xx_constraint_UQ_DimCustomer_CustomerID1] UNIQUE NONCLUSTERED ([CustomerID] ASC)
+CREATE TABLE [staging].[Salesperson] (
+    [SalespersonID] INT           NOT NULL,
+    [EmployeeCode]  VARCHAR (20)  NOT NULL,
+    [FirstName]     VARCHAR (100) NOT NULL,
+    [LastName]      VARCHAR (100) NOT NULL,
+    [FullName]      VARCHAR (200) NOT NULL,
+    [Email]         VARCHAR (200) NOT NULL,
+    [TerritoryID]   INT           NOT NULL,
+    [JobTitle]      VARCHAR (100) NOT NULL,
+    [HireDate]      DATE          NOT NULL,
+    [Status]        VARCHAR (20)  NOT NULL,
+    [SourceSystem]  VARCHAR (50)  NOT NULL,
+    [CreatedDate]   DATETIME2 (7) NOT NULL,
+    [ModifiedDate]  DATETIME2 (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([SalespersonID] ASC)
 );
 
-IF EXISTS (SELECT TOP 1 1 
-           FROM   [warehouse].[DimCustomer])
-    BEGIN
-        SET IDENTITY_INSERT [warehouse].[tmp_ms_xx_DimCustomer] ON;
-        INSERT INTO [warehouse].[tmp_ms_xx_DimCustomer] ([CustomerKey], [CustomerID], [CustomerCode], [CustomerName], [CustomerType], [Industry], [SalesTerritory], [Country], [StateProvince], [City], [Status], [SourceSystem], [CreatedDate], [ModifiedDate], [LoadDate])
-        SELECT   [CustomerKey],
-                 [CustomerID],
-                 [CustomerCode],
-                 [CustomerName],
-                 [CustomerType],
-                 [Industry],
-                 [SalesTerritory],
-                 [Country],
-                 [StateProvince],
-                 [City],
-                 [Status],
-                 [SourceSystem],
-                 [CreatedDate],
-                 [ModifiedDate],
-                 [LoadDate]
-        FROM     [warehouse].[DimCustomer]
-        ORDER BY [CustomerKey] ASC;
-        SET IDENTITY_INSERT [warehouse].[tmp_ms_xx_DimCustomer] OFF;
-    END
 
-DROP TABLE [warehouse].[DimCustomer];
-
-EXECUTE sp_rename N'[warehouse].[tmp_ms_xx_DimCustomer]', N'DimCustomer';
-
-EXECUTE sp_rename N'[warehouse].[tmp_ms_xx_constraint_PK_DimCustomer1]', N'PK_DimCustomer', N'OBJECT';
-
-EXECUTE sp_rename N'[warehouse].[tmp_ms_xx_constraint_UQ_DimCustomer_CustomerID1]', N'UQ_DimCustomer_CustomerID', N'OBJECT';
-
-COMMIT TRANSACTION;
-
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+GO
+PRINT N'Creating Table [staging].[SalesTerritory]...';
 
 
 GO
-PRINT N'Creating Procedure [pipeline].[sp_Developer_Load]...';
+CREATE TABLE [staging].[SalesTerritory] (
+    [TerritoryID]      INT           NOT NULL,
+    [TerritoryCode]    VARCHAR (20)  NOT NULL,
+    [TerritoryName]    VARCHAR (100) NOT NULL,
+    [Region]           VARCHAR (50)  NOT NULL,
+    [Country]          VARCHAR (100) NOT NULL,
+    [TerritoryManager] VARCHAR (100) NOT NULL,
+    [Status]           VARCHAR (20)  NOT NULL,
+    [SourceSystem]     VARCHAR (50)  NOT NULL,
+    [CreatedDate]      DATETIME2 (7) NOT NULL,
+    [ModifiedDate]     DATETIME2 (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([TerritoryID] ASC)
+);
 
 
 GO
-CREATE PROCEDURE [pipeline].[sp_Developer_Load]
+PRINT N'Creating Table [warehouse].[DimSalesperson]...';
+
+
+GO
+CREATE TABLE [warehouse].[DimSalesperson] (
+    [SalespersonKey] INT           IDENTITY (1, 1) NOT NULL,
+    [SalespersonID]  INT           NOT NULL,
+    [EmployeeCode]   VARCHAR (20)  NOT NULL,
+    [FirstName]      VARCHAR (100) NOT NULL,
+    [LastName]       VARCHAR (100) NOT NULL,
+    [FullName]       VARCHAR (200) NOT NULL,
+    [Email]          VARCHAR (200) NOT NULL,
+    [TerritoryID]    INT           NOT NULL,
+    [JobTitle]       VARCHAR (100) NOT NULL,
+    [HireDate]       DATE          NOT NULL,
+    [Status]         VARCHAR (20)  NOT NULL,
+    [SourceSystem]   VARCHAR (50)  NOT NULL,
+    [CreatedDate]    DATETIME2 (7) NOT NULL,
+    [ModifiedDate]   DATETIME2 (7) NOT NULL,
+    [LoadDate]       DATETIME2 (7) NOT NULL,
+    CONSTRAINT [PK_DimSalesperson] PRIMARY KEY CLUSTERED ([SalespersonKey] ASC)
+);
+
+
+GO
+PRINT N'Creating Table [warehouse].[DimSalesTerritory]...';
+
+
+GO
+CREATE TABLE [warehouse].[DimSalesTerritory] (
+    [SalesTerritoryKey] INT           IDENTITY (1, 1) NOT NULL,
+    [TerritoryID]       INT           NOT NULL,
+    [TerritoryCode]     VARCHAR (20)  NOT NULL,
+    [TerritoryName]     VARCHAR (100) NOT NULL,
+    [Region]            VARCHAR (50)  NOT NULL,
+    [Country]           VARCHAR (100) NOT NULL,
+    [TerritoryManager]  VARCHAR (100) NOT NULL,
+    [Status]            VARCHAR (20)  NOT NULL,
+    [SourceSystem]      VARCHAR (50)  NOT NULL,
+    [CreatedDate]       DATETIME2 (7) NOT NULL,
+    [ModifiedDate]      DATETIME2 (7) NOT NULL,
+    [LoadDate]          DATETIME2 (7) NOT NULL,
+    CONSTRAINT [PK_DimSalesTerritory] PRIMARY KEY CLUSTERED ([SalesTerritoryKey] ASC)
+);
+
+
+GO
+PRINT N'Creating Default Constraint [warehouse].[DF_DimSalesperson_LoadDate]...';
+
+
+GO
+ALTER TABLE [warehouse].[DimSalesperson]
+    ADD CONSTRAINT [DF_DimSalesperson_LoadDate] DEFAULT (SYSUTCDATETIME()) FOR [LoadDate];
+
+
+GO
+PRINT N'Creating Default Constraint [warehouse].[DF_DimSalesTerritory_LoadDate]...';
+
+
+GO
+ALTER TABLE [warehouse].[DimSalesTerritory]
+    ADD CONSTRAINT [DF_DimSalesTerritory_LoadDate] DEFAULT (SYSUTCDATETIME()) FOR [LoadDate];
+
+
+GO
+PRINT N'Creating Procedure [staging].[sp_Load_Staging_Salesperson]...';
+
+
+GO
+CREATE PROCEDURE [staging].[sp_Load_Staging_Salesperson]
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    PRINT '===========================================';
-    PRINT 'Enterprise SQL Platform - Developer Pipeline';
-    SELECT COUNT(*) FROM [warehouse].[DimCustomer]
-    PRINT '===========================================';
+    PRINT 'Loading staging.Salesperson...';
 
-    PRINT 'Loading Customer Dimension...';
-    EXEC warehouse.sp_Load_DimCustomer;
+    TRUNCATE TABLE staging.Salesperson;
 
-    PRINT 'Loading Date Dimension...';
-    EXEC warehouse.sp_Load_DimDate;
+    BULK INSERT staging.Salesperson
+    FROM 'C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\datasets\salesperson\salesperson_500.csv'
+    WITH
+    (
+        FIRSTROW = 2,
+        FIELDTERMINATOR = ',',
+        ROWTERMINATOR = '0x0A',
+        TABLOCK
+    );
 
-    PRINT 'Loading Product Dimension...';
-    EXEC warehouse.sp_Load_DimProduct;
-
-    PRINT 'Developer Pipeline Completed Successfully.';
+    PRINT 'Salesperson staging load completed.';
 END;
 GO
-PRINT N'Refreshing Procedure [warehouse].[sp_Load_DimCustomer]...';
+PRINT N'Creating Procedure [staging].[sp_Load_Staging_SalesTerritory]...';
 
 
 GO
-EXECUTE sp_refreshsqlmodule N'[warehouse].[sp_Load_DimCustomer]';
+CREATE PROCEDURE [staging].[sp_Load_Staging_SalesTerritory]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    PRINT 'Loading staging.SalesTerritory...';
+
+    TRUNCATE TABLE staging.SalesTerritory;
+
+    BULK INSERT staging.SalesTerritory
+    FROM 'C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\datasets\territory\salesterritory_50.csv'
+    WITH
+    (
+        FIRSTROW = 2,
+        FIELDTERMINATOR = ',',
+        ROWTERMINATOR = '0x0A',
+        TABLOCK
+    );
+
+    PRINT 'Sales Territory staging load completed.';
+END;
+GO
+PRINT N'Creating Procedure [warehouse].[sp_Load_DimSalesperson]...';
 
 
+GO
+CREATE PROCEDURE [warehouse].[sp_Load_DimSalesperson]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    TRUNCATE TABLE warehouse.DimSalesperson;
+
+    INSERT INTO warehouse.DimSalesperson
+    (
+        SalespersonID,
+        EmployeeCode,
+        FirstName,
+        LastName,
+        FullName,
+        Email,
+        TerritoryID,
+        JobTitle,
+        HireDate,
+        Status,
+        SourceSystem,
+        CreatedDate,
+        ModifiedDate
+    )
+    SELECT
+        SalespersonID,
+        EmployeeCode,
+        FirstName,
+        LastName,
+        FullName,
+        Email,
+        TerritoryID,
+        JobTitle,
+        HireDate,
+        Status,
+        SourceSystem,
+        CreatedDate,
+        ModifiedDate
+    FROM staging.Salesperson;
+
+END;
+GO
+PRINT N'Creating Procedure [warehouse].[sp_Load_DimSalesTerritory]...';
+
+
+GO
+CREATE PROCEDURE [warehouse].[sp_Load_DimSalesTerritory]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    TRUNCATE TABLE warehouse.DimSalesTerritory;
+
+    INSERT INTO warehouse.DimSalesTerritory
+    (
+        TerritoryID,
+        TerritoryCode,
+        TerritoryName,
+        Region,
+        Country,
+        TerritoryManager,
+        Status,
+        SourceSystem,
+        CreatedDate,
+        ModifiedDate
+    )
+    SELECT
+        TerritoryID,
+        TerritoryCode,
+        TerritoryName,
+        Region,
+        Country,
+        TerritoryManager,
+        Status,
+        SourceSystem,
+        CreatedDate,
+        ModifiedDate
+    FROM staging.SalesTerritory;
+
+END;
+GO
+PRINT N'Altering Procedure [pipeline].[sp_Load_Staging]...';
+
+
+GO
+ALTER PROCEDURE [pipeline].[sp_Load_Staging]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @CustomerRows INT;
+    DECLARE @CalendarRows INT;
+    DECLARE @ProductRows INT;
+    DECLARE @TablesLoaded INT = 6;
+    DECLARE @TotalRows INT;
+    DECLARE @GeographyRows INT;
+    DECLARE @SalesTerritoryRows INT
+    DECLARE @SalespersonRows INT;
+
+
+
+    PRINT '';
+    PRINT '============================================================';
+    PRINT 'Enterprise SQL Platform';
+    PRINT 'Pipeline : Load Staging';
+    PRINT '============================================================';
+    PRINT '';
+
+    PRINT '[INFO] Loading Customer Staging...';
+    EXEC staging.sp_Load_Staging_Customer;
+
+    PRINT '[INFO] Loading Calendar Staging...';
+    EXEC staging.sp_Load_Staging_Calendar;
+
+    PRINT '[INFO] Loading Product Staging...';
+    EXEC staging.sp_Load_Staging_Product;
+
+    PRINT '[INFO] Loading Geography Staging...';
+    EXEC staging.sp_Load_Staging_Geography;
+
+    PRINT '[INFO] Loading Sales Territory Staging...';
+    EXEC staging.sp_Load_Staging_SalesTerritory;
+
+    PRINT '[INFO] Loading Salesperson Staging...';
+    EXEC staging.sp_Load_Staging_Salesperson;
+
+    
+    SELECT @CustomerRows = COUNT(*)
+    FROM staging.Customer;
+
+    SELECT @CalendarRows = COUNT(*)
+    FROM staging.Calendar;
+
+    SELECT @ProductRows = COUNT(*)
+    FROM staging.Product;
+
+    SELECT @GeographyRows = COUNT(*)
+    FROM staging.Geography;
+
+    SELECT @SalesTerritoryRows = COUNT(*)
+    FROM staging.SalesTerritory;
+
+    SELECT @SalespersonRows = COUNT(*)
+    FROM staging.Salesperson;
+
+
+    SET @TotalRows =
+      @CustomerRows
+    + @CalendarRows
+    + @ProductRows
+    + @GeographyRows
+    + @SalesTerritoryRows
+    + @SalespersonRows;
+
+    PRINT '';
+    PRINT '============================================================';
+    PRINT 'Staging Pipeline Summary';
+    PRINT '============================================================';
+
+    PRINT '[PASS] Customer Rows Loaded : ' + CAST(@CustomerRows AS VARCHAR(20));
+    PRINT '[PASS] Calendar Rows Loaded : ' + CAST(@CalendarRows AS VARCHAR(20));
+    PRINT '[PASS] Product Rows Loaded  : ' + CAST(@ProductRows AS VARCHAR(20));
+    PRINT '[PASS] Geography Rows Loaded : ' + CAST(@GeographyRows AS VARCHAR(20));
+    PRINT '[PASS] Sales Territory Rows Loaded : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
+    PRINT '[PASS] Salesperson Rows Loaded : ' + CAST(@SalespersonRows AS VARCHAR(20));
+
+    PRINT '';
+    PRINT '------------------------------------------------------------';
+    PRINT 'Tables Loaded  : ' + CAST(@TablesLoaded AS VARCHAR(10));
+    PRINT 'Total Rows     : ' + CAST(@TotalRows AS VARCHAR(20));
+    PRINT 'Pipeline Status: SUCCESS';
+    PRINT '------------------------------------------------------------';
+    PRINT '';
+
+END;
+GO
+PRINT N'Altering Procedure [pipeline].[sp_Load_Warehouse]...';
+
+
+GO
+ALTER PROCEDURE [pipeline].[sp_Load_Warehouse]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @CustomerRows INT;
+    DECLARE @DateRows INT;
+    DECLARE @ProductRows INT;
+    DECLARE @TablesLoaded INT = 6;
+    DECLARE @TotalRows INT;
+    DECLARE @GeographyRows INT;
+    DECLARE @SalesTerritoryRows INT;
+    DECLARE @SalespersonRows INT;
+
+
+
+    PRINT '';
+    PRINT '============================================================';
+    PRINT 'Enterprise SQL Platform';
+    PRINT 'Pipeline : Load Warehouse';
+    PRINT '============================================================';
+    PRINT '';
+
+    PRINT '[INFO] Loading Customer Dimension...';
+    EXEC warehouse.sp_Load_DimCustomer;
+
+    PRINT '[INFO] Loading Date Dimension...';
+    EXEC warehouse.sp_Load_DimDate;
+
+    PRINT '[INFO] Loading Product Dimension...';
+    EXEC warehouse.sp_Load_DimProduct;
+
+    PRINT '[INFO] Loading Geography Dimension...';
+    EXEC warehouse.sp_Load_DimGeography;
+
+    PRINT '[INFO] Loading Salesperson Dimension...';
+    EXEC warehouse.sp_Load_DimSalesperson;
+
+    SELECT @CustomerRows = COUNT(*)
+    FROM warehouse.DimCustomer;
+
+    SELECT @DateRows = COUNT(*)
+    FROM warehouse.DimDate;
+
+    SELECT @ProductRows = COUNT(*)
+    FROM warehouse.DimProduct;
+
+    SELECT @GeographyRows = COUNT(*)
+    FROM warehouse.DimGeography;
+
+    SELECT @SalesTerritoryRows = COUNT(*)
+    FROM warehouse.DimSalesTerritory;
+
+    SELECT @SalespersonRows = COUNT(*)
+    FROM warehouse.DimSalesperson;
+
+
+    SET @TotalRows =
+      @CustomerRows
+    + @DateRows
+    + @ProductRows
+    + @GeographyRows
+    + @SalesTerritoryRows
+    + @SalespersonRows;
+
+    PRINT '';
+    PRINT '============================================================';
+    PRINT 'Warehouse Pipeline Summary';
+    PRINT '============================================================';
+
+    PRINT '[PASS] Customer Dimension Rows : ' + CAST(@CustomerRows AS VARCHAR(20));
+    PRINT '[PASS] Date Dimension Rows     : ' + CAST(@DateRows AS VARCHAR(20));
+    PRINT '[PASS] Product Dimension Rows  : ' + CAST(@ProductRows AS VARCHAR(20));
+    PRINT '[PASS] Geography Dimension Rows : ' + CAST(@GeographyRows AS VARCHAR(20));
+    PRINT '[PASS] Sales Territory Dimension Rows : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
+    PRINT '[PASS] Salesperson Dimension Rows : ' + CAST(@SalespersonRows AS VARCHAR(20));
+
+    PRINT '';
+    PRINT '------------------------------------------------------------';
+    PRINT 'Tables Loaded  : ' + CAST(@TablesLoaded AS VARCHAR(10));
+    PRINT 'Total Rows     : ' + CAST(@TotalRows AS VARCHAR(20));
+    PRINT 'Pipeline Status: SUCCESS';
+    PRINT '------------------------------------------------------------';
+    PRINT '';
+
+END;
 GO
 PRINT N'Update complete.';
 
