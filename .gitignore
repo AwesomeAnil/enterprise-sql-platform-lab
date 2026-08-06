@@ -17,6 +17,6 @@ obj/
 *.jfm
 
 # Ignore customer and sales data
-datasets/customer/**
-datasets/sales/**
+datasets/customer/full/**
+datasets/sales/full/**
 
