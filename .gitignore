@@ -16,10 +16,7 @@ obj/
 # SQL Server
 *.jfm
 
-# Ignore customer data
-datasets/customer/*.csv
-datasets/customer/*.parquet
+# Ignore customer and sales data
+datasets/customer/**
+datasets/sales/**
 
-# Ignore sales data
-datasets/sales/*.csv
-datasets/sales/*.parquet
