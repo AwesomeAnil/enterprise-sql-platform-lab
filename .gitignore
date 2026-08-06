@@ -16,8 +16,10 @@ obj/
 # SQL Server
 *.jfm
 
-# Ignore generated customer datasets
-datasets/customer/
+# Ignore customer data
+datasets/customer/*.csv
+datasets/customer/*.parquet
 
-# Ignore generated sales datasets
-datasets/sales/
+# Ignore sales data
+datasets/sales/*.csv
+datasets/sales/*.parquet
