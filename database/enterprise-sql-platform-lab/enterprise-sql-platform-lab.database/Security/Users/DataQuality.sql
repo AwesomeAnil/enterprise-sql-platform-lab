@@ -1,0 +1,3 @@
+﻿CREATE USER [DataQualityUser]
+WITHOUT LOGIN;
+GO

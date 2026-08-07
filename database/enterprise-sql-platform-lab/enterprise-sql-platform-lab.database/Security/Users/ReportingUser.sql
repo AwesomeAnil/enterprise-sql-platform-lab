@@ -1,0 +1,3 @@
+﻿CREATE USER [ReportingUser]
+WITHOUT LOGIN;
+GO

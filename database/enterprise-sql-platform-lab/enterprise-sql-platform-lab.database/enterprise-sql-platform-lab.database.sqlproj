@@ -56,7 +56,6 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Schemas" />
     <Folder Include="Tables" />
     <Folder Include="Stored Procedures" />
     <Folder Include="Views" />
@@ -74,11 +73,17 @@
     <Folder Include="Stored Procedures\pipeline" />
     <Folder Include="Stored Procedures\staging" />
     <Folder Include="Scripts\QA" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Roles" />
+    <Folder Include="Security\Users" />
+    <Folder Include="Security\Permissions" />
+    <Folder Include="Security\Synonyms" />
+    <Folder Include="Views\reporting" />
+    <Folder Include="Views\warehouse" />
+    <Folder Include="Views\dataquality" />
+    <Folder Include="Stored Procedures\pipeline docker" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Schemas\metadata.sql" />
-    <Build Include="Schemas\staging.sql" />
-    <Build Include="Schemas\warehouse.sql" />
     <Build Include="Tables\metadata\ETL_RunHistory.sql" />
     <Build Include="Tables\metadata\PipelineConfiguration.sql" />
     <Build Include="Tables\metadata\Watermark.sql" />
@@ -94,7 +99,6 @@
     <None Include="Scripts\Int\Load-Calendar.sql" />
     <None Include="Scripts\Int\Load-Customer.sql" />
     <None Include="Scripts\Int\Load-Product.sql" />
-    <Build Include="Schemas\pipeline.sql" />
     <Build Include="Stored Procedures\pipeline\sp_Load_Warehouse.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Calendar.sql" />
@@ -116,6 +120,35 @@
     <Build Include="Tables\warehouse\FactSales.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Sales.sql" />
     <Build Include="Stored Procedures\warehouse\sp_Load_FactSales.sql" />
+    <Build Include="Security\Schemas\metadata.sql" />
+    <Build Include="Security\Schemas\pipeline.sql" />
+    <Build Include="Security\Schemas\staging.sql" />
+    <Build Include="Security\Schemas\warehouse.sql" />
+    <Build Include="Security\Schemas\reporting.sql" />
+    <Build Include="Security\Synonyms\Customer.sql" />
+    <Build Include="Security\Synonyms\Calendar.sql" />
+    <Build Include="Security\Synonyms\Product.sql" />
+    <Build Include="Security\Synonyms\Geography.sql" />
+    <Build Include="Security\Synonyms\SalesTerritory.sql" />
+    <Build Include="Security\Synonyms\Salesperson.sql" />
+    <Build Include="Security\Synonyms\Sales.sql" />
+    <Build Include="Security\Schemas\dataquality.sql" />
+    <Build Include="Views\dataquality\vMissingCustomerKeys.sql" />
+    <Build Include="Views\dataquality\vDuplicateInvoiceLines.sql" />
+    <Build Include="Views\dataquality\vFinancialExceptions.sql" />
+    <Build Include="Views\dataquality\vDimensionCoverage.sql" />
+    <Build Include="Views\dataquality\vPipelineHealth.sql" />
+    <Build Include="Views\dataquality\vReferentialIntegrity.sql" />
+    <Build Include="Security\Roles\role_reporting.sql" />
+    <Build Include="Security\Roles\role_dataquality.sql" />
+    <Build Include="Security\Roles\role_etl.sql" />
+    <Build Include="Security\Roles\role_developer.sql" />
+    <Build Include="Security\Users\ReportingUser.sql" />
+    <Build Include="Security\Users\DataQuality.sql" />
+    <Build Include="Security\Users\ETLUser.sql" />
+    <Build Include="Security\Users\DeveloperUser.sql" />
+    <None Include="Post Deployment\Security.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer_Docker.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
@@ -128,5 +161,10 @@
     <None Include="Scripts\Dev\Execute-Dim-Loads.sql" />
     <None Include="Scripts\QA\Validate-FactSales.sql" />
     <None Include="Scripts\QA\Validate-Staging-Sales.sql" />
+    <None Include="Scripts\QA\Validate-Reporting-Synonyms.sql" />
+    <None Include="enterprise-sql-platform-lab.database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Post Deployment\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

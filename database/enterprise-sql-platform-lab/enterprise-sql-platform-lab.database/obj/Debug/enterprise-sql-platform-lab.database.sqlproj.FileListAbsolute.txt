@@ -4,3 +4,7 @@ C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platf
 C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\enterprise-sql-platform-lab.database.sqlproj.AssemblyReference.cache
 C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\enterprise_sql_platform_lab.database.dll
 C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\enterprise_sql_platform_lab.database.pdb
+C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\Model.xml
+C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\refactor.xml
+C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\postdeploy.sql
+C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\database\enterprise-sql-platform-lab\enterprise-sql-platform-lab.database\obj\Debug\predeploy.sql
