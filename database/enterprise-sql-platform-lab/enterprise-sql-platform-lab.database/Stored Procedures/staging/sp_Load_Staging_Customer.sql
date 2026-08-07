@@ -8,7 +8,7 @@ BEGIN
     TRUNCATE TABLE staging.Customer;
 
     BULK INSERT staging.Customer
-    FROM 'C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\datasets\customer\customer_50000.csv'
+    FROM 'C:\D Drive\Anil\GitHub\enterprise-sql-platform-lab\datasets\customer\full\customer_50000.csv'
     WITH
     (
         FIRSTROW = 2,

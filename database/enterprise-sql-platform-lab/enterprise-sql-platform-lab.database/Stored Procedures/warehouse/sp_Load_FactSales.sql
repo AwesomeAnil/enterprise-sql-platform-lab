@@ -3,11 +3,13 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    PRINT '[INFO] Loading warehouse.FactSales...';
+    PRINT '==================================================';
+    PRINT 'Loading Warehouse FactSales';
+    PRINT '==================================================';
 
-    TRUNCATE TABLE warehouse.FactSales;
+    TRUNCATE TABLE [warehouse].[FactSales];
 
-    INSERT INTO warehouse.FactSales
+    INSERT INTO [warehouse].[FactSales]
     (
         SalesID,
         SalesOrderNumber,
@@ -33,7 +35,8 @@ BEGIN
         CurrencyCode,
         SourceSystem,
         CreatedDate,
-        ModifiedDate
+        ModifiedDate,
+        LoadDate
     )
     SELECT
         SalesID,
@@ -60,17 +63,26 @@ BEGIN
         CurrencyCode,
         SourceSystem,
         CreatedDate,
-        ModifiedDate
+        ModifiedDate,
+        SYSUTCDATETIME()
     FROM staging.Sales;
 
-    DECLARE @RowCount INT;
+    DECLARE @RowsLoaded INT;
 
-    SELECT @RowCount = COUNT(*)
+    SELECT @RowsLoaded = COUNT(*)
     FROM warehouse.FactSales;
 
-    PRINT '[PASS] FactSales loaded successfully.';
-    PRINT '[PASS] FactSales Rows : '
-        + CAST(@RowCount AS VARCHAR(20));
+    PRINT '';
+    PRINT 'FactSales loaded successfully.';
+    PRINT CONCAT('Rows Loaded : ', @RowsLoaded);
+    PRINT '';
+
+    SELECT
+        RowsLoaded = @RowsLoaded,
+        TotalGrossSales = SUM(GrossSalesAmount),
+        TotalNetSales = SUM(NetSalesAmount),
+        TotalGrossMargin = SUM(GrossMarginAmount)
+    FROM warehouse.FactSales;
 
 END;
 GO

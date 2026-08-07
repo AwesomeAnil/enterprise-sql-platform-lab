@@ -73,6 +73,7 @@
     <Folder Include="Scripts\Int" />
     <Folder Include="Stored Procedures\pipeline" />
     <Folder Include="Stored Procedures\staging" />
+    <Folder Include="Scripts\QA" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schemas\metadata.sql" />
@@ -125,5 +126,7 @@
     <None Include="Scripts\Dev\Load-Calendar-LocalDB.sql" />
     <None Include="Scripts\Dev\Load-Product-LocalDB.sql" />
     <None Include="Scripts\Dev\Execute-Dim-Loads.sql" />
+    <None Include="Scripts\QA\Validate-FactSales.sql" />
+    <None Include="Scripts\QA\Validate-Staging-Sales.sql" />
   </ItemGroup>
 </Project>
