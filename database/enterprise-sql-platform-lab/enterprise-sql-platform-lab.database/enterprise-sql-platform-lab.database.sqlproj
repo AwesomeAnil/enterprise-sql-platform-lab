@@ -81,7 +81,8 @@
     <Folder Include="Views\reporting" />
     <Folder Include="Views\warehouse" />
     <Folder Include="Views\dataquality" />
-    <Folder Include="Stored Procedures\pipeline docker" />
+    <Folder Include="Integration" />
+    <Folder Include="Integration\Docker" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\metadata\ETL_RunHistory.sql" />
@@ -149,6 +150,14 @@
     <Build Include="Security\Users\DeveloperUser.sql" />
     <None Include="Post Deployment\Security.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer_Docker.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Calendar_Docker.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Product_Docker.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Geography_Docker.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_SalesTerritory_Docker.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Salesperson_Docker.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Sales_Docker.sql" />
+    <Build Include="Stored Procedures\pipeline\sp_Load_Staging_Docker.sql" />
+    <Build Include="Stored Procedures\pipeline\sp_Load_Warehouse_Docker.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
@@ -163,6 +172,9 @@
     <None Include="Scripts\QA\Validate-Staging-Sales.sql" />
     <None Include="Scripts\QA\Validate-Reporting-Synonyms.sql" />
     <None Include="enterprise-sql-platform-lab.database.publish.xml" />
+    <None Include="Scripts\QA\Validate-Security-Roles.sql" />
+    <None Include="Integration\Docker\01_Create_Test_Logins.sql" />
+    <None Include="Integration\Docker\02_Drop_Test_Logins.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Post Deployment\Script.PostDeployment.sql" />

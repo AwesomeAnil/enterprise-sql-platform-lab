@@ -26,15 +26,56 @@ ON SCHEMA::dataquality
 TO [role_dataquality];
 GO
 
-GRANT EXECUTE
-ON SCHEMA::pipeline
-TO [role_etl];
-GO
+/*==============================================================
+  ROLE: role_etl
+  Purpose:
+      ETL operators responsible for executing the data
+      ingestion pipelines.
+
+  Notes:
+      - BULK INSERT requires ETLLogin to be a member of the
+        server-level bulkadmin role (Integration only).
+      - Database permissions below are limited to the minimum
+        required for ETL execution.
+==============================================================*/
+
+------------------------------------------------------------
+-- Staging Schema
+------------------------------------------------------------
 
 GRANT SELECT
 ON SCHEMA::staging
-TO [role_etl];
+TO role_etl;
 GO
+
+GRANT ALTER
+ON SCHEMA::staging
+TO role_etl;
+GO
+
+GRANT EXECUTE
+ON SCHEMA::staging
+TO role_etl;
+GO
+
+------------------------------------------------------------
+-- Warehouse Schema
+------------------------------------------------------------
+
+GRANT EXECUTE
+ON SCHEMA::warehouse
+TO role_etl;
+GO
+
+------------------------------------------------------------
+-- Pipeline Schema
+------------------------------------------------------------
+
+GRANT EXECUTE
+ON SCHEMA::pipeline
+TO role_etl;
+GO
+
 
 GRANT SELECT, INSERT, UPDATE, DELETE
 ON SCHEMA::warehouse
