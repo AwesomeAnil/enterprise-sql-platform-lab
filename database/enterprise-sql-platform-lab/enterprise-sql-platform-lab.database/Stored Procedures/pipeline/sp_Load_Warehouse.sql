@@ -3,6 +3,24 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
+    ------------------------------------------------------------
+    -- Validate warehouse pipeline configuration
+    ------------------------------------------------------------
+    IF
+    (
+        SELECT COUNT(*)
+        FROM metadata.PipelineConfiguration
+        WHERE TargetSchema = 'warehouse'
+          AND IsActive = 1
+          AND ExecutionOrder BETWEEN 8 AND 14
+    ) <> 7
+    BEGIN
+        THROW 50011,
+            'Warehouse pipeline configuration is incomplete or invalid.',
+            1;
+    END;
+
+
     DECLARE @RunID INT;
     DECLARE @StartTime DATETIME2 = SYSUTCDATETIME();
 

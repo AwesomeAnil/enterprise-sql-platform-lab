@@ -3,6 +3,24 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
+
+    ------------------------------------------------------------
+    -- Validate staging pipeline configuration
+    ------------------------------------------------------------
+    IF
+    (
+        SELECT COUNT(*)
+        FROM metadata.PipelineConfiguration
+        WHERE TargetSchema = 'staging'
+          AND IsActive = 1
+          AND ExecutionOrder BETWEEN 1 AND 7
+    ) <> 7
+    BEGIN
+        THROW 50010,
+            'Staging pipeline configuration is incomplete or invalid.',
+            1;
+    END;
+
     DECLARE @RunID INT;
     DECLARE @StartTime DATETIME2 = SYSUTCDATETIME();
 
