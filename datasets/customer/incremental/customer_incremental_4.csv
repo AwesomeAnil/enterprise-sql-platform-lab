@@ -1,0 +1,5 @@
+CustomerID,CustomerCode,CustomerName,CustomerType,Industry,SalesTerritory,Country,StateProvince,City,PostalCode,EmailAddress,PhoneNumber,Status,CreatedDate,ModifiedDate,SourceSystem
+100001,CUST-100001,Northwind Holdings LLC - Updated Again,Enterprise,Healthcare,EMEA,United Arab Emirates,Louisiana,Dubai,32599,info@northwindholdingsllc.com,321.581.9600,Active,2024-02-22,2026-08-04,CRM
+100002,CUST-100002,Fusion Retail Ltd. - Updated Again,SMB,Manufacturing,AMER,Canada,Oklahoma,Calgary,26563,info@fusionretailltd.com,001-486-537-9402x654,Active,2022-07-07,2026-08-04,CRM
+150006,CUST-150006,Vertex Manufacturing Inc,Enterprise,Manufacturing,AMER,United States,Texas,Dallas,75201,info@vertexmanufacturinginc.com,214-555-1506,Active,2026-08-04,2026-08-04,CRM
+150007,CUST-150007,Silverline Retail GmbH,SMB,Retail,EMEA,Germany,Bavaria,Munich,80331,info@silverlineretailgmbh.com,089-555-1507,Active,2026-08-04,2026-08-04,CRM

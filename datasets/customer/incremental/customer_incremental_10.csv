@@ -1,0 +1,11 @@
+CustomerID,CustomerCode,CustomerName,CustomerType,Industry,SalesTerritory,Country,StateProvince,City,PostalCode,EmailAddress,PhoneNumber,Status,CreatedDate,ModifiedDate,SourceSystem
+100001,CUST-100001,Northwind Holdings LLC - Updated,Enterprise,Healthcare,EMEA,United Arab Emirates,Louisiana,Dubai,32599,info@northwindholdingsllc.com,321.581.9600,Active,2024-02-22,2026-08-03,CRM
+100002,CUST-100002,Fusion Retail Ltd. - Updated,SMB,Manufacturing,AMER,Canada,Oklahoma,Calgary,26563,info@fusionretailltd.com,001-486-537-9402x654,Active,2022-07-07,2026-08-03,CRM
+100003,CUST-100003,Velocity Technologies GmbH - Updated,Enterprise,Healthcare,EMEA,Germany,Colorado,Munich,50298,info@velocitytechnologiesgmbh.com,855-394-0781,Active,2025-05-31,2026-08-03,CRM
+100004,CUST-100004,Pacific Energy Pty Ltd - Updated,SMB,Manufacturing,APAC,Australia,South Carolina,Melbourne,47901,info@pacificenergyptyltd.com,001-831-603-4131,Active,2023-10-17,2026-08-03,CRM
+100005,CUST-100005,Atlas Healthcare Ltd - Updated,Enterprise,Healthcare,EMEA,United Kingdom,Hawaii,Birmingham,49021,info@atlashealthcareltd.com,(534)719-2832x764,Active,2023-05-26,2026-08-03,CRM
+150001,CUST-150001,Summit Financial Corp,Enterprise,Finance,AMER,United States,New York,New York,10001,info@summitfinancialcorp.com,212-555-1501,Active,2026-08-03,2026-08-03,CRM
+150002,CUST-150002,Orion Logistics Ltd,Enterprise,Logistics,EMEA,United Kingdom,England,London,EC1A1AA,info@orionlogisticsltd.com,020-5550-1502,Active,2026-08-03,2026-08-03,CRM
+150003,CUST-150003,BluePeak Technologies Inc,SMB,Technology,AMER,Canada,Ontario,Toronto,M5V2T6,info@bluepeaktechnologiesinc.com,416-555-1503,Active,2026-08-03,2026-08-03,CRM
+150004,CUST-150004,Evergreen Energy GmbH,Enterprise,Energy,EMEA,Germany,Hesse,Frankfurt,60311,info@evergreenenergygmbh.com,069-555-1504,Active,2026-08-03,2026-08-03,CRM
+150005,CUST-150005,Harbor Healthcare Pty Ltd,SMB,Healthcare,APAC,Australia,Victoria,Melbourne,3000,info@harborhealthcareptyltd.com,03-5550-1505,Active,2026-08-03,2026-08-03,CRM

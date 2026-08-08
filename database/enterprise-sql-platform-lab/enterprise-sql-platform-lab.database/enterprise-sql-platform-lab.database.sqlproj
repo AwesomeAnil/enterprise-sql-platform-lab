@@ -84,6 +84,7 @@
     <Folder Include="Integration" />
     <Folder Include="Integration\Docker" />
     <Folder Include="Post Deployment\Metadata" />
+    <Folder Include="Scripts\Sprint 8" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\metadata\ETL_RunHistory.sql" />
@@ -161,6 +162,7 @@
     <Build Include="Stored Procedures\pipeline\sp_Load_Warehouse_Docker.sql" />
     <None Include="Post Deployment\Metadata\PipelineConfiguration.sql" />
     <Build Include="Views\dataquality\vETLRunStatus.sql" />
+    <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer_Incremental.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
@@ -179,6 +181,7 @@
     <None Include="Integration\Docker\01_Create_Test_Logins.sql" />
     <None Include="Integration\Docker\02_Drop_Test_Logins.sql" />
     <None Include="Post Deployment\Metadata\PipelineConfiguration_Warehouse.sql" />
+    <None Include="Scripts\Sprint 8\Seed_Customer_Watermark.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Post Deployment\Script.PostDeployment.sql" />

@@ -40,438 +40,255 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating View [dataquality].[vETLRunStatus]...';
+PRINT N'Creating Procedure [staging].[sp_Load_Staging_Customer_Incremental]...';
 
 
 GO
-CREATE VIEW [dataquality].[vETLRunStatus]
+CREATE PROCEDURE [staging].[sp_Load_Staging_Customer_Incremental]
+    @SourceFilePath VARCHAR(500)
 AS
-WITH LatestRun AS
-(
-    SELECT
-        RunID,
-        PipelineName,
-        SourceSystem,
-        LoadType,
-        StartTime,
-        EndTime,
-        RowsExtracted,
-        RowsInserted,
-        RowsUpdated,
-        RowsRejected,
-        Status,
-        ErrorMessage,
-        ROW_NUMBER() OVER
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @RunID INT;
+    DECLARE @StartTime DATETIME2 = SYSUTCDATETIME();
+    DECLARE @LastWatermarkValue DATE;
+    DECLARE @NewWatermarkValue DATE;
+
+    DECLARE @RowsExtracted INT = 0;
+    DECLARE @RowsInserted INT = 0;
+    DECLARE @RowsUpdated INT = 0;
+
+    BEGIN TRY
+
+        ------------------------------------------------------------
+        -- Start ETL audit record
+        ------------------------------------------------------------
+        INSERT INTO metadata.ETL_RunHistory
         (
-            PARTITION BY PipelineName
-            ORDER BY RunID DESC
-        ) AS RowNum
-    FROM metadata.ETL_RunHistory
-)
-SELECT
-    RunID,
-    PipelineName,
-    SourceSystem,
-    LoadType,
-    StartTime,
-    EndTime,
+            PipelineName,
+            SourceSystem,
+            LoadType,
+            StartTime,
+            Status
+        )
+        VALUES
+        (
+            'Load_Staging_Customer',
+            'CRM',
+            'Incremental',
+            @StartTime,
+            'Running'
+        );
 
-    CASE
-        WHEN EndTime IS NOT NULL
-        THEN DATEDIFF(SECOND, StartTime, EndTime)
-        ELSE NULL
-    END AS DurationSeconds,
+        SET @RunID = SCOPE_IDENTITY();
 
-    RowsExtracted,
-    RowsInserted,
-    RowsUpdated,
-    RowsRejected,
-    Status,
-    ErrorMessage
-FROM LatestRun
-WHERE RowNum = 1;
-GO
-PRINT N'Altering Procedure [pipeline].[sp_Load_Staging]...';
+        ------------------------------------------------------------
+        -- Read current watermark
+        ------------------------------------------------------------
+        SELECT
+            @LastWatermarkValue = LastWatermarkValue
+        FROM metadata.Watermark
+        WHERE PipelineName = 'Load_Staging_Customer'
+          AND SourceObject = 'Customer';
 
+        ------------------------------------------------------------
+        -- Temporary source table
+        ------------------------------------------------------------
+        CREATE TABLE #CustomerSource
+        (
+            CustomerID INT NOT NULL,
+            CustomerCode VARCHAR(20) NOT NULL,
+            CustomerName VARCHAR(200) NOT NULL,
+            CustomerType VARCHAR(30) NOT NULL,
+            Industry VARCHAR(50) NOT NULL,
+            SalesTerritory VARCHAR(20) NOT NULL,
+            Country VARCHAR(50) NOT NULL,
+            StateProvince VARCHAR(100) NULL,
+            City VARCHAR(100) NOT NULL,
+            PostalCode VARCHAR(20) NULL,
+            EmailAddress VARCHAR(255) NULL,
+            PhoneNumber VARCHAR(50) NULL,
+            Status VARCHAR(20) NOT NULL,
+            CreatedDate DATE NOT NULL,
+            ModifiedDate DATE NOT NULL,
+            SourceSystem VARCHAR(20) NOT NULL
+        );
 
-GO
-ALTER PROCEDURE [pipeline].[sp_Load_Staging]
-AS
-BEGIN
-    SET NOCOUNT ON;
+        ------------------------------------------------------------
+        -- Load incremental source file
+        ------------------------------------------------------------
+        DECLARE @BulkSQL NVARCHAR(MAX);
 
-    DECLARE @RunID INT;
-    DECLARE @StartTime DATETIME2 = SYSUTCDATETIME();
+        SET @BulkSQL = N'
+            BULK INSERT #CustomerSource
+            FROM ''' + REPLACE(@SourceFilePath, '''', '''''') + N'''
+            WITH
+            (
+                FIRSTROW = 2,
+                FIELDTERMINATOR = '','',
+                ROWTERMINATOR = ''0x0A'',
+                TABLOCK
+            );';
 
-    DECLARE @CustomerRows INT;
-    DECLARE @CalendarRows INT;
-    DECLARE @ProductRows INT;
-    DECLARE @GeographyRows INT;
-    DECLARE @SalesTerritoryRows INT;
-    DECLARE @SalespersonRows INT;
-    DECLARE @SalesRows INT;
+        EXEC sys.sp_executesql @BulkSQL;
 
-    DECLARE @TablesLoaded INT = 7;
-    DECLARE @TotalRows INT;
+        ------------------------------------------------------------
+        -- Determine rows extracted
+        ------------------------------------------------------------
+        SELECT @RowsExtracted = COUNT(*)
+        FROM #CustomerSource
+        WHERE @LastWatermarkValue IS NULL
+           OR ModifiedDate >= @LastWatermarkValue;
 
-    /*
-    ============================================================
-    Create ETL Run History record
-    ============================================================
-    */
+        ------------------------------------------------------------
+        -- Process source rows
+        ------------------------------------------------------------
+        BEGIN TRANSACTION;
 
-    INSERT INTO metadata.ETL_RunHistory
-    (
-        PipelineName,
-        SourceSystem,
-        LoadType,
-        StartTime,
-        Status
-    )
-    VALUES
-    (
-        'Load Staging',
-        'CRM',
-        'Full',
-        @StartTime,
-        'Running'
-    );
+        ------------------------------------------------------------
+        -- UPDATE existing customers
+        ------------------------------------------------------------
+        UPDATE T
+        SET
+            T.CustomerCode    = S.CustomerCode,
+            T.CustomerName    = S.CustomerName,
+            T.CustomerType    = S.CustomerType,
+            T.Industry        = S.Industry,
+            T.SalesTerritory  = S.SalesTerritory,
+            T.Country         = S.Country,
+            T.StateProvince   = S.StateProvince,
+            T.City            = S.City,
+            T.PostalCode      = S.PostalCode,
+            T.EmailAddress    = S.EmailAddress,
+            T.PhoneNumber     = S.PhoneNumber,
+            T.Status          = S.Status,
+            T.CreatedDate     = S.CreatedDate,
+            T.ModifiedDate    = S.ModifiedDate,
+            T.SourceSystem    = S.SourceSystem
+        FROM staging.Customer T
+        INNER JOIN #CustomerSource S
+            ON T.CustomerID = S.CustomerID
+        WHERE @LastWatermarkValue IS NULL
+           OR S.ModifiedDate >= @LastWatermarkValue;
 
-    SET @RunID = SCOPE_IDENTITY();
+        SET @RowsUpdated = @@ROWCOUNT;
 
-    BEGIN TRY
+        ------------------------------------------------------------
+        -- INSERT new customers
+        ------------------------------------------------------------
+        INSERT INTO staging.Customer
+        (
+            CustomerID,
+            CustomerCode,
+            CustomerName,
+            CustomerType,
+            Industry,
+            SalesTerritory,
+            Country,
+            StateProvince,
+            City,
+            PostalCode,
+            EmailAddress,
+            PhoneNumber,
+            Status,
+            CreatedDate,
+            ModifiedDate,
+            SourceSystem
+        )
+        SELECT
+            S.CustomerID,
+            S.CustomerCode,
+            S.CustomerName,
+            S.CustomerType,
+            S.Industry,
+            S.SalesTerritory,
+            S.Country,
+            S.StateProvince,
+            S.City,
+            S.PostalCode,
+            S.EmailAddress,
+            S.PhoneNumber,
+            S.Status,
+            S.CreatedDate,
+            S.ModifiedDate,
+            S.SourceSystem
+        FROM #CustomerSource S
+        WHERE
+            (
+                @LastWatermarkValue IS NULL
+                OR S.ModifiedDate >= @LastWatermarkValue
+            )
+            AND NOT EXISTS
+            (
+                SELECT 1
+                FROM staging.Customer T
+                WHERE T.CustomerID = S.CustomerID
+            );
 
-        PRINT '';
-        PRINT '============================================================';
-        PRINT 'Enterprise SQL Platform';
-        PRINT 'Pipeline : Load Staging';
-        PRINT '============================================================';
-        PRINT '';
+        SET @RowsInserted = @@ROWCOUNT;
 
-        PRINT '[INFO] Loading Customer Staging...';
-        EXEC staging.sp_Load_Staging_Customer;
+        ------------------------------------------------------------
+        -- Determine new watermark
+        ------------------------------------------------------------
+        SELECT
+            @NewWatermarkValue = MAX(ModifiedDate)
+        FROM #CustomerSource
+        WHERE @LastWatermarkValue IS NULL
+           OR ModifiedDate >= @LastWatermarkValue;
 
-        PRINT '[INFO] Loading Calendar Staging...';
-        EXEC staging.sp_Load_Staging_Calendar;
+        ------------------------------------------------------------
+        -- Advance watermark only after successful processing
+        ------------------------------------------------------------
+        UPDATE metadata.Watermark
+        SET
+            LastWatermarkValue = @NewWatermarkValue,
+            LastSuccessfulRun = SYSUTCDATETIME(),
+            ModifiedDate = SYSUTCDATETIME()
+        WHERE PipelineName = 'Load_Staging_Customer'
+          AND SourceObject = 'Customer';
 
-        PRINT '[INFO] Loading Product Staging...';
-        EXEC staging.sp_Load_Staging_Product;
+        COMMIT TRANSACTION;
 
-        PRINT '[INFO] Loading Geography Staging...';
-        EXEC staging.sp_Load_Staging_Geography;
-
-        PRINT '[INFO] Loading Sales Territory Staging...';
-        EXEC staging.sp_Load_Staging_SalesTerritory;
-
-        PRINT '[INFO] Loading Salesperson Staging...';
-        EXEC staging.sp_Load_Staging_Salesperson;
-
-        PRINT '[INFO] Loading Sales Staging...';
-        EXEC staging.sp_Load_Staging_Sales;
-
-
-        /*
-        ========================================================
-        Capture loaded row counts
-        ========================================================
-        */
-
-        SELECT @CustomerRows = COUNT(*)
-        FROM staging.Customer;
-
-        SELECT @CalendarRows = COUNT(*)
-        FROM staging.Calendar;
-
-        SELECT @ProductRows = COUNT(*)
-        FROM staging.Product;
-
-        SELECT @GeographyRows = COUNT(*)
-        FROM staging.Geography;
-
-        SELECT @SalesTerritoryRows = COUNT(*)
-        FROM staging.SalesTerritory;
-
-        SELECT @SalespersonRows = COUNT(*)
-        FROM staging.Salesperson;
-
-        SELECT @SalesRows = COUNT(*)
-        FROM staging.Sales;
-
-
-        SET @TotalRows =
-              @CustomerRows
-            + @CalendarRows
-            + @ProductRows
-            + @GeographyRows
-            + @SalesTerritoryRows
-            + @SalespersonRows
-            + @SalesRows;
-
-
-        /*
-        ========================================================
-        Update successful ETL run
-        ========================================================
-        */
-
+        ------------------------------------------------------------
+        -- Complete ETL audit record
+        ------------------------------------------------------------
         UPDATE metadata.ETL_RunHistory
         SET
             EndTime = SYSUTCDATETIME(),
-            RowsExtracted = @TotalRows,
-            RowsInserted = @TotalRows,
-            RowsUpdated = 0,
+            RowsExtracted = @RowsExtracted,
+            RowsInserted = @RowsInserted,
+            RowsUpdated = @RowsUpdated,
             RowsRejected = 0,
-            Status = 'Success',
-            ErrorMessage = NULL
+            Status = 'Success'
         WHERE RunID = @RunID;
 
-
-        /*
-        ========================================================
-        Pipeline Summary
-        ========================================================
-        */
-
-        PRINT '';
-        PRINT '============================================================';
-        PRINT 'Staging Pipeline Summary';
-        PRINT '============================================================';
-
-        PRINT '[PASS] Customer Rows Loaded : ' + CAST(@CustomerRows AS VARCHAR(20));
-        PRINT '[PASS] Calendar Rows Loaded : ' + CAST(@CalendarRows AS VARCHAR(20));
-        PRINT '[PASS] Product Rows Loaded  : ' + CAST(@ProductRows AS VARCHAR(20));
-        PRINT '[PASS] Geography Rows Loaded : ' + CAST(@GeographyRows AS VARCHAR(20));
-        PRINT '[PASS] Sales Territory Rows Loaded : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
-        PRINT '[PASS] Salesperson Rows Loaded : ' + CAST(@SalespersonRows AS VARCHAR(20));
-        PRINT '[PASS] Sales Rows Loaded : ' + CAST(@SalesRows AS VARCHAR(20));
-
-        PRINT '';
-        PRINT '------------------------------------------------------------';
-        PRINT 'Tables Loaded  : ' + CAST(@TablesLoaded AS VARCHAR(10));
-        PRINT 'Total Rows     : ' + CAST(@TotalRows AS VARCHAR(20));
-        PRINT 'Pipeline Status: SUCCESS';
-        PRINT '------------------------------------------------------------';
-        PRINT '';
+        PRINT 'Customer incremental load completed.';
+        PRINT 'Rows Extracted : ' + CAST(@RowsExtracted AS VARCHAR(20));
+        PRINT 'Rows Updated   : ' + CAST(@RowsUpdated AS VARCHAR(20));
+        PRINT 'Rows Inserted  : ' + CAST(@RowsInserted AS VARCHAR(20));
+        PRINT 'New Watermark  : ' + CONVERT(VARCHAR(10), @NewWatermarkValue, 120);
 
     END TRY
-
     BEGIN CATCH
 
-        /*
-        ========================================================
-        Update failed ETL run
-        ========================================================
-        */
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
 
         UPDATE metadata.ETL_RunHistory
         SET
             EndTime = SYSUTCDATETIME(),
+            RowsExtracted = @RowsExtracted,
+            RowsInserted = @RowsInserted,
+            RowsUpdated = @RowsUpdated,
+            RowsRejected = 0,
             Status = 'Failed',
-            ErrorMessage = LEFT(ERROR_MESSAGE(), 2000)
+            ErrorMessage = ERROR_MESSAGE()
         WHERE RunID = @RunID;
-
-        PRINT '';
-        PRINT '============================================================';
-        PRINT 'Staging Pipeline FAILED';
-        PRINT '============================================================';
-        PRINT 'Error: ' + ERROR_MESSAGE();
-        PRINT '';
 
         THROW;
 
-    END CATCH;
-
-END;
-GO
-PRINT N'Altering Procedure [pipeline].[sp_Load_Warehouse]...';
-
-
-GO
-ALTER PROCEDURE [pipeline].[sp_Load_Warehouse]
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    DECLARE @RunID INT;
-    DECLARE @StartTime DATETIME2 = SYSUTCDATETIME();
-
-    DECLARE @CustomerRows INT;
-    DECLARE @DateRows INT;
-    DECLARE @ProductRows INT;
-    DECLARE @TablesLoaded INT = 7;
-    DECLARE @TotalRows INT;
-    DECLARE @GeographyRows INT;
-    DECLARE @SalesTerritoryRows INT;
-    DECLARE @SalespersonRows INT;
-    DECLARE @FactSalesRows INT;
-
-    /*
-    ============================================================
-    Create ETL Run History record
-    ============================================================
-    */
-
-    INSERT INTO metadata.ETL_RunHistory
-    (
-        PipelineName,
-        SourceSystem,
-        LoadType,
-        StartTime,
-        Status
-    )
-    VALUES
-    (
-        'Load Warehouse',
-        'CRM',
-        'Full',
-        @StartTime,
-        'Running'
-    );
-
-    SET @RunID = SCOPE_IDENTITY();
-
-    BEGIN TRY
-
-        PRINT '';
-        PRINT '============================================================';
-        PRINT 'Enterprise SQL Platform';
-        PRINT 'Pipeline : Load Warehouse';
-        PRINT '============================================================';
-        PRINT '';
-
-        PRINT '[INFO] Loading Customer Dimension...';
-        EXEC warehouse.sp_Load_DimCustomer;
-
-        PRINT '[INFO] Loading Date Dimension...';
-        EXEC warehouse.sp_Load_DimDate;
-
-        PRINT '[INFO] Loading Product Dimension...';
-        EXEC warehouse.sp_Load_DimProduct;
-
-        PRINT '[INFO] Loading Geography Dimension...';
-        EXEC warehouse.sp_Load_DimGeography;
-
-        PRINT '[INFO] Loading Sales Territory Dimension...';
-        EXEC warehouse.sp_Load_DimSalesTerritory;
-
-        PRINT '[INFO] Loading Salesperson Dimension...';
-        EXEC warehouse.sp_Load_DimSalesperson;
-
-        PRINT '[INFO] Loading FactSales...';
-        EXEC warehouse.sp_Load_FactSales;
-
-
-        /*
-        ========================================================
-        Capture loaded row counts
-        ========================================================
-        */
-
-        SELECT @CustomerRows = COUNT(*)
-        FROM warehouse.DimCustomer;
-
-        SELECT @DateRows = COUNT(*)
-        FROM warehouse.DimDate;
-
-        SELECT @ProductRows = COUNT(*)
-        FROM warehouse.DimProduct;
-
-        SELECT @GeographyRows = COUNT(*)
-        FROM warehouse.DimGeography;
-
-        SELECT @SalesTerritoryRows = COUNT(*)
-        FROM warehouse.DimSalesTerritory;
-
-        SELECT @SalespersonRows = COUNT(*)
-        FROM warehouse.DimSalesperson;
-
-        SELECT @FactSalesRows = COUNT(*)
-        FROM warehouse.FactSales;
-
-
-        SET @TotalRows =
-              @CustomerRows
-            + @DateRows
-            + @ProductRows
-            + @GeographyRows
-            + @SalesTerritoryRows
-            + @SalespersonRows
-            + @FactSalesRows;
-
-
-        /*
-        ========================================================
-        Update successful ETL run
-        ========================================================
-        */
-
-        UPDATE metadata.ETL_RunHistory
-        SET
-            EndTime = SYSUTCDATETIME(),
-            RowsExtracted = @TotalRows,
-            RowsInserted = @TotalRows,
-            RowsUpdated = 0,
-            RowsRejected = 0,
-            Status = 'Success',
-            ErrorMessage = NULL
-        WHERE RunID = @RunID;
-
-
-        /*
-        ========================================================
-        Pipeline Summary
-        ========================================================
-        */
-
-        PRINT '';
-        PRINT '============================================================';
-        PRINT 'Warehouse Pipeline Summary';
-        PRINT '============================================================';
-
-        PRINT '[PASS] Customer Dimension Rows : ' + CAST(@CustomerRows AS VARCHAR(20));
-        PRINT '[PASS] Date Dimension Rows     : ' + CAST(@DateRows AS VARCHAR(20));
-        PRINT '[PASS] Product Dimension Rows  : ' + CAST(@ProductRows AS VARCHAR(20));
-        PRINT '[PASS] Geography Dimension Rows : ' + CAST(@GeographyRows AS VARCHAR(20));
-        PRINT '[PASS] Sales Territory Dimension Rows : ' + CAST(@SalesTerritoryRows AS VARCHAR(20));
-        PRINT '[PASS] Salesperson Dimension Rows : ' + CAST(@SalespersonRows AS VARCHAR(20));
-        PRINT '[PASS] FactSales Rows : ' + CAST(@FactSalesRows AS VARCHAR(20));
-
-        PRINT '';
-        PRINT '------------------------------------------------------------';
-        PRINT 'Tables Loaded  : ' + CAST(@TablesLoaded AS VARCHAR(10));
-        PRINT 'Total Rows     : ' + CAST(@TotalRows AS VARCHAR(20));
-        PRINT 'Pipeline Status: SUCCESS';
-        PRINT '------------------------------------------------------------';
-        PRINT '';
-
-    END TRY
-
-    BEGIN CATCH
-
-        /*
-        ========================================================
-        Update failed ETL run
-        ========================================================
-        */
-
-        UPDATE metadata.ETL_RunHistory
-        SET
-            EndTime = SYSUTCDATETIME(),
-            Status = 'Failed',
-            ErrorMessage = LEFT(ERROR_MESSAGE(), 2000)
-        WHERE RunID = @RunID;
-
-        PRINT '';
-        PRINT '============================================================';
-        PRINT 'Warehouse Pipeline FAILED';
-        PRINT '============================================================';
-        PRINT 'Error: ' + ERROR_MESSAGE();
-        PRINT '';
-
-        THROW;
-
-    END CATCH;
-
+    END CATCH
 END;
 GO
 /*
