@@ -83,6 +83,7 @@
     <Folder Include="Views\dataquality" />
     <Folder Include="Integration" />
     <Folder Include="Integration\Docker" />
+    <Folder Include="Post Deployment\Metadata" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\metadata\ETL_RunHistory.sql" />
@@ -158,6 +159,8 @@
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Sales_Docker.sql" />
     <Build Include="Stored Procedures\pipeline\sp_Load_Staging_Docker.sql" />
     <Build Include="Stored Procedures\pipeline\sp_Load_Warehouse_Docker.sql" />
+    <None Include="Post Deployment\Metadata\PipelineConfiguration.sql" />
+    <Build Include="Views\dataquality\vETLRunStatus.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
@@ -175,6 +178,7 @@
     <None Include="Scripts\QA\Validate-Security-Roles.sql" />
     <None Include="Integration\Docker\01_Create_Test_Logins.sql" />
     <None Include="Integration\Docker\02_Drop_Test_Logins.sql" />
+    <None Include="Post Deployment\Metadata\PipelineConfiguration_Warehouse.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Post Deployment\Script.PostDeployment.sql" />
