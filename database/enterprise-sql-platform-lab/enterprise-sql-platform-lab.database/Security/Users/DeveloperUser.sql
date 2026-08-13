@@ -1,3 +1,0 @@
-﻿CREATE USER [DeveloperUser]
-WITHOUT LOGIN;
-GO

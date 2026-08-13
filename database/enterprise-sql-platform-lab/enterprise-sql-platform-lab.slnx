@@ -1,4 +1,18 @@
 <Solution>
+  <Folder Name="/deployment/">
+    <File Path="Provision-Security.sql" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="01_CRM.sql" />
+    <File Path="02_CustomerSuccess.sql" />
+    <File Path="03_Finance.sql" />
+    <File Path="04_Sales.sql" />
+    <File Path="05_Reporting.sql" />
+    <File Path="06_DataQuality.sql" />
+    <File Path="07_ETL.sql" />
+    <File Path="08_Developer.sql" />
+    <File Path="09_SecurityBaseline.sql" />
+  </Folder>
   <Project Path="enterprise-sql-platform-lab.database/enterprise-sql-platform-lab.database.sqlproj" Id="29d2b0fe-fa22-44cb-a659-92d05389bb47">
     <Build />
     <Deploy />

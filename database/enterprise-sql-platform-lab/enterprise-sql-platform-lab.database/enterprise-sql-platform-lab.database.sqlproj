@@ -85,6 +85,19 @@
     <Folder Include="Integration\Docker" />
     <Folder Include="Post Deployment\Metadata" />
     <Folder Include="Scripts\Sprint 8" />
+    <Folder Include="Views\customersuccess" />
+    <Folder Include="Tables\security" />
+    <Folder Include="Functions\security" />
+    <Folder Include="Views\sales" />
+    <Folder Include="Security\Policies" />
+    <Folder Include="Security\Synonyms\reporting" />
+    <Folder Include="Security\Synonyms\sales" />
+    <Folder Include="Scripts\Users" />
+    <Folder Include="Views\Finance" />
+    <Folder Include="Security\Synonyms\finance" />
+    <Folder Include="Security\Synonyms\customersuccess" />
+    <Folder Include="Views\crm" />
+    <Folder Include="Security\Synonyms\crm" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\metadata\ETL_RunHistory.sql" />
@@ -128,13 +141,6 @@
     <Build Include="Security\Schemas\staging.sql" />
     <Build Include="Security\Schemas\warehouse.sql" />
     <Build Include="Security\Schemas\reporting.sql" />
-    <Build Include="Security\Synonyms\Customer.sql" />
-    <Build Include="Security\Synonyms\Calendar.sql" />
-    <Build Include="Security\Synonyms\Product.sql" />
-    <Build Include="Security\Synonyms\Geography.sql" />
-    <Build Include="Security\Synonyms\SalesTerritory.sql" />
-    <Build Include="Security\Synonyms\Salesperson.sql" />
-    <Build Include="Security\Synonyms\Sales.sql" />
     <Build Include="Security\Schemas\dataquality.sql" />
     <Build Include="Views\dataquality\vMissingCustomerKeys.sql" />
     <Build Include="Views\dataquality\vDuplicateInvoiceLines.sql" />
@@ -146,10 +152,6 @@
     <Build Include="Security\Roles\role_dataquality.sql" />
     <Build Include="Security\Roles\role_etl.sql" />
     <Build Include="Security\Roles\role_developer.sql" />
-    <Build Include="Security\Users\ReportingUser.sql" />
-    <Build Include="Security\Users\DataQuality.sql" />
-    <Build Include="Security\Users\ETLUser.sql" />
-    <Build Include="Security\Users\DeveloperUser.sql" />
     <None Include="Post Deployment\Security.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer_Docker.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Calendar_Docker.sql" />
@@ -163,6 +165,40 @@
     <None Include="Post Deployment\Metadata\PipelineConfiguration.sql" />
     <Build Include="Views\dataquality\vETLRunStatus.sql" />
     <Build Include="Stored Procedures\staging\sp_Load_Staging_Customer_Incremental.sql" />
+    <Build Include="Security\Roles\role_finance.sql" />
+    <Build Include="Security\Roles\role_sales.sql" />
+    <Build Include="Security\Roles\role_crm.sql" />
+    <Build Include="Security\Roles\role_customersuccess.sql" />
+    <Build Include="Security\Schemas\finance.sql" />
+    <Build Include="Security\Schemas\sales.sql" />
+    <Build Include="Security\Schemas\crm.sql" />
+    <Build Include="Security\Schemas\customersuccess.sql" />
+    <Build Include="Views\customersuccess\vw_Customer360.sql" />
+    <Build Include="Security\Permissions\role_customersuccess.sql" />
+    <Build Include="Security\Permissions\role_reporting.sql" />
+    <Build Include="Security\Permissions\role_dataquality.sql" />
+    <Build Include="Security\Permissions\role_etl.sql" />
+    <Build Include="Security\Permissions\role_finance.sql" />
+    <Build Include="Security\Permissions\role_sales.sql" />
+    <Build Include="Security\Permissions\role_crm.sql" />
+    <Build Include="Security\Schemas\security.sql" />
+    <Build Include="Tables\security\SalesRegionAccess.sql" />
+    <Build Include="Functions\security\fn_SalesTerritoryPredicate.sql" />
+    <Build Include="Views\sales\vw_SalesAccountPlanning.sql" />
+    <Build Include="Security\Policies\SalesCustomerRLS.sql" />
+    <Build Include="Security\Synonyms\reporting\Calendar.sql" />
+    <Build Include="Security\Synonyms\reporting\Customer.sql" />
+    <Build Include="Security\Synonyms\reporting\Geography.sql" />
+    <Build Include="Security\Synonyms\reporting\Product.sql" />
+    <Build Include="Security\Synonyms\reporting\Sales.sql" />
+    <Build Include="Security\Synonyms\reporting\Salesperson.sql" />
+    <Build Include="Security\Synonyms\reporting\SalesTerritory.sql" />
+    <Build Include="Security\Synonyms\sales\SalesAccountPlanning.sql" />
+    <Build Include="Views\Finance\vw_FinanceLedger.sql" />
+    <Build Include="Security\Synonyms\finance\FinanceLedger.sql" />
+    <Build Include="Security\Synonyms\customersuccess\Customer360.sql" />
+    <Build Include="Views\crm\vw_CustomerAccount.sql" />
+    <Build Include="Security\Synonyms\crm\CustomerAccount.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="enterprise-sql-platform-lab.database.refactorlog" />
@@ -182,6 +218,9 @@
     <None Include="Integration\Docker\02_Drop_Test_Logins.sql" />
     <None Include="Post Deployment\Metadata\PipelineConfiguration_Warehouse.sql" />
     <None Include="Scripts\Sprint 8\Seed_Customer_Watermark.sql" />
+    <None Include="Scripts\Users\Login_Passwords.sql" />
+    <None Include="Scripts\Users\SalesDWUsers.sql" />
+    <None Include="Scripts\Users\Check_User.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Post Deployment\Script.PostDeployment.sql" />

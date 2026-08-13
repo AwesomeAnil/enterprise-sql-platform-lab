@@ -1,0 +1,3 @@
+﻿GRANT SELECT
+ON SCHEMA::crm
+TO role_crm;

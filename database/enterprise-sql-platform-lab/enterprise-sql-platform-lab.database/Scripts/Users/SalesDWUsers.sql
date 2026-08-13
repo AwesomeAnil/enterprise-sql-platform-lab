@@ -1,0 +1,11 @@
+﻿CREATE USER SalesEMEAUser FOR LOGIN SalesEMEAUser;
+CREATE USER SalesAMERUser FOR LOGIN SalesAMERUser;
+CREATE USER SalesAPACUser FOR LOGIN SalesAPACUser;
+CREATE USER SalesGlobalUser FOR LOGIN SalesGlobalUser;
+GO
+
+ALTER ROLE role_sales ADD MEMBER SalesEMEAUser;
+ALTER ROLE role_sales ADD MEMBER SalesAMERUser;
+ALTER ROLE role_sales ADD MEMBER SalesAPACUser;
+ALTER ROLE role_sales ADD MEMBER SalesGlobalUser
+GO
