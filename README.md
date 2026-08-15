@@ -291,34 +291,91 @@ Validation
 The repository is organized around implementation, testing, deployment and documentation.
 
 ```text
-Enterprise-SQL-Platform-Lab
+Enterprise-SQL-Platform-Lab/
 │
 ├── README.md
+├── .gitignore
+├── LICENSE
+│
+├── database/
+│   └── enterprise-sql-platform-lab/
+│       │
+│       ├── enterprise-sql-platform-lab.database/
+│       │   ├── bin/
+│       │   ├── Functions/
+│       │   ├── Integration/
+│       │   ├── obj/
+│       │   ├── Post Deployment/
+│       │   ├── Pre-Deployment/
+│       │   ├── Scripts/
+│       │   ├── Security/
+│       │   ├── Stored Procedures/
+│       │   ├── Tables/
+│       │   └── Views/
+│       │
+│       │   ├── enterprise-sql-platform-lab.database.dbmdl
+│       │   ├── enterprise-sql-platform-lab.database.jfm
+│       │   ├── enterprise-sql-platform-lab.database.publish.xml
+│       │   ├── enterprise-sql-platform-lab.database.refactorlog
+│       │   ├── enterprise-sql-platform-lab.database.sqlproj
+│       │   ├── enterprise-sql-platform-lab.database.sqlproj.user
+│       │   └── localDB.publish.publish.xml
+│       │
+│       ├── 01_CRM.sql
+│       ├── 02_CustomerSuccess.sql
+│       ├── 03_Finance.sql
+│       ├── 04_Sales.sql
+│       ├── 05_Reporting.sql
+│       ├── 06_DataQuality.sql
+│       ├── 07_ETL.sql
+│       ├── 08_Developer.sql
+│       ├── 09_SecurityBaseline.sql
+│       ├── ETL_RunHistory.sql
+│       ├── metadata.sql
+│       ├── Provision-Security.sql
+│       ├── SqlQuery_1.sql
+│       ├── staging.sql
+│       ├── warehouse.sql
+│       └── enterprise-sql-platform-lab.sln
+│
+├── datasets/
+│   ├── calendar/
+│   ├── customer/
+│   ├── geography/
+│   ├── product/
+│   ├── sales/
+│   ├── salesperson/
+│   └── territory/
+│
+├── docker/
+│   └── [currently a placeholder]
 │
 ├── docs/
 │   ├── 00_Project_Vision.md
 │   ├── 01_Architecture.md
 │   ├── 02_Engineering_Methodology.md
 │   ├── 03_Platform_Foundations.md
+│   ├── 04_Platform_Operations.md
 │   ├── 05_Metadata_Capability.md
-│   ├── 07_Data_Ingestion_Capability.md
+│   ├── 06_Data_Ingestion_Capability.md
 │   ├── 07_Data_Storage_Capability.md
 │   ├── 08_Business_Consumption.md
 │   ├── 09_Platform_Governance.md
+│   ├── 10_Architecture_Overview.md
 │   ├── 11_Database_Development_Workflow.md
-│   ├── 12_Deployment_Workflow.md
-│   ├── 13_Testing_Workflow.md
+│   ├── 12_Database_Deployment.md
+│   ├── 13_Environment_Provisioning.md
 │   ├── 14_Security_Architecture.md
 │   ├── 15_Security_Testing.md
 │   ├── 16_Git_Development_Workflow.md
-│   └── 17_Sprint_Plan_and_Project_History.md
+│   ├── 17_Sprint_Plan_and_Project_History.md
+│   │
+│   ├── 17_sprint_plan_and_project_history_expanded.md
+│   └── 17_Sprint_Plan_and_Project_History_REVISED.md
 │
-├── database/
-├── deployment/
-├── tests/
-├── docker/
-├── datasets/
-├── architecture/
+├── google-colab/
+│   └── enterprise-data-generator.ipynb
+│
 └── images/
 ```
 
