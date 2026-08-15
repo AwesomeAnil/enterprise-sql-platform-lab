@@ -16,6 +16,14 @@ obj/
 # SQL Server
 *.jfm
 
+# Docker
+.env
+*.bak
+*.trn
+*.mdf
+*.ndf
+*.ldf
+
 # Ignore customer and sales data
 datasets/customer/full/**
 datasets/sales/full/**
