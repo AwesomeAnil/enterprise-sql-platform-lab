@@ -163,3 +163,228 @@ docker/
 ├── .gitignore
 ├── README.md
 └── compose.yaml
+```
+
+### 🌱 Git Development & Delivery
+🌱 16 — Git Development Workflow
+
+Documents the Git-based engineering workflow, including:
+
+Repository structure
+Branching
+Commits
+Commit strategy
+Sprint commit model
+Feature development
+Integration
+Release discipline
+📅 Project Journey
+🏃 Sprint 1 → Sprint 11
+📅 17 — Sprint Plan & Project History
+
+The complete engineering journey of the project.
+
+The Sprint history captures the progression from initial platform foundations through database engineering, security, Git development, documentation, repository engineering, and final platform presentation.
+
+### 🧭 Sprint Journey
+
+Sprint 01 ──► Platform Foundations
+     │
+Sprint 02 ──► Database Architecture & Development
+     │
+Sprint 03 ──► Database Engineering
+     │
+Sprint 04 ──► Data & ETL Capabilities
+     │
+Sprint 05 ──► Metadata & Platform Capabilities
+     │
+Sprint 06 ──► Security Engineering
+     │
+Sprint 07 ──► Testing & Validation
+     │
+Sprint 08 ──► Platform Engineering Maturity
+     │
+Sprint 09 ──► Engineering Workflow & Delivery
+     │
+Sprint 10 ──► Project Consolidation
+     │
+Sprint 11 ──► Documentation & Repository Completion
+     │
+     ▼
+🏆 Enterprise SQL Platform Lab
+
+### 📊 Data & Experimentation
+#### 📁 Curated Datasets
+
+The repository contains the project's curated datasets used for development and platform validation.
+
+datasets/
+├── calendar/
+├── customer/
+├── geography/
+├── product/
+├── sales/
+├── salesperson/
+└── territory/
+
+### 🧪 Google Colab
+
+The repository also contains the data-generation notebook used to support the project's dataset creation and experimentation.
+
+🧪 Open Google Colab Assets
+
+### 🗃️ Database Project
+
+The SQL Server database project contains the source-controlled database implementation
+
+database/
+└── enterprise-sql-platform-lab/
+    └── enterprise-sql-platform-lab.database/
+
+### 🔄 Database Engineering Lifecycle
+
+💡 Design
+   ↓
+🧑‍💻 Develop
+   ↓
+🔍 Validate
+   ↓
+🏗️ Build
+   ↓
+📦 DACPAC
+   ↓
+🚀 Deploy
+   ↓
+🧪 Test
+
+
+## 🧭 How to Navigate This Documentation
+#### 👋 New to the project?
+
+Start with:
+
+🎯 Project Vision
+↓
+🏗️ Architecture
+↓
+⚙️ Engineering Methodology
+↓
+🧱 Platform Foundations
+
+#### 👨‍💻 Interested in database engineering?
+
+Start with:
+
+🗄️ Database Development Workflow
+↓
+🚀 Deployment Workflow
+↓
+🧪 Testing Workflow
+
+#### 🔐 Interested in security?
+
+Start with:
+
+🏰 Security Architecture
+↓
+🧪 Security Testing
+
+#### 🐳 Want to run the platform locally?
+
+Start with:
+
+🐳 Docker Environment
+
+#### 🌱 Want to understand how the project was delivered?
+
+Start with:
+
+🌱 Git Development Workflow
+↓
+📅 Sprint Plan & Project History
+
+### 🏆 The Engineering Story
+
+This project is more than a collection of SQL scripts.
+
+It demonstrates an end-to-end engineering discipline:
+
+🎯 Vision
+   │
+   ▼
+🏗️ Architecture
+   │
+   ▼
+⚙️ Engineering Methodology
+   │
+   ▼
+🧱 Platform Foundations
+   │
+   ▼
+🧩 Platform Capabilities
+   │
+   ▼
+🗄️ Database Engineering
+   │
+   ▼
+🔐 Security
+   │
+   ▼
+🧪 Testing
+   │
+   ▼
+🚀 Deployment
+   │
+   ▼
+🌱 Git & Delivery
+   │
+   ▼
+📅 Sprint Execution
+   │
+   ▼
+📚 Engineering Documentation
+   │
+   ▼
+🏆 Enterprise SQL Platform Lab
+
+### 🧭 Repository Navigation
+
+| 📚 Resource                          | 🔗 Purpose                                      |
+| ------------------------------------ | ----------------------------------------------- |
+| 📖 [Repository README](../README.md) | Project introduction and repository orientation |
+| 📚 [Documentation](.)                | Engineering documentation portal                |
+| 🗄️ [Database](../database/)         | SQL Server database project                     |
+| 📊 [Datasets](../datasets/)          | Curated platform datasets                       |
+| 🐳 [Docker](../docker/)              | Reproducible SQL Server development environment |
+| 🧪 [Google Colab](../google-colab/)  | Data generation and experimentation             |
+| 🖼️ [Images](../images/)             | Project documentation visuals                   |
+
+
+### 🚀 Final Destination
+**Build it. Secure it. Test it. Deploy it. Document it.**
+
+The Enterprise SQL Platform Lab brings together the engineering disciplines required to build and operate a structured SQL Server data platform — from architectural vision through implementation, security, deployment, Git-based delivery, and project history.
+
+Welcome to the lab. 🏗️ 🗄️ 🔐 🧪 🚀
+
+
+🏆 Enterprise SQL Platform Lab
+    by Anil Jacob | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anil-jacobs/)
+[![GitHub](https://img.shields.io/badge/GitHub-View%20Profile-181717?logo=github&logoColor=white)](https://github.com/AwesomeAnil)
+
+Architecture • Engineering • Security • Data • Deployment • Governance
+
+</p> ```
+
+
+
+
+
+
+
+
+
+
+
+
+
