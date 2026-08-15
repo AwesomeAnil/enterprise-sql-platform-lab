@@ -374,7 +374,7 @@ Welcome to the lab. 🏗️ 🗄️ 🔐 🧪 🚀
     by Anil Jacob | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anil-jacobs/)
 [![GitHub](https://img.shields.io/badge/GitHub-View%20Profile-181717?logo=github&logoColor=white)](https://github.com/AwesomeAnil)
 
-Architecture • Engineering • Security • Data • Deployment • Governance
+> Architecture • Engineering • Security • Data • Deployment • Governance
 
 </p> ```
 
