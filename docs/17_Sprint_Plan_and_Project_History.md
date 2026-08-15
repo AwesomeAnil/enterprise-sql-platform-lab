@@ -49,20 +49,20 @@ Sprint history and Git history answer different questions.
 
 Answers:
 
-> \*\*What outcome did the team intend to deliver, and what was
-> accomplished?\*\*
+> \\\*\\\*What outcome did the team intend to deliver, and what was
+> accomplished?\\\*\\\*
 
 ### Git history
 
 Answers:
 
-> \*\*What source-controlled changes were actually committed?\*\*
+> \\\*\\\*What source-controlled changes were actually committed?\\\*\\\*
 
 ### Architecture documentation
 
 Answers:
 
-> \*\*What is the resulting design and how does it work?\*\*
+> \\\*\\\*What is the resulting design and how does it work?\\\*\\\*
 
 The three should not be conflated.
 
@@ -186,49 +186,513 @@ the intention and the outcome.
 
 # Part I --- Project Sprint History
 
-## 8\. Sprint 1--8 --- Historical Foundation
+## 8\. Sprint 1 --- Project and Database Foundation
 
-The project predates the current documentation baseline.
+### Objective
 
-These early sprints established the foundation from which the current
-platform evolved.
+Establish the SQL Server development foundation for the Enterprise SQL Platform and move database development toward a structured, source-controlled engineering model.
 
-However, this document deliberately does **not** fabricate detailed
-historical records where the original sprint evidence has not been
-formally captured.
+### Major work
 
-The repository should distinguish between:
+The early project established the database development environment and the SQL Server Database Project as the central source-controlled development surface.
 
-``` text
-Confirmed historical fact
-        |
-        v
-Documented project record
+The project began treating database objects as software artifacts rather than as objects maintained only through manual changes against a database.
+
+The foundational workflow became:
+
+```text
+SQL source
+    |
+    v
+Database Project
+    |
+    v
+Build
+    |
+    v
+Database
 ```
 
-and:
+### Architectural significance
 
-``` text
-Reasonable reconstruction
-        |
-        v
-Historical assumption
+The most important decision was to establish the database project as the authoritative representation of database objects.
+
+This created the foundation for:
+
+* source control;
+* repeatable builds;
+* DACPAC generation;
+* publish/deployment;
+* subsequent Git-based development.
+
+### Resulting baseline
+
+Sprint 1 established the basic engineering discipline on which every later database and DevOps sprint depended.
+
+\---
+
+## 9\. Sprint 2 --- Database Architecture and Schema Foundation
+
+### Objective
+
+Establish a logical database architecture with meaningful schema boundaries.
+
+### Major work
+
+The database was progressively organized into functional schemas rather than treating the database as one undifferentiated object namespace.
+
+The architecture evolved around:
+
+```text
+crm
+customersuccess
+finance
+sales
+reporting
+dataquality
+staging
+warehouse
+pipeline
+security
 ```
 
-Only the former should be presented as authoritative sprint history.
+### Architectural significance
 
-The detailed Sprint 1--8 records should therefore be completed from
-actual Git history, project notes, commits, and other authoritative
-project evidence rather than invented retrospectively.
+Schemas were deliberately treated as responsibility boundaries.
 
-### Historical baseline
+This decision later enabled the security architecture to express permissions at the appropriate level.
 
-The early project phase established the major database development
-foundation that later sprints built upon.
+For example:
 
-The resulting platform subsequently evolved into the structured
-database, deployment, security and DevOps architecture documented in the
-later project documents.
+```text
+role\_crm
+    |
+    +--> crm
+
+role\_finance
+    |
+    +--> finance
+
+role\_sales
+    |
+    +--> sales
+
+role\_reporting
+    |
+    +--> reporting
+```
+
+The schema design therefore became both a data-architecture decision and a security-architecture decision.
+
+### Resulting baseline
+
+Sprint 2 established the logical structure into which the staging, warehouse, pipeline and security layers were subsequently developed.
+
+\---
+
+## 10\. Sprint 3 --- Staging Data Model
+
+### Objective
+
+Build the staging layer required to ingest and work with the GreenPear Labs dataset.
+
+### Major work
+
+The staging layer developed around the core source-oriented entities:
+
+```text
+Calendar
+Customer
+Geography
+Product
+Sales
+Salesperson
+SalesTerritory
+```
+
+Primary keys and supporting constraints were introduced as appropriate.
+
+### Data-flow architecture
+
+The project established the fundamental data movement model:
+
+```text
+Source data
+    |
+    v
+Staging
+    |
+    v
+Transformation
+    |
+    v
+Warehouse
+```
+
+The staging layer therefore became the controlled landing point between source data and analytical processing.
+
+### Why this mattered
+
+Separating staging from the warehouse allowed the project to:
+
+* inspect incoming data;
+* validate source structures;
+* perform transformations;
+* isolate ingestion logic;
+* reload source-oriented data without directly disturbing analytical structures.
+
+### Resulting baseline
+
+Sprint 3 established the physical staging foundation later consumed by the ETL and pipeline procedures.
+
+\---
+
+## 11\. Sprint 4 --- Warehouse and Analytical Model
+
+### Objective
+
+Establish the analytical warehouse layer and separate it from source ingestion.
+
+### Major work
+
+The warehouse was developed as a distinct architectural layer rather than simply another copy of staging data.
+
+The resulting conceptual model became:
+
+```text
+Source
+  |
+  v
+Staging
+  |
+  v
+Transformation
+  |
+  v
+Warehouse
+  |
+  v
+Reporting
+```
+
+### Architectural significance
+
+The warehouse became the controlled analytical state of the platform.
+
+This distinction later supported differentiated access:
+
+```text
+ETL
+    -> controlled processing access
+
+Developer
+    -> development-level warehouse access
+
+Reporting
+    -> reporting access
+
+Business roles
+    -> controlled domain access
+```
+
+### Resulting baseline
+
+Sprint 4 established the analytical layer and the boundary between ingestion and consumption.
+
+\---
+
+## 12\. Sprint 5 --- ETL and Pipeline Development
+
+### Objective
+
+Create repeatable database-side processing for loading staging and warehouse data.
+
+### Major work
+
+Stored procedures were developed in the `staging` and `pipeline` schemas.
+
+The resulting implementation included procedures such as:
+
+```text
+pipeline.sp\_Load\_Staging
+pipeline.sp\_Load\_Staging\_Docker
+pipeline.sp\_Load\_Warehouse
+pipeline.sp\_Load\_Warehouse\_Docker
+```
+
+Entity-specific staging procedures included:
+
+```text
+staging.sp\_Load\_Staging\_Calendar
+staging.sp\_Load\_Staging\_Customer
+staging.sp\_Load\_Staging\_Geography
+staging.sp\_Load\_Staging\_Product
+staging.sp\_Load\_Staging\_Sales
+staging.sp\_Load\_Staging\_Salesperson
+staging.sp\_Load\_Staging\_SalesTerritory
+```
+
+Incremental processing was also introduced where required:
+
+```text
+staging.sp\_Load\_Staging\_Customer\_Incremental
+```
+
+### Docker-specific development
+
+Docker-specific procedures were developed where environment-specific loading behavior required them.
+
+This experience later contributed to an important architectural lesson:
+
+> Environment-specific concerns should not automatically become part of the database artifact.
+
+### Resulting baseline
+
+Sprint 5 established the database ETL and pipeline layer and provided the executable processing required to move data through staging and warehouse layers.
+
+\---
+
+## 13\. Sprint 6 --- Database Project, Build and DACPAC Deployment
+
+### Objective
+
+Turn the database implementation into a reproducible build and deployment artifact.
+
+### Major work
+
+The SQL Server Database Project became the central compilation and deployment mechanism.
+
+The workflow evolved into:
+
+```text
+SQL source
+    |
+    v
+Database Project
+    |
+    v
+Build
+    |
+    v
+DACPAC
+    |
+    v
+Publish
+```
+
+### Development discipline
+
+The project increasingly relied on:
+
+```text
+Change
+  |
+  v
+Build
+  |
+  v
+Resolve errors
+  |
+  v
+Publish
+  |
+  v
+Validate
+```
+
+rather than manually recreating database objects.
+
+### Post-deployment
+
+A Post-Deployment folder was established within the database project for deployment operations that legitimately belonged inside the DACPAC boundary.
+
+This eventually provided the mechanism for including database-level deployment SQL through the post-deployment entry point.
+
+### Important lesson
+
+The existence of a Post-Deployment folder does not mean every environment operation belongs there.
+
+That distinction became critical when security provisioning was separated from DACPAC deployment.
+
+### Resulting baseline
+
+Sprint 6 established the DACPAC-based database deployment model.
+
+\---
+
+## 14\. Sprint 7 --- LocalDB and Docker Development Model
+
+### Objective
+
+Establish separate development and integration environments and define what each environment is responsible for.
+
+### LocalDB role
+
+LocalDB became the rapid development environment for:
+
+```text
+Database project builds
+DACPAC generation
+Database object deployment
+Schema validation
+Routine database development
+Fast feedback
+```
+
+### Docker SQL Server role
+
+Docker SQL Server became the broader integration and security validation environment for:
+
+```text
+DACPAC deployment
+Server-level configuration
+Login validation
+Database-user validation
+Role membership
+Security provisioning
+Security testing
+Runtime integration
+```
+
+### Critical architectural lesson
+
+The project encountered practical SQL Server edition and environment limitations when attempting to use LocalDB as the universal test environment.
+
+The resulting architecture became:
+
+```text
+LocalDB
+    =
+Fast database development and build validation
+
+Docker SQL Server
+    =
+Broader SQL Server integration and security validation
+```
+
+### Security implication
+
+Rather than creating separate:
+
+```text
+LocalDB-Security.sql
+Docker-Security.sql
+```
+
+the project ultimately adopted one coherent provisioning model that runs against the environment where the relevant security capabilities exist.
+
+### Resulting baseline
+
+Sprint 7 established the two-environment development model that later made the clean security provisioning/testing separation possible.
+
+\---
+
+## 15\. Sprint 8 --- Deployment and DevOps Foundation
+
+### Objective
+
+Formalize how database source becomes a deployable artifact and how environment-specific state is handled.
+
+### Major work
+
+Deployment evolved from simply publishing a DACPAC into a broader delivery model:
+
+```text
+Source control
+      |
+      v
+Database Project
+      |
+      v
+Build
+      |
+      v
+DACPAC
+      |
+      v
+Database deployment
+      |
+      v
+Environment provisioning
+      |
+      v
+Validation
+```
+
+### Critical architectural boundary
+
+The project established a fundamental distinction:
+
+> The database artifact and environment state are not the same thing.
+
+Database objects belong in the database project.
+
+Environment-specific state belongs outside the DACPAC when it cannot or should not be represented by the database artifact.
+
+This eventually produced:
+
+```text
+deployment/
+    Provision-Security.sql
+```
+
+outside the database project.
+
+### Testing boundary
+
+A second boundary was established:
+
+```text
+deployment/
+    Provision-Security.sql
+
+tests/
+    security/
+        \*.sql
+```
+
+`Provision-Security.sql` establishes the required environment state.
+
+Security tests prove that the resulting state behaves correctly.
+
+### DevOps direction
+
+The project also established the conceptual promotion model:
+
+```text
+Git
+  |
+  v
+Build
+  |
+  v
+Artifact
+  |
+  v
+DEV
+  |
+  v
+TEST
+  |
+  v
+PROD
+```
+
+Production was subsequently understood as a deployment stage consuming the approved artifact rather than as a separate implementation of the database.
+
+### Resulting baseline
+
+Sprint 8 established the deployment and DevOps boundaries that Sprint 9 and Sprint 10 would apply rigorously to security.
+
+\---
+
+## Historical qualification for Sprints 1--8
+
+The detailed Sprint 1--8 records above are a reconstruction from the project's accumulated development context and implementation history.
+
+They intentionally document the technical progression without fabricating exact dates, ticket identifiers, commit hashes or other metadata that is not reliably available.
+
+This preserves the usefulness of the sprint history without pretending that every early sprint boundary was formally recorded at the time.
 
 \---
 
@@ -338,44 +802,44 @@ The final security model established during Sprint 10 includes the
 following functional roles:
 
 ``` text
-role\_crm
-role\_customersuccess
-role\_dataquality
-role\_developer
-role\_etl
-role\_finance
-role\_reporting
-role\_sales
+role\\\_crm
+role\\\_customersuccess
+role\\\_dataquality
+role\\\_developer
+role\\\_etl
+role\\\_finance
+role\\\_reporting
+role\\\_sales
 ```
 
 Validated role memberships include:
 
 ``` text
-role\_crm
+role\\\_crm
  ├── CRMAMERUser
  ├── CRMAPACUser
  ├── CRMEMEAUser
  └── CRMLogin
 
-role\_customersuccess
+role\\\_customersuccess
  └── CustomerSuccessUser
 
-role\_dataquality
+role\\\_dataquality
  └── DataQualityUser
 
-role\_developer
+role\\\_developer
  └── DeveloperUser
 
-role\_etl
+role\\\_etl
  └── ETLUser
 
-role\_finance
+role\\\_finance
  └── FinanceUser
 
-role\_reporting
+role\\\_reporting
  └── ReportingUser
 
-role\_sales
+role\\\_sales
  ├── SalesAMERUser
  ├── SalesAPACUser
  └── SalesEMEAUser
@@ -384,13 +848,13 @@ role\_sales
 The detailed security architecture is maintained in:
 
 ``` text
-docs/14\_security\_architecture.md
+docs/14\\\_security\\\_architecture.md
 ```
 
 The testing methodology is maintained in:
 
 ``` text
-docs/15\_security\_testing.md
+docs/15\\\_security\\\_testing.md
 ```
 
 \---
@@ -587,7 +1051,7 @@ Sprint 11
 
 The Sprint 10 record explains **when the architecture was established**.
 
-`14\_security\_architecture.md` explains **what that architecture is**.
+`14\\\_security\\\_architecture.md` explains **what that architecture is**.
 
 \---
 
@@ -612,7 +1076,7 @@ rather than mechanically creating one commit per task.
 This principle is documented in:
 
 ``` text
-docs/16\_git\_development\_workflow.md
+docs/16\\\_git\\\_development\\\_workflow.md
 ```
 
 \---
@@ -1106,16 +1570,16 @@ This keeps future sprint entries consistent.
 At sprint close:
 
 ``` text
-\[ ] Objective achieved
-\[ ] Deliverables identified
-\[ ] Build validated
-\[ ] Relevant tests passed
-\[ ] Architectural decisions captured
-\[ ] Documentation updated
-\[ ] Git changes committed
-\[ ] Pull request completed where applicable
-\[ ] Deferred work recorded
-\[ ] Sprint history updated
+\\\[ ] Objective achieved
+\\\[ ] Deliverables identified
+\\\[ ] Build validated
+\\\[ ] Relevant tests passed
+\\\[ ] Architectural decisions captured
+\\\[ ] Documentation updated
+\\\[ ] Git changes committed
+\\\[ ] Pull request completed where applicable
+\\\[ ] Deferred work recorded
+\\\[ ] Sprint history updated
 ```
 
 \---
@@ -1167,7 +1631,7 @@ Sprint 10
     +--> Security architecture established
               |
               v
-14\_security\_architecture.md
+14\\\_security\\\_architecture.md
     |
     +--> Current security reference
 ```
@@ -1291,10 +1755,10 @@ None should be treated as a replacement for the others.
 
 The governing principle for sprint management is:
 
-> \*\*Plan meaningful outcomes, implement them through disciplined Git
+> \\\*\\\*Plan meaningful outcomes, implement them through disciplined Git
 > workflows, validate them against the appropriate environments,
 > document stable architectural decisions, and record the completed
-> sprint without rewriting history.\*\*
+> sprint without rewriting history.\\\*\\\*
 
 The sprint record should tell the story of the project's evolution.
 
