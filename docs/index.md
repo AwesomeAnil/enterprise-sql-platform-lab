@@ -1,4 +1,6 @@
 # 🚀 Enterprise SQL Platform Lab
+![Enterprise SQL Platform Lab](images/hero_banner.png)
+
 
 > **An enterprise-grade SQL Server platform engineering laboratory demonstrating architecture, database engineering, security, deployment, governance, reproducible development, and disciplined Git-based delivery.**
 
