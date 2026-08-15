@@ -1,4 +1,5 @@
 # 🚀 Enterprise SQL Platform Lab
+![banner](images/hero_banner.png)
 
 <div align="center">
 
@@ -12,15 +13,6 @@
 **Enterprise SQL Engineering from First Principles**
 
 *Build • Understand • Test • Inspect • Document • Automate*
-
-<br>
-
-<a href="docs/00_Project_Vision.md"><img src="https://img.shields.io/badge/📖%20Project%20Vision-00_Project_Vision-2F81F7?style=for-the-badge" alt="Project Vision"></a>
-<a href="docs/01_Architecture.md"><img src="https://img.shields.io/badge/🏗%20Architecture-01_Architecture-6F42C1?style=for-the-badge" alt="Architecture"></a>
-<a href="docs/14_Security_Architecture.md"><img src="https://img.shields.io/badge/🔐%20Security-14_Security-8B5CF6?style=for-the-badge" alt="Security"></a>
-<a href="docs/13_Testing_Workflow.md"><img src="https://img.shields.io/badge/🧪%20Testing-13_Testing-238636?style=for-the-badge" alt="Testing"></a>
-<a href="docs/16_Git_Development_Workflow.md"><img src="https://img.shields.io/badge/🌿%20Git%20Workflow-16_Git-8250DF?style=for-the-badge" alt="Git Workflow"></a>
-<a href="docs/17_Sprint_Plan_and_Project_History.md"><img src="https://img.shields.io/badge/📋%20Sprint%20History-17_Sprints-0969DA?style=for-the-badge" alt="Sprint History"></a>
 
 </div>
 
@@ -571,7 +563,7 @@ Suggestions and constructive discussion are welcome.
 
 ## 👤 Author
 
-**GreenPear Labs**
+> **Anil Jacob** | Connect with me | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anil-jacobs/) | [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/AwesomeAnil)
 
 *Enterprise SQL Engineering from First Principles*
 
