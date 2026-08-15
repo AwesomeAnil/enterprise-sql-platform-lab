@@ -7,313 +7,511 @@
 ![Windows](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows)
 ![GitHub](https://img.shields.io/badge/GitHub-Version_Control-181717?style=for-the-badge&logo=github)
 ![SSDT](https://img.shields.io/badge/SSDT-Database_Projects-68217A?style=for-the-badge)
-![Power BI](https://img.shields.io/badge/Power_BI-Integration-F2C811?style=for-the-badge&logo=powerbi)
+![Power BI](https://img.shields.io/badge/Power_BI-Future_State-F2C811?style=for-the-badge&logo=powerbi)
 
 **Enterprise SQL Engineering from First Principles**
 
 *Build • Understand • Test • Inspect • Document • Automate*
 
----
+<br>
 
-*A complete engineering playbook for building modern SQL Server platforms using Docker, SQL Server Developer Edition, SSDT, DACPACs, CI/CD and enterprise data warehouse design.*
+<a href="docs/00_Project_Vision.md"><img src="https://img.shields.io/badge/📖%20Project%20Vision-00_Project_Vision-2F81F7?style=for-the-badge" alt="Project Vision"></a>
+<a href="docs/01_Architecture.md"><img src="https://img.shields.io/badge/🏗%20Architecture-01_Architecture-6F42C1?style=for-the-badge" alt="Architecture"></a>
+<a href="docs/14_Security_Architecture.md"><img src="https://img.shields.io/badge/🔐%20Security-14_Security-8B5CF6?style=for-the-badge" alt="Security"></a>
+<a href="docs/13_Testing_Workflow.md"><img src="https://img.shields.io/badge/🧪%20Testing-13_Testing-238636?style=for-the-badge" alt="Testing"></a>
+<a href="docs/16_Git_Development_Workflow.md"><img src="https://img.shields.io/badge/🌿%20Git%20Workflow-16_Git-8250DF?style=for-the-badge" alt="Git Workflow"></a>
+<a href="docs/17_Sprint_Plan_and_Project_History.md"><img src="https://img.shields.io/badge/📋%20Sprint%20History-17_Sprints-0969DA?style=for-the-badge" alt="Sprint History"></a>
 
 </div>
 
 ---
 
-# 📖 Why This Repository Exists
+## 📖 What This Project Is
 
-Most SQL Server tutorials teach isolated technologies.
+The **Enterprise SQL Platform Lab** is a practical engineering project for designing, building, securing, testing, documenting, and deploying a SQL Server data platform.
 
-- Learn Docker
-- Learn SQL
-- Learn SSDT
-- Learn CI/CD
+It is deliberately more than a collection of SQL scripts.
 
-Real enterprise data platforms are built differently.
-
-Infrastructure, administration, metadata, data ingestion, dimensional modeling, deployment and governance are engineered together as one integrated platform.
-
-This repository documents that engineering journey from the ground up.
-
-Every component is:
-
-✅ Built manually
-
-✅ Understood conceptually
-
-✅ Tested
-
-✅ Inspected
-
-✅ Documented
-
-✅ Automated
-
-The result is not another SQL tutorial.
-
-It is an **Enterprise SQL Engineering Playbook**.
-
----
-
-# 🎯 Project Objectives
-
-- Build SQL Server Developer Edition inside Docker
-- Learn SQL Server administration
-- Design an enterprise data warehouse
-- Build metadata-driven ETL
-- Implement dimensional modeling
-- Create SSDT Database Projects
-- Deploy using DACPACs
-- Automate deployments with GitHub Actions
-- Apply enterprise engineering best practices
-
----
-
-# 🏗 Enterprise Platform Architecture
+The project demonstrates an end-to-end engineering approach:
 
 ```text
-                    Windows 11
-                         │
-                         ▼
-                  Docker Desktop
-                         │
-                         ▼
-                SQL Server Developer
-                         │
-        ┌────────────────┼────────────────┐
-        ▼                ▼                ▼
-    sql-dev          sql-test          sql-dw
-                         │
-                         ▼
-                     SalesDW
-                         │
- ┌──────────────┬──────────────┬──────────────┐
- ▼              ▼              ▼              ▼
-Metadata      Staging      Warehouse      Reporting
-```
-
----
-
-# 🧠 Engineering Methodology
-
-Every component in this repository follows the same methodology.
-
-```text
+Design
+  ↓
 Build
-    ↓
+  ↓
 Understand
-    ↓
+  ↓
 Test
-    ↓
+  ↓
 Inspect
-    ↓
+  ↓
 Document
-    ↓
+  ↓
 Automate
 ```
 
-Automation is never introduced before understanding.
+Automation is introduced only after the underlying platform behaviour is understood and validated.
 
 ---
 
-# 🏛 Enterprise Capability Model
+## 🎯 Why This Repository Exists
+
+Most SQL Server learning resources teach isolated technologies.
+
+This project takes a different approach.
+
+Infrastructure, administration, database development, metadata, data ingestion, storage, security, testing, deployment, source control and governance are engineered together as one integrated platform.
+
+Every major component follows the same discipline:
+
+- ✅ Built
+- 🧠 Understood
+- 🧪 Tested
+- 🔎 Inspected
+- 📚 Documented
+- ⚙️ Prepared for automation
+
+The result is an **Enterprise SQL Engineering Playbook** rather than another SQL tutorial.
+
+---
+
+## 🏗 Architecture at a Glance
+
+The current engineering lifecycle is:
+
+```text
+                    SOURCE CONTROL
+                         |
+                         v
+                 DATABASE PROJECT
+                         |
+                         v
+                    BUILD / DACPAC
+                         |
+              +----------+----------+
+              |                     |
+           LOCALDB              DOCKER SQL
+              |                     |
+              +----------+----------+
+                         |
+                         v
+                  SECURITY
+                PROVISIONING
+                         |
+                         v
+                      TESTS
+                         |
+                         v
+                    COMMIT
+                         |
+                         v
+                 RELEASE ARTIFACT
+                         |
+                    +----+----+
+                    |         |
+                   TEST      PROD
+```
+
+The important architectural boundary is that **database deployment and environment-specific security provisioning are separate concerns**.
+
+The DACPAC delivers the database implementation. Security provisioning handles environment-specific principals and role membership outside the DACPAC scope.
+
+---
+
+## 🏛 Enterprise Capability Model
 
 Rather than building isolated SQL objects, this repository builds complete engineering capabilities.
 
 | Capability | Status |
-|------------|--------|
-| Metadata Capability | ✅ |
-| Data Ingestion Capability | 🚧 |
-| Data Storage Capability | ⏳ |
-| Business Consumption Capability | ⏳ |
-| Platform Governance Capability | ⏳ |
+|---|---|
+| 🧱 Platform Foundations | ✅ Implemented |
+| 🗂 Metadata | ✅ Implemented |
+| 📥 Data Ingestion | ✅ Implemented |
+| 💾 Data Storage | ✅ Implemented |
+| 📊 Business Consumption | 🟡 Database foundation implemented |
+| 🛡️ Platform Governance | ✅ Established |
+| 🔐 Security | ✅ Implemented |
+| 🧪 Testing | ✅ Implemented |
+| 🌿 Git Development Workflow | ✅ Established |
+| ⚙️ CI/CD Automation | 🔵 Future |
+| 📈 Power BI Consumption | 🔵 Future |
+
+### ✅ Implemented Platform Capabilities
+
+The current platform includes:
+
+- source-controlled SQL Server Database Project;
+- relational schemas and storage;
+- staging and warehouse layers;
+- entity-level ingestion procedures;
+- pipeline procedures;
+- incremental Customer ingestion;
+- database roles and permissions;
+- row-level security;
+- security provisioning outside DACPAC deployment;
+- LocalDB development;
+- Docker SQL Server validation;
+- structured security and functional testing;
+- Git-based development and sprint history;
+- structured engineering documentation.
 
 ---
 
-# 📂 Repository Structure
+## 🔄 Development Lifecycle
+
+The platform follows a controlled development path:
+
+```text
+Requirement
+    ↓
+Source Change
+    ↓
+Database Project Build
+    ↓
+LocalDB Validation
+    ↓
+Docker SQL Server Validation
+    ↓
+Security Provisioning
+    ↓
+Functional / Security Tests
+    ↓
+Git Commit
+    ↓
+Release / Promotion
+```
+
+The database project remains the source-controlled definition of the database implementation.
+
+Deployed databases are runtime environments, not the source of truth.
+
+---
+
+## 🔐 Security Model
+
+Security is built around roles, permissions and controlled provisioning.
+
+The platform uses database roles such as:
+
+```text
+role_crm
+role_customersuccess
+role_dataquality
+role_developer
+role_etl
+role_finance
+role_reporting
+role_sales
+```
+
+The general model is:
+
+```text
+User
+  ↓
+Role
+  ↓
+Permission
+  ↓
+Database Object
+```
+
+Row-level security is also implemented for sales territory access.
+
+Security provisioning is deliberately kept outside DACPAC deployment so that environment-specific principals do not become tightly coupled to the database artifact.
+
+👉 See **[14 — Security Architecture](docs/14_Security_Architecture.md)** and **[15 — Security Testing](docs/15_Security_Testing.md)**.
+
+---
+
+## 🧪 Testing
+
+Testing is treated as part of development rather than as a final activity.
+
+The project includes validation for:
+
+- 🏗 database structure;
+- 📥 ingestion;
+- 🔄 pipeline execution;
+- 👥 roles and permissions;
+- 🔑 role membership;
+- 🛡️ row-level security;
+- ⚙️ ETL access;
+- 📊 reporting access;
+- 🚀 deployment behaviour.
+
+The principle is simple:
+
+```text
+Build Success
+     ↓
+Deployment
+     ↓
+Functional Validation
+     ↓
+Security Validation
+     ↓
+Approved Change
+```
+
+👉 See **[13 — Testing Workflow](docs/13_Testing_Workflow.md)** and **[15 — Security Testing](docs/15_Security_Testing.md)**.
+
+---
+
+## 🚀 Deployment
+
+The database is deployed through the Database Project and DACPAC model.
+
+```text
+Database Project
+      ↓
+Build
+      ↓
+DACPAC
+      ↓
+Target Database
+      ↓
+Security Provisioning
+      ↓
+Validation
+```
+
+🧪 **LocalDB** is used for rapid development and structural validation.
+
+🐳 **Docker SQL Server** provides broader integration and SQL Server behaviour validation.
+
+🏭 **Production** is treated as a controlled deployment target rather than a development workspace.
+
+👉 See **[12 — Deployment Workflow](docs/12_Deployment_Workflow.md)**.
+
+---
+
+## 📂 Repository Structure
+
+The repository is organized around implementation, testing, deployment and documentation.
 
 ```text
 Enterprise-SQL-Platform-Lab
-
 │
 ├── README.md
 │
-├── docs
-│     │
-│     ├── 00_Project_Vision.md
-│     ├── 01_Architecture.md
-│     ├── 02_Engineering_Methodology.md
-│     ├── 03_Platform_Foundation.md
-│     ├── 04_SQL_Server_Administration.md
-│     ├── 05_Metadata_Capability.md
-│     ├── 06_Data_Ingestion_Capability.md
-│     ├── 07_Data_Storage_Capability.md
-│     ├── 08_Business_Consumption.md
-│     └── 09_Platform_Governance.md
+├── docs/
+│   ├── 00_Project_Vision.md
+│   ├── 01_Architecture.md
+│   ├── 02_Engineering_Methodology.md
+│   ├── 03_Platform_Foundations.md
+│   ├── 05_Metadata_Capability.md
+│   ├── 07_Data_Ingestion_Capability.md
+│   ├── 07_Data_Storage_Capability.md
+│   ├── 08_Business_Consumption.md
+│   ├── 09_Platform_Governance.md
+│   ├── 11_Database_Development_Workflow.md
+│   ├── 12_Deployment_Workflow.md
+│   ├── 13_Testing_Workflow.md
+│   ├── 14_Security_Architecture.md
+│   ├── 15_Security_Testing.md
+│   ├── 16_Git_Development_Workflow.md
+│   └── 17_Sprint_Plan_and_Project_History.md
 │
-├── docker
-├── sql
-├── scripts
-├── architecture
-├── datasets
-└── images
+├── database/
+├── deployment/
+├── tests/
+├── docker/
+├── datasets/
+├── architecture/
+└── images/
 ```
+
+The README is the project landing page.
+
+The `docs/` directory is the detailed engineering reference.
+
+🌿 Git history records implementation changes.
+
+📋 Sprint history records how the platform evolved.
 
 ---
 
-# 📚 Learning Progression
+# 📚 Documentation
 
-The repository follows a structured engineering progression.
+## 🧭 Start Here
+
+New to the project? Follow this sequence:
+
+| Document | Purpose |
+|---|---|
+| 📖 [`00_Project_Vision.md`](docs/00_Project_Vision.md) | Project purpose, direction and guiding principles |
+| 🏗 [`01_Architecture.md`](docs/01_Architecture.md) | Platform architecture and major boundaries |
+| 🧠 [`02_Engineering_Methodology.md`](docs/02_Engineering_Methodology.md) | Engineering approach and working principles |
+| 🧱 [`03_Platform_Foundations.md`](docs/03_Platform_Foundations.md) | Core platform foundations |
+| 🗄️ [`11_Database_Development_Workflow.md`](docs/11_Database_Development_Workflow.md) | How database changes are developed |
+| 🌿 [`16_Git_Development_Workflow.md`](docs/16_Git_Development_Workflow.md) | Git, commits and development workflow |
+| 📋 [`17_Sprint_Plan_and_Project_History.md`](docs/17_Sprint_Plan_and_Project_History.md) | Complete Sprint 1–11 project history |
+
+## 🧩 Capability Documentation
+
+| Document | Capability |
+|---|---|
+| 🗂 [`05_Metadata_Capability.md`](docs/05_Metadata_Capability.md) | Database metadata and inspection |
+| 📥 [`07_Data_Ingestion_Capability.md`](docs/07_Data_Ingestion_Capability.md) | Staging and ingestion |
+| 💾 [`07_Data_Storage_Capability.md`](docs/07_Data_Storage_Capability.md) | Staging and warehouse storage |
+| 📊 [`08_Business_Consumption.md`](docs/08_Business_Consumption.md) | Reporting and business-facing database consumption |
+| 🛡️ [`09_Platform_Governance.md`](docs/09_Platform_Governance.md) | Governance and change control |
+
+## ⚙️ Engineering and Operational Documentation
+
+| Document | Purpose |
+|---|---|
+| 🚀 [`12_Deployment_Workflow.md`](docs/12_Deployment_Workflow.md) | Deployment process |
+| 🧪 [`13_Testing_Workflow.md`](docs/13_Testing_Workflow.md) | Testing process |
+| 🔐 [`14_Security_Architecture.md`](docs/14_Security_Architecture.md) | Security architecture |
+| 🛡️ [`15_Security_Testing.md`](docs/15_Security_Testing.md) | Security validation |
+| 🌿 [`16_Git_Development_Workflow.md`](docs/16_Git_Development_Workflow.md) | Git workflow |
+| 📋 [`17_Sprint_Plan_and_Project_History.md`](docs/17_Sprint_Plan_and_Project_History.md) | Sprint history and delivery milestones |
+
+---
+
+## 📈 Current State
+
+The platform has progressed from foundational SQL Server development into a structured engineering solution.
+
+Today, the repository provides a source-controlled database implementation with:
 
 ```text
-Platform (Docker)
-
-        ↓
-
-SQL Server Instance
-
-        ↓
-
-Administration
-
-        ↓
-
-Database
-
-        ↓
-
-Schemas
-
-        ↓
-
-Operational Metadata
-
-        ↓
-
-Data Ingestion
-
-        ↓
-
-Dimensions
-
-        ↓
-
-Facts
-
-        ↓
-
-Reporting
-
-        ↓
-
-SSDT
-
-        ↓
-
-DACPAC
-
-        ↓
-
-Docker Compose
-
-        ↓
-
-CI/CD
+Database Project
+      +
+DACPAC Deployment
+      +
+Security Provisioning
+      +
+Functional Testing
+      +
+Security Testing
+      +
+Git Workflow
+      +
+Engineering Documentation
 ```
+
+The platform is intentionally designed so that future capabilities can be added without changing the underlying engineering principles.
 
 ---
 
-# 🗂 Current Data Warehouse Architecture
+## 🔮 Future State
 
-```text
-SalesDW
+The following capabilities are intentionally identified as future evolution rather than current implementation.
 
-├── metadata
-│     ├── ETL_RunHistory
-│     ├── PipelineConfiguration
-│     └── Watermark
-│
-├── staging
-│     └── Customer
-│
-├── warehouse
-│     └── DimCustomer
-│
-├── reporting
-│
-└── audit
-```
+### ⚙️ Automation
+
+- CI/CD pipelines;
+- automated quality gates;
+- automated deployment;
+- automated security provisioning;
+- automated drift detection.
+
+### 📊 Business Consumption
+
+- Power BI semantic models;
+- Power BI reports;
+- Power BI dashboards;
+- APIs and data services;
+- additional analytical consumers.
+
+### 🧠 Metadata and Operations
+
+- richer metadata management;
+- automated lineage;
+- data dictionary capabilities;
+- deployment audit reporting;
+- broader observability;
+- performance and storage monitoring.
+
+Future capabilities should be introduced when there is a genuine engineering or business requirement.
 
 ---
 
-# 🛠 Technology Stack
+## 🛠 Technology Stack
 
 | Layer | Technology |
-|---------|------------|
-| Operating System | Windows 11 |
-| Container Platform | Docker Desktop |
-| Database Engine | SQL Server 2022 Developer Edition |
-| Administration | SQL Server Management Studio |
-| Database Projects | SSDT |
-| Deployment | DACPAC |
-| Source Control | Git & GitHub |
-| Analytics | Power BI Desktop |
-| Spreadsheet Integration | Microsoft Excel |
+|---|---|
+| 💻 Operating System | Windows 11 |
+| 🐳 Container Platform | Docker |
+| 🗄️ Database Engine | SQL Server 2022 Developer Edition |
+| 🛠 Administration | SQL Server Management Studio |
+| 🧩 Database Projects | SQL Server Database Projects / SSDT |
+| 📦 Deployment | DACPAC |
+| 🌿 Source Control | Git & GitHub |
+| 📊 Analytics | Power BI — Future State |
+| 📝 Documentation | Markdown |
 
 ---
 
-# 🚀 Project Roadmap
+## ⭐ Engineering Principles
 
-- [x] Docker Platform
-- [x] SQL Server Container
-- [x] SQL Server Administration
-- [x] SalesDW
-- [x] Enterprise Schemas
-- [x] Metadata Capability
-- [x] Data Ingestion
-- [ ] Fact Tables
-- [ ] Reporting Layer
-- [ ] SSDT
-- [ ] DACPAC
-- [ ] Docker Compose
-- [ ] CI/CD
-- [ ] GitHub Actions
+- 🏗 **Infrastructure as Code**
+- 🧩 **Capability-driven architecture**
+- 🧠 **Manual understanding before automation**
+- 🔐 **Security by design**
+- 🧪 **Test behaviour, not just structure**
+- 🔁 **Reproducible engineering environments**
+- 📚 **Documentation as code**
+- 🎯 **Best practices over shortcuts**
+- 🔎 **Inspect before assuming**
+- 📦 **Deploy repeatably**
+- 🌿 **Source control as the source of truth**
 
 ---
 
-# ⭐ Engineering Principles
+## 🗺️ Project History
 
-- Infrastructure as Code
-- Capability-driven architecture
-- Metadata-driven ETL
-- Enterprise-first design
-- Manual understanding before automation
-- Reproducible engineering environments
-- Documentation as code
-- Best practices over shortcuts
+The project has evolved through eleven structured sprints.
+
+```text
+Sprints 1–8
+    |
+    v
+Platform foundations, database development,
+storage, ingestion, security and validation
+
+Sprint 9
+    |
+    v
+Security architecture and implementation maturity
+
+Sprint 10
+    |
+    v
+Security validation, deployment readiness
+and platform hardening
+
+Sprint 11
+    |
+    v
+Documentation, governance and engineering
+knowledge consolidation
+```
+
+For the complete reconstruction of Sprint 1 through Sprint 11, see:
+
+👉 **[17 — Sprint Plan and Project History](docs/17_Sprint_Plan_and_Project_History.md)**
 
 ---
 
-# 🤝 Contributions
+## 🤝 Contributions
 
-This repository is intended as an educational engineering project demonstrating modern SQL Server platform development and enterprise data warehouse engineering practices.
+This repository is primarily an engineering learning and platform-development project.
 
-Contributions, discussions and suggestions are welcome.
+The emphasis is on disciplined implementation, reproducibility, documentation and engineering practice.
 
----
+Suggestions and constructive discussion are welcome.
 
 ---
 
 ## 👤 Author
 
-**Anil Jacob**
+**GreenPear Labs**
 
-*Enterprise Decision Intelligence & Governance Leader | Commercial Excellence | Revenue Intelligence | Business Intelligence | Data Platform Engineering*
-
-📌 **LinkedIn:** https://www.linkedin.com/in/anil-jacobs
-
-💻 **GitHub:** https://github.com/awesomeanil
+*Enterprise SQL Engineering from First Principles*
 
 ---
 
@@ -321,9 +519,16 @@ Contributions, discussions and suggestions are welcome.
 
 **Enterprise SQL Platform Lab**
 
-Designed and engineered with a focus on modern SQL Server engineering, enterprise data platform architecture, and infrastructure as code.
+Designed and engineered with a focus on modern SQL Server engineering, enterprise data platform architecture, security, reproducible development and infrastructure as code.
+
+<br>
+
+<a href="docs/00_Project_Vision.md"><img src="https://img.shields.io/badge/📖%20Read%20the%20Docs-Start%20Here-0969DA?style=for-the-badge" alt="Read the Docs"></a>
+<a href="docs/17_Sprint_Plan_and_Project_History.md"><img src="https://img.shields.io/badge/📋%20Explore%20the%20Sprints-Sprint%201--11-6F42C1?style=for-the-badge" alt="Explore the Sprints"></a>
+<a href="docs/16_Git_Development_Workflow.md"><img src="https://img.shields.io/badge/🌿%20Development-Git%20Workflow-238636?style=for-the-badge" alt="Git Workflow"></a>
 
 ### ⭐ If you found this repository useful, consider giving it a star.
 
 **Happy Engineering! 🚀**
 
+</div>
