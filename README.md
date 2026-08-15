@@ -348,7 +348,10 @@ Enterprise-SQL-Platform-Lab/
 │   └── territory/
 │
 ├── docker/
-│   └── [currently a placeholder]
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── README.md
+│   └── compose.yaml
 │
 ├── docs/
 │   ├── 00_Project_Vision.md
@@ -386,6 +389,8 @@ The `docs/` directory is the detailed engineering reference.
 🌿 Git history records implementation changes.
 
 📋 Sprint history records how the platform evolved.
+
+**Important:** `.env` is deliberately **not shown** because it remains a local secret and is excluded from Git. The repository contains `.env.example` instead.
 
 ---
 
