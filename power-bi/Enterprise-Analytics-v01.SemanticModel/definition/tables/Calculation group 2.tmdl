@@ -1,0 +1,74 @@
+table 'Calculation group 2'
+	lineageTag: e2542607-0441-4bf4-8789-4093241bbeb0
+
+	calculationGroup
+		precedence: 20
+
+		calculationItem YTD =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    DATESYTD(
+				        '3. DimCalendar'[CalendarDate]
+				    )
+				)
+
+		calculationItem 'Previous Year' =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    SAMEPERIODLASTYEAR(
+				        '3. DimCalendar'[CalendarDate]
+				    )
+				)
+
+		calculationItem YoY =
+				VAR CurrentValue =
+				    SELECTEDMEASURE()
+				
+				VAR PreviousYearValue =
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        SAMEPERIODLASTYEAR(
+				            '3. DimCalendar'[CalendarDate]
+				        )
+				    )
+				
+				RETURN
+				    CurrentValue - PreviousYearValue
+
+		calculationItem 'YoY %' =
+				VAR CurrentValue =
+				    SELECTEDMEASURE()
+				
+				VAR PreviousYearValue =
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        SAMEPERIODLASTYEAR(
+				            '3. DimCalendar'[CalendarDate]
+				        )
+				    )
+				
+				RETURN
+				    DIVIDE(
+				        CurrentValue - PreviousYearValue,
+				        PreviousYearValue
+				    )
+
+	column 'Time Intelligence'
+		dataType: string
+		lineageTag: cd0576e5-d2e5-4a04-907c-e7363ccf5a04
+		isDefaultLabel
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c5cfb07-4584-4e31-9179-b8995e52a95e
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

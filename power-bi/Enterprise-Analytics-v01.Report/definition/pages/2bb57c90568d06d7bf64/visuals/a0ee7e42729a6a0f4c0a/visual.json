@@ -1,0 +1,157 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "a0ee7e42729a6a0f4c0a",
+  "position": {
+    "x": 768,
+    "y": 464,
+    "z": 4,
+    "height": 208,
+    "width": 416,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "NetSales"
+                }
+              },
+              "queryRef": "1. fact.NetSales",
+              "nativeQueryRef": "NetSales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "GrossSales"
+                }
+              },
+              "queryRef": "1. fact.GrossSales",
+              "nativeQueryRef": "GrossSales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "GrossMargins"
+                }
+              },
+              "queryRef": "1. fact.GrossMargins",
+              "nativeQueryRef": "GrossMargins"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "Discounts"
+                }
+              },
+              "queryRef": "1. fact.Discounts",
+              "nativeQueryRef": "Discounts"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "1. fact"
+                  }
+                },
+                "Property": "NetSales"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a0d2f61f2b3db8306432",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "NetSales"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d1d76c44024a4332d6be",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "GrossSales"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b6b389c40f859b694f9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "GrossMargins"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fd4d9da65dff7419d50f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "Discounts"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

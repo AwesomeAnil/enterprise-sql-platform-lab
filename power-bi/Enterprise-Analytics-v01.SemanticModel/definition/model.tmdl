@@ -55,6 +55,7 @@ ref table LocalDateTable_5a70f763-1a37-49ea-9519-ffc24a1b6f4c
 ref table LocalDateTable_c101ae01-be96-48d8-886f-305b1604683f
 ref table '1. fact'
 ref table 'Calculation group'
+ref table 'Calculation group 2'
 
 ref cultureInfo en-US
 

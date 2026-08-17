@@ -2,6 +2,7 @@ table 'Calculation group'
 	lineageTag: f702a4a4-de70-489b-971e-f716f5b1c317
 
 	calculationGroup
+		precedence: 10
 
 		calculationItem 'Gross Sales' = [GrossSales]
 
@@ -14,6 +15,7 @@ table 'Calculation group'
 	column 'Metric Selector'
 		dataType: string
 		lineageTag: 07ee958f-c386-4fff-94f9-1a6348ebe86e
+		isDefaultLabel
 		summarizeBy: none
 		sourceColumn: Name
 		sortByColumn: Ordinal

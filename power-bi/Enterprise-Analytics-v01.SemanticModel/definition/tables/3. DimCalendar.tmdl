@@ -12,7 +12,7 @@ table '3. DimCalendar'
 
 	column CalendarDate
 		dataType: dateTime
-		formatString: General Date
+		formatString: dd/mm/yyyy
 		lineageTag: bca61dd3-a262-4ea4-8391-3857a374ebf9
 		summarizeBy: none
 		sourceColumn: CalendarDate
@@ -23,6 +23,8 @@ table '3. DimCalendar'
 			defaultHierarchy: LocalDateTable_a9198893-429c-4b21-9d75-a55113650900.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Day
 		dataType: int64
@@ -204,8 +206,6 @@ table '3. DimCalendar'
 				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * FROM #(lf)reporting.Calendar"])
 				in
 				  Source
-
-	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navigation
 

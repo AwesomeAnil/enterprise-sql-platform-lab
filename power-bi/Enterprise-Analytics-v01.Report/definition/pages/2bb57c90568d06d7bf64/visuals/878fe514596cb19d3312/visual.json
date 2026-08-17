@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "878fe514596cb19d3312",
+  "position": {
+    "x": 144,
+    "y": 432,
+    "z": 3,
+    "height": 208,
+    "width": 208,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calculation group 2"
+                    }
+                  },
+                  "Property": "Time Intelligence"
+                }
+              },
+              "queryRef": "Calculation group 2.Time Intelligence",
+              "nativeQueryRef": "Time Intelligence"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f1017f1fe02325738fc4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculation group 2"
+              }
+            },
+            "Property": "Time Intelligence"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
