@@ -1,0 +1,31 @@
+table 'Calculation group'
+	lineageTag: f702a4a4-de70-489b-971e-f716f5b1c317
+
+	calculationGroup
+
+		calculationItem 'Gross Sales' = [GrossSales]
+
+		calculationItem 'Net Sales' = [NetSales]
+
+		calculationItem 'Gross Margins' = [GrossMargins]
+
+		calculationItem Discounts = [Discounts]
+
+	column 'Metric Selector'
+		dataType: string
+		lineageTag: 07ee958f-c386-4fff-94f9-1a6348ebe86e
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: e3b1099c-ce7a-4a5b-b5dd-eec3d1425a7e
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

@@ -1,0 +1,213 @@
+table '3. DimCalendar'
+	lineageTag: 7901a01c-a468-4551-9d5e-e7a91624fab1
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: dcc0b577-6ab5-48bb-9076-e86e60c9666f
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bca61dd3-a262-4ea4-8391-3857a374ebf9
+		summarizeBy: none
+		sourceColumn: CalendarDate
+
+		variation Variation
+			isDefault
+			relationship: 5b540631-a5e2-45fe-972b-33f8c1a30fa5
+			defaultHierarchy: LocalDateTable_a9198893-429c-4b21-9d75-a55113650900.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 49f9c86c-9d07-4737-9296-dec9c6b88fd9
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: d50505eb-c3c2-48e2-aee7-bf441875a8f7
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d41c271-9ea1-4d8b-bb37-4353a24add5b
+		summarizeBy: sum
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: ea43436e-5422-47c3-b544-e87a3dc4f92e
+		summarizeBy: sum
+		sourceColumn: WeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 446d0c28-4506-4e7c-bed0-3dd27eca6ca5
+		summarizeBy: sum
+		sourceColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: 61ec8a90-5a5d-4a50-b5e6-58d161673bc6
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: 307b8169-1397-4d2a-92e5-44bf571ed212
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 306e1ee7-3188-4e11-8325-da1b5918af18
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: f9be5506-6583-4c89-8d48-1ae9185254e8
+		summarizeBy: sum
+		sourceColumn: FiscalMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: string
+		lineageTag: b0a4bac7-9056-4d94-b8b8-436f63999aca
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 40d67216-58da-4db1-ac4a-fea702a22c0d
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWeekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 602f86c1-7a76-4f3d-9222-340ed7a4d70d
+		summarizeBy: none
+		sourceColumn: IsWeekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsMonthEnd
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4c3d72e4-2836-4f22-9beb-688a7c53395f
+		summarizeBy: none
+		sourceColumn: IsMonthEnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsMonthStart
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 35592840-335a-4db1-8db1-8fa22eaa6b8d
+		summarizeBy: none
+		sourceColumn: IsMonthStart
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsQuarterEnd
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0b6cba09-9783-46da-bd20-c9ff3e79e78b
+		summarizeBy: none
+		sourceColumn: IsQuarterEnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsQuarterStart
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5b2dc055-cfa1-4be0-98ed-a6d9ba6e26b7
+		summarizeBy: none
+		sourceColumn: IsQuarterStart
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsYearEnd
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fb2a1e9f-de5c-48d9-885b-4d8cb573427b
+		summarizeBy: none
+		sourceColumn: IsYearEnd
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsYearStart
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d9b91c21-4394-45a2-b038-d682745b61aa
+		summarizeBy: none
+		sourceColumn: IsYearStart
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 179e27af-f1b6-4a97-9abf-3cc001d211b8
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: fd763ad3-9d77-4a11-b9c7-c95e2e257961
+			defaultHierarchy: LocalDateTable_916b4e3d-cb56-48ad-937a-c4388971f9a9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '3. DimCalendar' = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * FROM #(lf)reporting.Calendar"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

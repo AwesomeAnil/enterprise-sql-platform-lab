@@ -1,0 +1,134 @@
+table '7. DimSalesTerritory'
+	lineageTag: a544500c-8b90-4891-aaa4-b0cfb24b3eb6
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 884efc92-1ff9-4405-a3c5-786d8b1abdcc
+		summarizeBy: count
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 74bda074-1bfe-4e9d-9771-b269f9979a35
+		summarizeBy: none
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryCode
+		dataType: string
+		lineageTag: 4eaff2f7-f996-443b-8967-c073304e7c16
+		summarizeBy: none
+		sourceColumn: TerritoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryName
+		dataType: string
+		lineageTag: d2e5dcc3-4fd9-4030-b8d1-1245b4085b0d
+		summarizeBy: none
+		sourceColumn: TerritoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: e990a44d-7207-4eab-8c58-09a917591099
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: dbc7dfda-b260-4fa1-85cb-f0a453a63b4e
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryManager
+		dataType: string
+		lineageTag: 88907ce5-3819-470d-8674-4f4c8f069e82
+		summarizeBy: none
+		sourceColumn: TerritoryManager
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 29c5f193-9c46-4ea0-ad00-02224e011737
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSystem
+		dataType: string
+		lineageTag: 6f5aece3-9cd9-4765-8542-774f2e72279d
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cefb9e97-d4e1-4f13-9641-cce5e4038e77
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 5943d5fd-60b1-40eb-9a41-a90dd94f6475
+			defaultHierarchy: LocalDateTable_92702585-732f-4459-b7c1-6bc8eed4e754.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d535fcc7-2d6e-462d-9690-39c58249ab70
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 3e2bb87a-47ec-42d6-99d0-7d9424e8eb33
+			defaultHierarchy: LocalDateTable_5a70f763-1a37-49ea-9519-ffc24a1b6f4c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 50e46331-76d7-4052-a079-f1a0a580b94a
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: aebb84cd-5971-4c46-8336-47b3aba7b533
+			defaultHierarchy: LocalDateTable_c101ae01-be96-48d8-886f-305b1604683f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '7. DimSalesTerritory' = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * #(lf)FROM reporting.SalesTerritory"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

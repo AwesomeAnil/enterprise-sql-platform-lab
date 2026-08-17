@@ -1,0 +1,75 @@
+table '1. fact'
+	lineageTag: 0a900984-b4f3-4166-8340-e5aab1460bd7
+
+	measure NetSales = SUM('2. FactSales'[NetSalesAmount])
+		formatString: #,0
+		displayFolder: Measures
+		lineageTag: 8f618c08-a84f-423a-8f7b-9bd557fb3a20
+
+	measure GrossSales = ```
+			SUM('2. FactSales'[GrossSalesAmount]) 
+			```
+		formatString: #,0
+		displayFolder: Measures
+		lineageTag: b4775515-b38f-422f-a8e5-5c8f61336b12
+
+	measure GrossMargins = ```
+			SUM('2. FactSales'[GrossMarginAmount]) 
+			```
+		formatString: #,0
+		displayFolder: Measures
+		lineageTag: 473e2363-6c05-463a-ac9f-44a832d50875
+
+	measure Cost = ```
+			SUM('2. FactSales'[CostAmount])  
+			```
+		formatString: #,0
+		displayFolder: Measures
+		lineageTag: 85bb1de4-e7c6-4197-ae59-649332e955bb
+
+	measure Discount% = ```
+			[Discounts] / [NetSales] 
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Measures
+		lineageTag: 11574059-08b7-4877-9651-50d0689b84bb
+
+	measure Discounts = ```
+			SUM('2. FactSales'[DiscountAmount]) 
+			```
+		displayFolder: Measures
+		lineageTag: 6a85058c-94c5-4a16-8780-642195ccdccb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Selected Metric' = [NetSales]
+		formatString: #,0
+		displayFolder: Measures
+		lineageTag: 9e9c6707-16bb-4c05-9a01-7613a88b0a2a
+
+	column DataColumnGroupedHeadings
+		dataType: string
+		isHidden
+		lineageTag: ea508324-a66a-4ae6-8835-ebc7d759fecd
+		summarizeBy: none
+		sourceColumn: DataColumnGroupedHeadings
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '1. fact' = m
+		mode: import
+		queryGroup: Fact
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [DataColumnGroupedHeadings = _t])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

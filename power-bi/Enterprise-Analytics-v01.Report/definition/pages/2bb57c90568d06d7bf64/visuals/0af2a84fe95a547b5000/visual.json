@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "0af2a84fe95a547b5000",
+  "position": {
+    "x": 880,
+    "y": 112,
+    "z": 2,
+    "height": 300,
+    "width": 300,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "NetSales"
+                }
+              },
+              "queryRef": "1. fact.NetSales",
+              "nativeQueryRef": "NetSales"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "1. fact"
+                  }
+                },
+                "Property": "NetSales"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "86220198962c7a3e5cba",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "NetSales"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

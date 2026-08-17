@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "64ed1155ce68e7ed1c08",
+  "position": {
+    "x": 464,
+    "y": 224,
+    "z": 0,
+    "height": 176,
+    "width": 176,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "Selected Metric"
+                }
+              },
+              "queryRef": "1. fact.Selected Metric",
+              "nativeQueryRef": "Selected Metric"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "1. fact"
+                  }
+                },
+                "Property": "Selected Metric"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "054a8b3d355c7e6ca4b3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "Selected Metric"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

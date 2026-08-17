@@ -1,0 +1,134 @@
+relationship 5b540631-a5e2-45fe-972b-33f8c1a30fa5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '3. DimCalendar'.CalendarDate
+	toColumn: LocalDateTable_a9198893-429c-4b21-9d75-a55113650900.Date
+
+relationship fd763ad3-9d77-4a11-b9c7-c95e2e257961
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '3. DimCalendar'.LoadDate
+	toColumn: LocalDateTable_916b4e3d-cb56-48ad-937a-c4388971f9a9.Date
+
+relationship f38cd9bf-c141-4c03-83fe-bea7031f71e4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '8. DimCustomer'.CreatedDate
+	toColumn: LocalDateTable_5cb8bbc2-7612-4c25-8277-1ac6ac82d4ab.Date
+
+relationship 1581df62-9152-427f-b8b0-38b38cc8e2da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '8. DimCustomer'.ModifiedDate
+	toColumn: LocalDateTable_252b3cd7-dc2f-41b9-ba9a-4e8972b1b1be.Date
+
+relationship 0d65415d-00d7-467e-8812-20bdbea97276
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '8. DimCustomer'.LoadDate
+	toColumn: LocalDateTable_6ad85436-467f-4667-a614-3c932629769d.Date
+
+relationship 7747cd3a-1c3b-474f-b36e-1f866687b9b4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '4. DimGeography'.CreatedDate
+	toColumn: LocalDateTable_058df144-df00-432c-8868-66846a76f27e.Date
+
+relationship cae59fd8-4274-4e82-bc54-3f5321fc69d9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '4. DimGeography'.ModifiedDate
+	toColumn: LocalDateTable_07ac0770-70bf-49be-b238-8dbe5fc1a051.Date
+
+relationship 57a4b185-2c6d-4fc1-9816-9572bf13f4cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '4. DimGeography'.LoadDate
+	toColumn: LocalDateTable_addb97c2-6cdc-4b0e-baf7-e31d781236c0.Date
+
+relationship 9ecef62f-e236-4804-aca9-ec302034be12
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '5. DimProduct'.CreatedDate
+	toColumn: LocalDateTable_8c581dbb-33be-4ce7-8347-eebc67b48a67.Date
+
+relationship 8e5686b3-0da7-4caf-b1bc-ce039f517b22
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '5. DimProduct'.ModifiedDate
+	toColumn: LocalDateTable_3c277a31-a4f5-467e-9273-3b13adbb5c23.Date
+
+relationship aae52d8d-a3eb-4ca6-b3aa-c601880b1836
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '5. DimProduct'.LoadDate
+	toColumn: LocalDateTable_1fff701f-0237-4208-a8e1-cb22be2670fc.Date
+
+relationship 9cfe2e9e-3a9d-4a84-88ef-82251e1b68a2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '2. FactSales'.CreatedDate
+	toColumn: LocalDateTable_7e03a977-3e68-4477-a926-1afd6c3143bb.Date
+
+relationship ccc9dd02-40ad-43c8-93f9-4a12fb3d198e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '2. FactSales'.ModifiedDate
+	toColumn: LocalDateTable_e5717c77-5ebe-474e-8697-96d937cd7eca.Date
+
+relationship 667e488d-8cd3-480d-a1f2-7db833d31020
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '2. FactSales'.LoadDate
+	toColumn: LocalDateTable_7f60e9e4-e10a-409a-9047-b4b780de2095.Date
+
+relationship 5aa348e7-5889-4617-8600-d2b952172ba8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '6. DimSalesperson'.HireDate
+	toColumn: LocalDateTable_3652e275-6d9b-4927-9ccc-d31857f3f3e5.Date
+
+relationship 27a40873-f188-49d0-86cc-a0f2531137ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '6. DimSalesperson'.CreatedDate
+	toColumn: LocalDateTable_1aee55a2-02cf-4f62-8844-097f41e1abb9.Date
+
+relationship 3e911c8b-8a6c-42ca-af4e-082ab5a26acc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '6. DimSalesperson'.ModifiedDate
+	toColumn: LocalDateTable_66f58ad2-c86b-47ef-9fb0-d4d968c032b7.Date
+
+relationship 7af1281a-182a-4a0c-b440-8217b9df0c8b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '6. DimSalesperson'.LoadDate
+	toColumn: LocalDateTable_89b89e5f-8e52-4643-97f0-b79bc5a4f4de.Date
+
+relationship 5943d5fd-60b1-40eb-9a41-a90dd94f6475
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '7. DimSalesTerritory'.CreatedDate
+	toColumn: LocalDateTable_92702585-732f-4459-b7c1-6bc8eed4e754.Date
+
+relationship 3e2bb87a-47ec-42d6-99d0-7d9424e8eb33
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '7. DimSalesTerritory'.ModifiedDate
+	toColumn: LocalDateTable_5a70f763-1a37-49ea-9519-ffc24a1b6f4c.Date
+
+relationship aebb84cd-5971-4c46-8336-47b3aba7b533
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '7. DimSalesTerritory'.LoadDate
+	toColumn: LocalDateTable_c101ae01-be96-48d8-886f-305b1604683f.Date
+
+relationship AutoDetected_36627fa1-161e-471e-a845-aff8a8f3165e
+	fromColumn: '2. FactSales'.DateKey
+	toColumn: '3. DimCalendar'.DateKey
+
+relationship AutoDetected_05072126-8c46-4cae-a423-e71ac7baedc4
+	fromColumn: '2. FactSales'.CustomerID
+	toColumn: '8. DimCustomer'.CustomerID
+
+relationship AutoDetected_3c6cc7da-d1b0-41cc-82c4-4e59ac0377f8
+	fromColumn: '2. FactSales'.GeographyID
+	toColumn: '4. DimGeography'.GeographyID
+
+relationship AutoDetected_9976bf79-fd37-4d8e-88f4-e27be03c8055
+	fromColumn: '2. FactSales'.ProductID
+	toColumn: '5. DimProduct'.ProductID
+
+relationship AutoDetected_aed9693c-2422-4e8d-8d35-99b47101c4d8
+	fromColumn: '2. FactSales'.TerritoryID
+	toColumn: '7. DimSalesTerritory'.TerritoryID
+
+relationship AutoDetected_d4b4151f-93ba-4193-a3b9-44082e33b2c5
+	isActive: false
+	fromColumn: '6. DimSalesperson'.TerritoryID
+	toColumn: '7. DimSalesTerritory'.TerritoryID
+
+relationship AutoDetected_e330b890-fc99-4571-a3d4-0d06e468076d
+	fromColumn: '2. FactSales'.SalespersonID
+	toColumn: '6. DimSalesperson'.SalespersonID
+

@@ -1,0 +1,154 @@
+table '5. DimProduct'
+	lineageTag: 6bbfdb00-3948-444f-933f-3040d871b303
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: f8c29038-ed95-44e2-9f8e-b992a2587e3a
+		summarizeBy: count
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8546d1fb-ae9f-4b64-983a-523829aacd62
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		lineageTag: a3eee73a-d1d0-4131-ba17-ed1c21abd313
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: c1541b7e-45b1-4bd5-9765-9c42850c9934
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 450bfa2b-2e46-49e7-a353-ed0fd1c36f60
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategory
+		dataType: string
+		lineageTag: 84b41a36-4b4a-46b0-a0fb-94dd6e7fb89b
+		summarizeBy: none
+		sourceColumn: SubCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 3092be43-41c0-44e7-a203-02273c9e4dd4
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 0353ee54-e259-4d3f-b453-d58f2667882b
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardCost
+		dataType: double
+		lineageTag: 1dbd2546-9af3-475e-a538-35bf34c400d5
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Status
+		dataType: string
+		lineageTag: fb6447a1-1930-4fd4-90d0-a1374947c1e5
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSystem
+		dataType: string
+		lineageTag: 5f28b82b-1896-43e3-a0fa-5ca10237e1c3
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8f331d60-b843-416b-9933-8b0a5e6b7746
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 9ecef62f-e236-4804-aca9-ec302034be12
+			defaultHierarchy: LocalDateTable_8c581dbb-33be-4ce7-8347-eebc67b48a67.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 472cbeb7-ee06-4e74-8d8b-3a4831efa37d
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 8e5686b3-0da7-4caf-b1bc-ce039f517b22
+			defaultHierarchy: LocalDateTable_3c277a31-a4f5-467e-9273-3b13adbb5c23.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6c36aed4-0088-40b3-9ce9-88f0edf906e8
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: aae52d8d-a3eb-4ca6-b3aa-c601880b1836
+			defaultHierarchy: LocalDateTable_1fff701f-0237-4208-a8e1-cb22be2670fc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '5. DimProduct' = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * #(lf)FROM reporting.Product"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

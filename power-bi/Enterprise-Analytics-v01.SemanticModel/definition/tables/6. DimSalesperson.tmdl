@@ -1,0 +1,165 @@
+table '6. DimSalesperson'
+	lineageTag: e5f56de9-a4c3-4e6f-977d-4050da7c80dd
+
+	column SalespersonKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 745e1a84-3179-413f-b09d-b80394551ada
+		summarizeBy: count
+		sourceColumn: SalespersonKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalespersonID
+		dataType: int64
+		formatString: 0
+		lineageTag: 04831cf7-5f01-4abe-bf12-4b5dd6067c98
+		summarizeBy: none
+		sourceColumn: SalespersonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeCode
+		dataType: string
+		lineageTag: d01a6083-f043-4229-a726-1ab95868a922
+		summarizeBy: none
+		sourceColumn: EmployeeCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 1ff2116b-1d8f-422e-9ffb-7717f9d1d245
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 37ee86b9-8a2a-4121-86dd-5d263fc6c557
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		lineageTag: b26ba9b8-edcd-4cc5-8d6a-778990ed700a
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: af5b371c-44ca-4566-973b-e48577598bd2
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: d158da23-dafa-43ef-9223-6add142b0983
+		summarizeBy: count
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column JobTitle
+		dataType: string
+		lineageTag: db405313-85e4-4953-9556-9b2bcf3d43cd
+		summarizeBy: none
+		sourceColumn: JobTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column HireDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d0b5f8dc-2926-4ca2-834d-eaaa635f6f1d
+		summarizeBy: none
+		sourceColumn: HireDate
+
+		variation Variation
+			isDefault
+			relationship: 5aa348e7-5889-4617-8600-d2b952172ba8
+			defaultHierarchy: LocalDateTable_3652e275-6d9b-4927-9ccc-d31857f3f3e5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: db8aa581-011c-4fdf-bbfb-909c25908448
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSystem
+		dataType: string
+		lineageTag: f9cba912-284b-4961-989b-11476923c69e
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d0e0bd93-d251-4a56-b393-c4656e864c68
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 27a40873-f188-49d0-86cc-a0f2531137ea
+			defaultHierarchy: LocalDateTable_1aee55a2-02cf-4f62-8844-097f41e1abb9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2dc81d55-ee4a-413b-8892-23d71239a652
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 3e911c8b-8a6c-42ca-af4e-082ab5a26acc
+			defaultHierarchy: LocalDateTable_66f58ad2-c86b-47ef-9fb0-d4d968c032b7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a7e5249d-650c-4a9b-9f4f-2031abf19e31
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: 7af1281a-182a-4a0c-b440-8217b9df0c8b
+			defaultHierarchy: LocalDateTable_89b89e5f-8e52-4643-97f0-b79bc5a4f4de.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '6. DimSalesperson' = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * #(lf)FROM reporting.Salesperson"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

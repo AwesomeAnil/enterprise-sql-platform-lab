@@ -1,0 +1,278 @@
+table '2. FactSales'
+	lineageTag: 57c4dcbd-ddba-4abb-84bd-056cb0d6f25c
+
+	column SalesKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bce321c-b5d6-4165-a34b-30c15422e677
+		summarizeBy: count
+		sourceColumn: SalesKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0270f469-645a-47e8-90ba-9dd5b388cfe3
+		summarizeBy: none
+		sourceColumn: SalesID
+
+		annotation SummarizationSetBy = User
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: 75c13910-cb75-415d-859d-8263ddb1a5da
+		summarizeBy: count
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = User
+
+	column SalesOrderLineNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f9338ba-2d77-4b79-b113-168551f03f7a
+		summarizeBy: count
+		sourceColumn: SalesOrderLineNumber
+
+		annotation SummarizationSetBy = User
+
+	column InvoiceNumber
+		dataType: string
+		lineageTag: 0a4a654b-c397-4aa8-8cf9-47ca1c979935
+		summarizeBy: none
+		sourceColumn: InvoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f34c794-828e-42db-98c9-a9b0a1ea3881
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 54b363f5-7219-4be5-8682-4b9eea26a261
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2582fbf8-7782-4e17-ba9f-4e0fc1b36dfc
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyID
+		dataType: int64
+		formatString: 0
+		lineageTag: 82cc072a-b788-4390-8396-5b4df4877ab5
+		summarizeBy: none
+		sourceColumn: GeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: fb260b8b-ffa8-41a9-9708-6a0a9ca5bc5a
+		summarizeBy: none
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalespersonID
+		dataType: int64
+		formatString: 0
+		lineageTag: 44d27b3c-c805-4c71-b705-94f39454192a
+		summarizeBy: none
+		sourceColumn: SalespersonID
+
+		annotation SummarizationSetBy = User
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 15132276-8b18-44fd-8303-8b475e192452
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 309015dd-a873-4b67-b1ec-dd3cfef3e8ba
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GrossSalesAmount
+		dataType: double
+		lineageTag: 535182c8-fd99-4375-a48d-da4ff744cbc8
+		summarizeBy: sum
+		sourceColumn: GrossSalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountPercent
+		dataType: double
+		lineageTag: 58147daf-652f-4ed3-9b59-ae32fd403516
+		summarizeBy: sum
+		sourceColumn: DiscountPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountAmount
+		dataType: double
+		lineageTag: 19bbd3f5-547d-466d-af83-17b54d13d9f1
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetSalesAmount
+		dataType: double
+		lineageTag: e9fb406e-118f-472a-a88a-747a995f04a4
+		summarizeBy: sum
+		sourceColumn: NetSalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostAmount
+		dataType: double
+		lineageTag: 813df99f-d02d-40d1-ae0e-335ea2297390
+		summarizeBy: sum
+		sourceColumn: CostAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GrossMarginAmount
+		dataType: double
+		lineageTag: 9543b1cb-4e24-45a1-9b90-6a968fe3e68c
+		summarizeBy: sum
+		sourceColumn: GrossMarginAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GrossMarginPercent
+		dataType: double
+		lineageTag: ff37e1c0-0a2c-41a0-aea9-3be9bb1513e0
+		summarizeBy: sum
+		sourceColumn: GrossMarginPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesChannel
+		dataType: string
+		lineageTag: 9bca2055-e33c-4b7e-a4da-4c2d66dd8710
+		summarizeBy: none
+		sourceColumn: SalesChannel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderStatus
+		dataType: string
+		lineageTag: 145e8e09-e876-4362-878e-f1cbe469fbba
+		summarizeBy: none
+		sourceColumn: OrderStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: 8164104c-c500-4543-b22f-10c4bb52f512
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSystem
+		dataType: string
+		lineageTag: 3ac37a8c-6468-4a39-8c95-cbc9fb79c914
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 097a719d-1c52-4645-8dbd-e96d00aad38f
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 9cfe2e9e-3a9d-4a84-88ef-82251e1b68a2
+			defaultHierarchy: LocalDateTable_7e03a977-3e68-4477-a926-1afd6c3143bb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a34bbb12-0619-4fb0-9863-f6f6e64eb78a
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: ccc9dd02-40ad-43c8-93f9-4a12fb3d198e
+			defaultHierarchy: LocalDateTable_e5717c77-5ebe-474e-8697-96d937cd7eca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ca0cdf4a-d554-463b-a578-44aa5d23ad20
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: 667e488d-8cd3-480d-a1f2-7db833d31020
+			defaultHierarchy: LocalDateTable_7f60e9e4-e10a-409a-9047-b4b780de2095.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '2. FactSales' = m
+		mode: import
+		queryGroup: Fact
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * FROM#(lf)reporting.Sales"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

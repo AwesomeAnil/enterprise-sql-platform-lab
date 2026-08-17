@@ -1,0 +1,131 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "3ea8d6391d9082a3cd55",
+  "position": {
+    "x": 128,
+    "y": 560,
+    "z": 0,
+    "height": 288,
+    "width": 816,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "6. DimSalesperson"
+                    }
+                  },
+                  "Property": "SalespersonID"
+                }
+              },
+              "queryRef": "CountNonNull(6. DimSalesperson.SalespersonID)",
+              "nativeQueryRef": "SalespersonID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "6. DimSalesperson"
+                    }
+                  },
+                  "Property": "FullName"
+                }
+              },
+              "queryRef": "6. DimSalesperson.FullName",
+              "nativeQueryRef": "FullName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "7. DimSalesTerritory"
+                    }
+                  },
+                  "Property": "TerritoryID"
+                }
+              },
+              "queryRef": "7. DimSalesTerritory.TerritoryID",
+              "nativeQueryRef": "TerritoryID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "7. DimSalesTerritory"
+                    }
+                  },
+                  "Property": "TerritoryManager"
+                }
+              },
+              "queryRef": "7. DimSalesTerritory.TerritoryManager",
+              "nativeQueryRef": "TerritoryManager"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "4. DimGeography"
+                    }
+                  },
+                  "Property": "Country"
+                }
+              },
+              "queryRef": "4. DimGeography.Country",
+              "nativeQueryRef": "Country"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "GrossSales"
+                }
+              },
+              "queryRef": "1. fact.GrossSales",
+              "nativeQueryRef": "GrossSales"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "93D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "6. DimSalesperson.FullName"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,60 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-GB
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// For fact tables
+queryGroup Fact
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// for dimensions
+queryGroup Dim
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["3. DimCalendar","8. DimCustomer","4. DimGeography","5. DimProduct","2. FactSales","6. DimSalesperson","7. DimSalesTerritory","1. fact"]
+
+annotation PBI_ProTooling = ["CalcGroup","DevMode"]
+
+ref table '3. DimCalendar'
+ref table DateTableTemplate_334e834d-2038-4732-a339-f6f7d832bc5e
+ref table LocalDateTable_a9198893-429c-4b21-9d75-a55113650900
+ref table LocalDateTable_916b4e3d-cb56-48ad-937a-c4388971f9a9
+ref table '8. DimCustomer'
+ref table LocalDateTable_5cb8bbc2-7612-4c25-8277-1ac6ac82d4ab
+ref table LocalDateTable_252b3cd7-dc2f-41b9-ba9a-4e8972b1b1be
+ref table LocalDateTable_6ad85436-467f-4667-a614-3c932629769d
+ref table '4. DimGeography'
+ref table LocalDateTable_058df144-df00-432c-8868-66846a76f27e
+ref table LocalDateTable_07ac0770-70bf-49be-b238-8dbe5fc1a051
+ref table LocalDateTable_addb97c2-6cdc-4b0e-baf7-e31d781236c0
+ref table '5. DimProduct'
+ref table LocalDateTable_8c581dbb-33be-4ce7-8347-eebc67b48a67
+ref table LocalDateTable_3c277a31-a4f5-467e-9273-3b13adbb5c23
+ref table LocalDateTable_1fff701f-0237-4208-a8e1-cb22be2670fc
+ref table '2. FactSales'
+ref table LocalDateTable_7e03a977-3e68-4477-a926-1afd6c3143bb
+ref table LocalDateTable_e5717c77-5ebe-474e-8697-96d937cd7eca
+ref table LocalDateTable_7f60e9e4-e10a-409a-9047-b4b780de2095
+ref table '6. DimSalesperson'
+ref table LocalDateTable_3652e275-6d9b-4927-9ccc-d31857f3f3e5
+ref table LocalDateTable_1aee55a2-02cf-4f62-8844-097f41e1abb9
+ref table LocalDateTable_66f58ad2-c86b-47ef-9fb0-d4d968c032b7
+ref table LocalDateTable_89b89e5f-8e52-4643-97f0-b79bc5a4f4de
+ref table '7. DimSalesTerritory'
+ref table LocalDateTable_92702585-732f-4459-b7c1-6bc8eed4e754
+ref table LocalDateTable_5a70f763-1a37-49ea-9519-ffc24a1b6f4c
+ref table LocalDateTable_c101ae01-be96-48d8-886f-305b1604683f
+ref table '1. fact'
+ref table 'Calculation group'
+
+ref cultureInfo en-US
+

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "1f52a6701fb679459bf7",
+  "position": {
+    "x": 832,
+    "y": 32,
+    "z": 1,
+    "height": 176,
+    "width": 448,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "3. DimCalendar"
+                    }
+                  },
+                  "Property": "FiscalYear"
+                }
+              },
+              "queryRef": "DimCalendar.FiscalYear",
+              "nativeQueryRef": "Sum of FiscalYear"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "GrossSales"
+                }
+              },
+              "queryRef": "1. fact.GrossSales",
+              "nativeQueryRef": "GrossSales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "GrossMargins"
+                }
+              },
+              "queryRef": "1. fact.GrossMargins",
+              "nativeQueryRef": "GrossMargins"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "NetSales"
+                }
+              },
+              "queryRef": "1. fact.NetSales",
+              "nativeQueryRef": "NetSales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1. fact"
+                    }
+                  },
+                  "Property": "Cost"
+                }
+              },
+              "queryRef": "1. fact.Cost",
+              "nativeQueryRef": "Cost"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "3. DimCalendar"
+                  }
+                },
+                "Property": "FiscalYear"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "288b0c19e619979addd4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "3. DimCalendar"
+              }
+            },
+            "Property": "FiscalYear"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "67984bea95a9ae1147de",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1. fact"
+              }
+            },
+            "Property": "GrossSales"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

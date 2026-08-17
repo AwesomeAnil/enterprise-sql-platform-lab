@@ -1,0 +1,132 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 987.36331812567141,
+            "y": 4.4293580827096548
+          },
+          "nodeIndex": "1. fact",
+          "nodeLineageTag": "0a900984-b4f3-4166-8340-e5aab1460bd7",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 444.82246598412951,
+            "y": 419.64351841476986
+          },
+          "nodeIndex": "2. FactSales",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 649.86331812567141,
+            "y": 12.679358082709655
+          },
+          "nodeIndex": "3. DimCalendar",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 728.96957960170766,
+            "y": 760.35871616541931
+          },
+          "nodeIndex": "4. DimGeography",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 334.20869001960091,
+            "y": -50
+          },
+          "nodeIndex": "5. DimProduct",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 96.8886395111424,
+            "y": 729.94580124025481
+          },
+          "nodeIndex": "6. DimSalesperson",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 294.80034357801605
+          },
+          "nodeIndex": "7. DimSalesTerritory",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 830.86331812567141,
+            "y": 410.10097128002479
+          },
+          "nodeIndex": "8. DimCustomer",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1122.6133181256714,
+            "y": 207.42935808270965
+          },
+          "nodeIndex": "Calculation group",
+          "nodeLineageTag": "f702a4a4-de70-489b-971e-f716f5b1c317",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 7
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

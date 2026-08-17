@@ -1,0 +1,158 @@
+table '8. DimCustomer'
+	lineageTag: 6e131ade-ba91-4bc6-81e9-bc93a929f9f2
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 200cc1b1-4740-45b3-a853-16f4d4f420de
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: f6756906-8caf-49b6-9f40-cb51888af278
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCode
+		dataType: string
+		lineageTag: 0fbc173d-dc9b-4910-a426-bf9811ded095
+		summarizeBy: none
+		sourceColumn: CustomerCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: 968689f7-a4c3-44a3-8715-dbb0d80f3656
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerType
+		dataType: string
+		lineageTag: a8a25e07-f7be-4bfb-9e82-7f5c8f8e809f
+		summarizeBy: none
+		sourceColumn: CustomerType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industry
+		dataType: string
+		lineageTag: 5b880d06-7b31-4035-bc46-fbd3b5554e61
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritory
+		dataType: string
+		lineageTag: bf12c548-c3c7-42dc-b1f3-0e62ccbace49
+		summarizeBy: none
+		sourceColumn: SalesTerritory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 7a8a67c8-dc42-4c2a-bf4d-b9c12b008fb5
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvince
+		dataType: string
+		lineageTag: f5f8aa61-2de5-4675-9c36-98585015c63d
+		summarizeBy: none
+		sourceColumn: StateProvince
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 26246130-fd49-4c6e-b828-78c2aa61fdba
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 9e7dea57-f679-45ce-b95d-bd77f5eb5255
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSystem
+		dataType: string
+		lineageTag: 062840e2-37eb-4232-9803-0af4f9c424ef
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: af275f48-1572-43d1-b7b6-5b5bbe305428
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: f38cd9bf-c141-4c03-83fe-bea7031f71e4
+			defaultHierarchy: LocalDateTable_5cb8bbc2-7612-4c25-8277-1ac6ac82d4ab.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bea7a1be-3df5-4196-92b0-8d29627278e5
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 1581df62-9152-427f-b8b0-38b38cc8e2da
+			defaultHierarchy: LocalDateTable_252b3cd7-dc2f-41b9-ba9a-4e8972b1b1be.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f992368c-6e7e-4a85-852b-51632d6e9ca3
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: 0d65415d-00d7-467e-8812-20bdbea97276
+			defaultHierarchy: LocalDateTable_6ad85436-467f-4667-a614-3c932629769d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '8. DimCustomer' = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * #(lf)FROM [reporting].[Customer]"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

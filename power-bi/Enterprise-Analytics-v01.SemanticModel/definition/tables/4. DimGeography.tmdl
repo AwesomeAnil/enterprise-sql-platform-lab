@@ -1,0 +1,154 @@
+table '4. DimGeography'
+	lineageTag: ff4a5fa6-e784-4540-b8b3-95c070fba12e
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c39bb65a-239e-4688-9d9d-f0e452b44ce3
+		summarizeBy: count
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyID
+		dataType: int64
+		formatString: 0
+		lineageTag: db9d7a0e-e378-4e4b-8447-dc39107e0985
+		summarizeBy: none
+		sourceColumn: GeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyCode
+		dataType: string
+		lineageTag: f9a384dd-548b-4b92-9c8a-ba4058101813
+		summarizeBy: none
+		sourceColumn: GeographyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: fb741088-bbba-4f36-9235-02e90a2e2907
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvince
+		dataType: string
+		lineageTag: c1085398-2f8e-47f2-8148-f91b5151f1be
+		summarizeBy: none
+		sourceColumn: StateProvince
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 635c462e-7679-4201-9501-2d7c920fbaa5
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: f2f183ce-979c-4ee4-96ef-3e7696c9b7de
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: 7e5901c1-c15f-4f35-af09-f01d515733ae
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: 628cb017-30a5-48ad-a0c9-1856177fc738
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 6d156fec-8379-49dc-99c8-eee91671edf6
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SourceSystem
+		dataType: string
+		lineageTag: 5d611c99-3235-4431-a1a2-7ba727f256f4
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f5a54880-0c92-4b29-9860-038cd387a0e9
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 7747cd3a-1c3b-474f-b36e-1f866687b9b4
+			defaultHierarchy: LocalDateTable_058df144-df00-432c-8868-66846a76f27e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fcc4b17f-263b-4b78-b210-27252536fbd2
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: cae59fd8-4274-4e82-bc54-3f5321fc69d9
+			defaultHierarchy: LocalDateTable_07ac0770-70bf-49be-b238-8dbe5fc1a051.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0e3083ea-c427-443c-9459-165dc67248be
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: 57a4b185-2c6d-4fc1-9816-9572bf13f4cc
+			defaultHierarchy: LocalDateTable_addb97c2-6cdc-4b0e-baf7-e31d781236c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '4. DimGeography' = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				  Source = Sql.Database("localhost", "SalesDW", [Query = "SELECT * #(lf)FROM [reporting].[Geography]"])
+				in
+				  Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
